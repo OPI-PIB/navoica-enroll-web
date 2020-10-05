@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/OPI-PIB/navoica-enroll-web.svg?branch=master)](https://travis-ci.org/OPI-PIB/navoica-enroll-web)
+
 # Formularz Rejestacyjny Navoica
 
 Do działania systemu wymagane są otwarte port 80 i 443. Certyfikat SSL zostanie pobrany automatycznie zgodnie z wybraną domeną.
@@ -9,6 +11,14 @@ Ustaw zmienne środowiskowe:
     export ENROLL_DOMAIN = domena.pl
 
     export ENROLL_EMAIL = adres_do_kontaktu@domena.pl
+
+Pobierz aktualne repo z githuba:
+
+    git clone https://github.com/OPI-PIB/navoica-enroll-web.git
+    
+Przejdź do katalogu:
+
+    cd navoica-enroll-web/
 
 Uruchom komende:
 
@@ -31,6 +41,20 @@ Uzupełniamy informacje o domenie zgodnie z `DOMAIN`
 Dodajemy wartości OAUTH2 otrzymane od administratora z navoica.pl, provider EDX
 
     https://enroll-test.navoica.pl/admin/socialaccount/socialapp/
+    
+    
+## Aktywacja integracji z navoica.pl 
+
+Przechodzimy do panelu twórcy na stronie studio.navoica.pl i wybieramy kurs do edycji. 
+
+    Ustawienia -> Ustawienia zaawansowane -> 
+    
+Wypełniamy następujące pola:
+
+    Adres rejestracji zdalnej //nasz adres https://ENROLL_DOMAIN/
+i
+
+    Aktywuj zdalną rejestrację na kurs // ustawiamy na TRUE
 
 
 ## Podmiana plików PDF ze zgodami w formularzu
