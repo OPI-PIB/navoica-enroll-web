@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>{% block title %} {% trans "Navoica Remote Enrollment for a
-    Course" %}{% endblock title %}</title>
+  <title>{% block title %} {% blocktrans %}Navoica Remote Enrollment for a Course
+  {% endblocktrans %}{% endblock title %}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="author" content="">
@@ -55,7 +55,9 @@
     </div>
   {% endblock content %}
   <footer>
-    <p class="footer-copyright text-muted text-center"><small>&copy; Copyright 2018<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script> Navoica.pl | ver.{{ settings.PLATFORM_VERSION }}</small> </p>
+    <p class="footer-copyright text-muted text-center"><small>&copy; Copyright 2018
+      <script>new Date().getFullYear() > 2010 && document.write("-" + new Date().getFullYear());</script>
+      Navoica.pl | ver.{{ settings.PLATFORM_VERSION }}</small></p>
   </footer>
 </div> <!-- /container -->
 
