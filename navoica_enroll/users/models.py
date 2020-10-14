@@ -17,6 +17,8 @@ class User(AbstractUser):
 
 
 class UserRegistrationCourse(models.Model):
+    ADMINISTRATIVE_UNIT_CHOICES_FIXED = ADMINISTRATIVE_UNIT_CHOICES + (('szczecin', 'Szczecin'),)
+
     first_name = models.CharField(_("First Name"), max_length=100)
     last_name = models.CharField(_("Last name"), max_length=100)
     gender = models.CharField(_("Gender"), choices=[
@@ -49,7 +51,7 @@ class UserRegistrationCourse(models.Model):
                                    choices=sorted(VOIVODESHIP_CHOICES,
                                                   key=lambda x: x[1]))
     county = models.CharField(_("County"), max_length=30, null=True, blank=True,
-                              choices=sorted(ADMINISTRATIVE_UNIT_CHOICES,
+                              choices=sorted(ADMINISTRATIVE_UNIT_CHOICES_FIXED,
                                              key=lambda x: x[1]))
     commune = models.CharField(_("Commune"), max_length=30, null=True,
                                blank=True)

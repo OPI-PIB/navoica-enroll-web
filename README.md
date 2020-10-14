@@ -1,21 +1,43 @@
+[![Build Status](https://travis-ci.org/OPI-PIB/navoica-enroll-web.svg?branch=master)](https://travis-ci.org/OPI-PIB/navoica-enroll-web)
+
 # Formularz Rejestacyjny Navoica
 
-Do działania systemu wymagane są otwarte port 80 i 443. Certyfikat SSL zostanie pobrany automatycznie zgodnie z wybraną domeną.
+Do działania systemu wymagane są 
+
+* Zaintalowany Docker i Docker Compose
+* Dostęp do użytkowania dockera przez użytkownika bez 'sudo'
+* Otwarte port 80 i 443. Certyfikat SSL zostanie pobrany automatycznie zgodnie z wybraną domeną.
+* Git
 
 ## Wersja automatyczna instalacji:
+
+Pobierz aktualny kod z repozytorium:
+
+    git clone https://github.com/OPI-PIB/navoica-enroll-web.git
 
 Ustaw zmienne środowiskowe:
 
     export ENROLL_DOMAIN = domena.pl
 
     export ENROLL_EMAIL = adres_do_kontaktu@domena.pl
+    
+[Opcjonalnie] zapisze je do `~/.bashrc` do pożniejszego wykorzystania
+
+Pobierz aktualne repo z githuba:
+
+    git clone https://github.com/OPI-PIB/navoica-enroll-web.git
+    
+Przejdź do katalogu:
+
+    cd navoica-enroll-web/
 
 Uruchom komende:
 
     make setup
-
+    
 Ostatnim krokiem instalacji będzie ustawienie hasła dla użytkownika `admin`.
-Przejdź do sekcji `Konfiguracja Oauth2`
+
+Formularz powinien zostać już zainstalowany poprawny i dostępny online. Przejdź do sekcji `Konfiguracja Oauth2`
 
 
 ## Konfiguracja Oauth2 do komunikacji z navoica.pl
@@ -31,13 +53,27 @@ Uzupełniamy informacje o domenie zgodnie z `DOMAIN`
 Dodajemy wartości OAUTH2 otrzymane od administratora z navoica.pl, provider EDX
 
     https://enroll-test.navoica.pl/admin/socialaccount/socialapp/
+    
+    
+## Aktywacja integracji z navoica.pl 
+
+Przechodzimy do panelu twórcy na stronie studio.navoica.pl i wybieramy kurs do edycji. 
+
+    Ustawienia -> Ustawienia zaawansowane -> 
+    
+Wypełniamy następujące pola:
+
+    Adres rejestracji zdalnej //nasz adres https://ENROLL_DOMAIN/
+i
+
+    Aktywuj zdalną rejestrację na kurs // ustawiamy na TRUE
 
 
 ## Podmiana plików PDF ze zgodami w formularzu
 
 Dodaj odpowiednie pliki do katalogu: `./external_static`
 
-Edytuj zmienne środowiskowe ( lub je dodaj ) w pliku `.django `
+Edytuj zmienne środowiskowe ( lub je dodaj ) w pliku `.envs./production/.django `
     
 "Wzór oświadczenia...":
 
