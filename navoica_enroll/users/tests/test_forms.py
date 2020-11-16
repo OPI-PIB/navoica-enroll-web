@@ -95,3 +95,5 @@ class TestUserRegisterForm(TestCase):
         obj.save()
 
         assert obj.pk
+
+        assert obj.email == 'longemaillongemaillongemaillongemail@longemaillongemaillongemaillongemail.pl'
