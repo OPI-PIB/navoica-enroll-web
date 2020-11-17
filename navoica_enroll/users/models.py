@@ -42,7 +42,7 @@ class UserRegistrationCourse(models.Model):
                               help_text=_("Enter the address correspondence."))
     street_no = models.CharField(_("Street no"), max_length=10,
                                  help_text=_("May contain letters"))
-    street_building_no = models.CharField(_("Building no"), max_length=10,
+    street_building_no = models.CharField(_("Building no"), max_length=10, null=True, blank=True,
                                           help_text=_("May contain letters"))
     postal_code = models.CharField(_("Postal code"), max_length=6)
     city = models.CharField(_("City"), max_length=30)
