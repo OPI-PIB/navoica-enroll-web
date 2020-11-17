@@ -146,6 +146,8 @@ class UserRegistrationCourseView(UserRegistrationCourseViewBase):
             messages.error(request, _("You are already enrolled in this course"))
             raise Http404()
 
+        logout(request)
+
         return super(UserRegistrationCourseView, self).dispatch(request, *args,
                                                                 **kwargs)
 
