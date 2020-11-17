@@ -91,3 +91,63 @@ class TestUserEnrollView(WebTest):
             # check if we have correct pdf files
             self.assertIn(settings.STATEMENT1_EN_PDF, response.context['form'].fields['statement1'].label, )
             self.assertIn(settings.STATEMENT2_EN_PDF, response.context['form'].fields['statement2'].label, )
+
+    def test_register(self):
+        User = get_user_model()
+        user = User.objects.get(
+            pk=1
+        )
+        self.assertEqual(user.username, 'admin')
+        self.app.set_user(user)
+
+        with requests_mock.Mocker() as mock:
+            mock.get("{}{}{}".format(settings.NAVOICA_URL, "/api/courses/v1/courses/", self.course_id),
+                     json={'course_id': self.course_id}, status_code=200)
+
+            mock.get("{}{}{}".format(settings.NAVOICA_URL, "/api/enrollment/v1/enrollment/", self.course_id),
+                     json={'is_active': False},
+                     status_code=200)
+
+            mock.post("{}{}".format(settings.NAVOICA_URL, "/api/enrollment/v1/enrollment"), status_code=200)
+
+            response = self.app.get(reverse('form', args=[self.course_id]))
+            self.assertEqual(response.status_code, 200)
+            self.assertEqual(type(response.context['form']), UserRegistrationCourseEnglishForm)
+
+            d = {
+                'first_name': user.first_name,
+                'last_name': user.last_name,
+                'gender': 'M',
+                'pesel': '53022858449',
+                'age': 30,
+                'education': 3,
+                'street': "Test",
+                'street_no': "Test",
+                'street_building_no': "Test",
+                'postal_code': "00-001",
+                'city': 'Szczecin',
+                'voivodeship': 'west_pomerania',
+                'county': 'szczecin',
+                'country': 'Polska',
+                'commune': 'Test',
+                'phone': 432423,
+                'email': 'longemaillongemaillongemaillongemail@longemaillongemaillongemaillongemail.pl',
+                'status': 'Employed',
+                'profession': 'Farmer',
+                'work_name': "Test",
+                'origin': "y",
+                'homeless': "n",
+                'disabled_person': "n",
+                'social_disadvantage': "n",
+                'statement1': True,
+                'statement2': True
+
+            }
+
+            form = response.form
+            for key, value in d.items():
+                form[key] = value
+
+            response = form.submit()
+            self.assertEqual(response.status_code, 302)
+            self.assertEqual("{}/courses/{}".format(settings.NAVOICA_URL, self.course_id), response.url)
