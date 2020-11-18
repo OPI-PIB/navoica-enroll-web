@@ -41,3 +41,6 @@ SENTRY_DSN=https://3ec2192965104f3da05de5c0f1967e07@sentry.navoica.pl/13
 # ------------------------------------------------------------------------------
 REDIS_URL=redis://redis:6379/0
 
+# Form Name
+FORM_ORGANIZER_NAME=
+
