@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-30 11:24+0100\n"
+"POT-Creation-Date: 2020-12-14 12:01+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -442,13 +442,81 @@ msgstr ""
 "form, will be collected, processed and verified by the course organizer. "
 "Filling in the form is a prerequisite to join the course."
 
-#: navoica_enroll/templates/users/form_registration.html:63
+#: navoica_enroll/templates/users/form_registration.html:35
+msgid "The form contains errors"
+msgstr "The form contains errors"
+
+#: navoica_enroll/templates/users/form_registration.html:35
+msgid "Correct or complete the missing information"
+msgstr "Correct or complete the missing information"
+
+#: navoica_enroll/templates/users/form_registration.html:49
 msgid "Choose county..."
-msgstr "Choose county..."
+msgstr "County..."
+
+#: navoica_enroll/templates/users/form_registration.html:50
+msgid "Choose voivodeship..."
+msgstr "Voivodeship..."
+
+#: navoica_enroll/templates/users/form_registration.html:51
+msgid "Choose employed status..."
+msgstr "Employed status..."
+
+#: navoica_enroll/templates/users/form_registration.html:53
+msgid "Choose profession..."
+msgstr "Profession..."
+
+#: navoica_enroll/templates/users/form_registration.html:57
+msgid "Field required"
+msgstr "Field required"
+
+#: navoica_enroll/templates/users/form_registration.html:58
+msgid "The field can contain up to 100 characters"
+msgstr "The field can contain up to 100 characters"
+
+#: navoica_enroll/templates/users/form_registration.html:59
+msgid "Max. 300 characters"
+msgstr "Max. 300 characters"
+
+#: navoica_enroll/templates/users/form_registration.html:60
+msgid "Max. 1000 characters"
+msgstr "Max. 1000 characters"
+
+#: navoica_enroll/templates/users/form_registration.html:61
+msgid "Max. 30 characters"
+msgstr "Max. 30 characters"
+
+#: navoica_enroll/templates/users/form_registration.html:62
+msgid "Max. 10 characters"
+msgstr "Max. 10 characters"
+
+#: navoica_enroll/templates/users/form_registration.html:63
+msgid "Max. 12 characters"
+msgstr "Max. 12 characters"
 
 #: navoica_enroll/templates/users/form_registration.html:64
-msgid "Choose voivodeship..."
-msgstr "Choose voivodeship..."
+msgid "Max. 6 characters"
+msgstr "Max. 6 characters"
+
+#: navoica_enroll/templates/users/form_registration.html:65
+msgid "Min. 8 characters"
+msgstr "Min. 8 characters"
+
+#: navoica_enroll/templates/users/form_registration.html:66
+msgid "Incorrect age"
+msgstr "Incorrect age"
+
+#: navoica_enroll/templates/users/form_registration.html:69
+msgid "The answer is obligatory"
+msgstr "The answer is obligatory"
+
+#: navoica_enroll/templates/users/form_registration.html:70
+msgid "The acceptance of the declaration is obligatory"
+msgstr "The acceptance of the declaration is obligatory"
+
+#: navoica_enroll/templates/users/form_registration.html:71
+msgid "The consent is mandatory"
+msgstr "The consent is mandatory"
 
 #: navoica_enroll/templates/users/user_detail.html:4
 msgid "User: "
@@ -484,7 +552,7 @@ msgstr "E-mail address"
 
 #: navoica_enroll/users/forms.py:56
 msgid "Don't have a PESEL number"
-msgstr "Don't have a PESEL number"
+msgstr "I don't have a PESEL number"
 
 #: navoica_enroll/users/forms.py:59 navoica_enroll/users/forms.py:276
 #, python-brace-format
@@ -656,10 +724,6 @@ msgstr "End project date"
 msgid "Start support date"
 msgstr "Start support date"
 
-#: navoica_enroll/users/models.py:75
-msgid "Choose employed status..."
-msgstr "Choose employed status..."
-
 #: navoica_enroll/users/models.py:76
 msgid "Employed"
 msgstr "Employed"
@@ -678,11 +742,7 @@ msgstr "Unemployed, not looking for work"
 
 #: navoica_enroll/users/models.py:82
 msgid "Status"
-msgstr "Status"
-
-#: navoica_enroll/users/models.py:87
-msgid "Choose profession..."
-msgstr "Choose profession..."
+msgstr "What is your current status on the labor market?"
 
 #: navoica_enroll/users/models.py:88
 msgid "Vocational teacher"
@@ -750,7 +810,9 @@ msgstr "Abbreviations not allowed, full name of the institution"
 
 #: navoica_enroll/users/models.py:112
 msgid "Migrant / ethnic minority"
-msgstr "Migrant / ethnic minority"
+msgstr ""
+"Do you belong to a national or ethnic minority, are you a migrant, a person "
+"of foreign origin?"
 
 #: navoica_enroll/users/models.py:113 navoica_enroll/users/models.py:119
 #: navoica_enroll/users/models.py:126 navoica_enroll/users/models.py:133
@@ -769,15 +831,15 @@ msgstr "Prefer not to tell"
 
 #: navoica_enroll/users/models.py:118
 msgid "Homeless"
-msgstr "Homeless"
+msgstr "Are you homeless or excluded from housing?"
 
 #: navoica_enroll/users/models.py:124
 msgid "Disabled person"
-msgstr "Disabled person"
+msgstr "Are you a person with a disability?"
 
 #: navoica_enroll/users/models.py:131
 msgid "Socially disadvantaged"
-msgstr "Socially disadvantaged"
+msgstr "Are you a socially disadvantaged person?"
 
 #: navoica_enroll/users/models.py:147
 msgid "Registration for course"

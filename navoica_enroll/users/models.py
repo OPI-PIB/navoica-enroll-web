@@ -72,19 +72,19 @@ class UserRegistrationCourse(models.Model):
                                           default=timezone.now)
 
     STATUSES = [
-        _("Choose employed status..."),
+        "",
         _("Employed"),
         _("Registered unemployed"),
         _("Unregistered unemployed"),
         _("Unemployed, not looking for work")
     ]
 
-    status = models.CharField(_("Status"), default="", max_length=1000,
+    status = models.CharField(_("Status"), max_length=1000,
                               choices=[(t, t) for t in STATUSES]
                               )
 
     PROFESSIONS = [
-        _("Choose profession..."),
+        "",
         _("Vocational teacher"),
         _("General education teacher"),
         _("Kindergarten teacher"),
@@ -100,7 +100,7 @@ class UserRegistrationCourse(models.Model):
         _("Other"),
     ]
 
-    profession = models.CharField(_("Profession"), default="test", max_length=1000,
+    profession = models.CharField(_("Profession"), max_length=1000,
                                   choices=[(t, t) for t in
                                            PROFESSIONS])
 

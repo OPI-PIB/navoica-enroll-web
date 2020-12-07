@@ -17,10 +17,22 @@ body {
   border-color: #E3F0F0;
   color: #008080;
   font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 1rem;
+  line-height: 1.5rem;
   font-weight: 600;
   border-radius: 0; }
+
+.alert-message-error {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #E41D37;
+  font-family: 'Open Sans', sans-serif;
+  padding: 22px 30px;
+  background-color: #FDEDEF;
+  box-shadow: 0 3px 6px #00000029; }
+  @media screen and (max-width: 767px) {
+    .alert-message-error {
+      padding: 22px 15px; } }
 
 .alert {
   padding: 1.25rem 1.0625rem; }
@@ -166,15 +178,15 @@ hr.pb-30 {
 .modal__title {
   font-family: 'Open Sans', sans-serif;
   font-weight: bold;
-  font-size: 18px;
-  line-height: 30px;
+  font-size: 1.125rem;
+  line-height: 1.875rem;
   color: #212529; }
 
 .modal__description {
   font-family: 'Open Sans', sans-serif;
   font-weight: normal;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 1rem;
+  line-height: 1.5rem;
   color: #212529; }
 
 .modal .close {
@@ -203,9 +215,6 @@ hr.pb-30 {
 #student-form #div_id_social_disadvantage > div {
   display: inline-flex; }
 
-#student-form :invalid {
-  box-shadow: none; }
-
 #student-form :-moz-submit-invalid {
   box-shadow: none; }
 
@@ -224,6 +233,29 @@ hr.pb-30 {
 #student-form .custom-control.custom-radio {
   display: inline-block;
   padding: 0; }
+
+#student-form .error-message, #student-form .invalid-feedback {
+  color: #E41D37;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  display: flex;
+  margin-top: 5px;
+  font-weight: normal; }
+
+#student-form .invalid-feedback strong {
+  font-weight: normal; }
+
+#student-form .error-field,
+#student-form input[type='radio'].error-field + label, #student-form .is-invalid {
+  border-bottom: 2px solid #E41D37; }
+
+#student-form .is-invalid {
+  border-bottom: 2px solid #E41D37;
+  border-top-color: #5B5B5B;
+  border-left-color: #5B5B5B;
+  border-right-color: #5B5B5B;
+  background-image: none; }
 
 #student-form input[type='radio'] + .custom-control-label:after,
 #student-form input[type='radio'] + .custom-control-label:before {

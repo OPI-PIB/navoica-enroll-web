@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-30 11:24+0100\n"
+"POT-Creation-Date: 2020-12-14 12:01+0100\n"
 "PO-Revision-Date: 2020-09-30 07:34+0000\n"
 "Last-Translator: Paula Wasylów <Paula.Wasylow@opi.org.pl>, 2020\n"
 "Language-Team: Polish (https://www.transifex.com/navoica/teams/104253/pl/)\n"
@@ -447,13 +447,81 @@ msgstr ""
 " weryfikowane przez organizatora kursu. Wypełnienie formularza jest "
 "warunkiem przystąpienia do kursu."
 
-#: navoica_enroll/templates/users/form_registration.html:63
+#: navoica_enroll/templates/users/form_registration.html:35
+msgid "The form contains errors"
+msgstr "Formularz zawiera błędy"
+
+#: navoica_enroll/templates/users/form_registration.html:35
+msgid "Correct or complete the missing information"
+msgstr "Popraw lub uzupełnij brakujące informacje"
+
+#: navoica_enroll/templates/users/form_registration.html:49
 msgid "Choose county..."
 msgstr "Wybierz powiat..."
 
-#: navoica_enroll/templates/users/form_registration.html:64
+#: navoica_enroll/templates/users/form_registration.html:50
 msgid "Choose voivodeship..."
 msgstr "Wybierz województwo..."
+
+#: navoica_enroll/templates/users/form_registration.html:51
+msgid "Choose employed status..."
+msgstr "Wybierz status..."
+
+#: navoica_enroll/templates/users/form_registration.html:53
+msgid "Choose profession..."
+msgstr "Wybierz zawód..."
+
+#: navoica_enroll/templates/users/form_registration.html:57
+msgid "Field required"
+msgstr "Pole wymagane"
+
+#: navoica_enroll/templates/users/form_registration.html:58
+msgid "The field can contain up to 100 characters"
+msgstr "Pole może zawierać maksymalnie 100 znaków"
+
+#: navoica_enroll/templates/users/form_registration.html:59
+msgid "Max. 300 characters"
+msgstr "Max. 300 znaków"
+
+#: navoica_enroll/templates/users/form_registration.html:60
+msgid "Max. 1000 characters"
+msgstr "Max. 1000 znaków"
+
+#: navoica_enroll/templates/users/form_registration.html:61
+msgid "Max. 30 characters"
+msgstr "Max. 30 znaków"
+
+#: navoica_enroll/templates/users/form_registration.html:62
+msgid "Max. 10 characters"
+msgstr "Max. 10 znaków"
+
+#: navoica_enroll/templates/users/form_registration.html:63
+msgid "Max. 12 characters"
+msgstr "Max. 12 znaków"
+
+#: navoica_enroll/templates/users/form_registration.html:64
+msgid "Max. 6 characters"
+msgstr "Max. 6 znaków"
+
+#: navoica_enroll/templates/users/form_registration.html:65
+msgid "Min. 8 characters"
+msgstr "Min. 8 znaków"
+
+#: navoica_enroll/templates/users/form_registration.html:66
+msgid "Incorrect age"
+msgstr "Nieprawidłowy wiek"
+
+#: navoica_enroll/templates/users/form_registration.html:69
+msgid "The answer is obligatory"
+msgstr "Odpowiedź jest obowiązkowa"
+
+#: navoica_enroll/templates/users/form_registration.html:70
+msgid "The acceptance of the declaration is obligatory"
+msgstr "Zaakceptowanie oświadczenia jest obowiązkowe"
+
+#: navoica_enroll/templates/users/form_registration.html:71
+msgid "The consent is mandatory"
+msgstr "Wyrażenie zgody jest obowiązkowe"
 
 #: navoica_enroll/templates/users/user_detail.html:4
 msgid "User: "
@@ -661,10 +729,6 @@ msgstr "Data zakończenia udziału w projekcie"
 msgid "Start support date"
 msgstr "Data rozpoczęcia otrzymania wsparcia"
 
-#: navoica_enroll/users/models.py:75
-msgid "Choose employed status..."
-msgstr "Wybierz status..."
-
 #: navoica_enroll/users/models.py:76
 msgid "Employed"
 msgstr "Osoba pracująca"
@@ -684,10 +748,6 @@ msgstr "Osoba bierna zawodowo"
 #: navoica_enroll/users/models.py:82
 msgid "Status"
 msgstr "Jaki jest obecnie Twój status na rynku pracy?"
-
-#: navoica_enroll/users/models.py:87
-msgid "Choose profession..."
-msgstr "Wybierz zawód..."
 
 #: navoica_enroll/users/models.py:88
 msgid "Vocational teacher"
