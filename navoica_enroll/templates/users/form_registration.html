@@ -32,7 +32,8 @@
     </div>
   </div>
 
-  {% crispy form %}
+  <div class="alert-message-error js-show-register-alert d-none"><strong>{% trans 'The form contains errors' %}.</strong> {% trans 'Correct or complete the missing information' %}.</div>
+  <div class="js-register-form">{% crispy form %}</div>
 </div>
 {% endblock %}
 
@@ -40,12 +41,36 @@
   <script>
     document.addEventListener("DOMContentLoaded", loadTranslationsJS);
     function loadTranslationsJS() {
-      let countyInput = document.getElementById('id_county');
-      let voivodeshipInput = document.getElementById('id_voivodeship');
+      let countyInput = document.getElementById("id_county");
+      let voivodeshipInput = document.getElementById("id_voivodeship");
+      let statusJobInput = document.getElementById("id_status");
+      let jobProfessionInput = document.getElementById("id_profession");
 
       countyInput[0].textContent = "{% trans 'Choose county...'%}";
       voivodeshipInput[0].textContent = "{% trans 'Choose voivodeship...'%}";
+      statusJobInput.options[0] = new Option("{% trans 'Choose employed status...'%}","");
+      statusJobInput.options[0].setAttribute("selected", "true");
+      jobProfessionInput.options[0] = new Option("{% trans 'Choose profession...'%}","");
+      jobProfessionInput.options[0].setAttribute("selected", "true");
 
+        window.validationTranslates = {
+        "error_message_required": "{% trans 'Field required' %}",
+        "error_message_100_char_required": "{% trans 'The field can contain up to 100 characters' %}",
+        "error_message_300_char_required": "{% trans 'Max. 300 characters' %}",
+        "error_message_1000_char_required": "{% trans 'Max. 1000 characters' %}",
+        "error_message_30_char_required": "{% trans 'Max. 30 characters' %}",
+        "error_message_10_char_required": "{% trans 'Max. 10 characters' %}",
+        "error_message_12_char_required": "{% trans 'Max. 12 characters' %}",
+        "error_message_6_char_required": "{% trans 'Max. 6 characters' %}",
+        "error_message_8_min_char_required": "{% trans 'Min. 8 characters' %}",
+        "error_message_age": "{% trans 'Incorrect age' %}",
+        "error_message_pesel": "{% trans 'Incorrect PESEL number' %}",
+        "error_message_email": "{% trans 'Incorrect e-mail address' %}",
+        "error_message_radio_field": "{% trans 'The answer is obligatory' %}",
+        "error_message_accept_field_required": "{% trans 'The acceptance of the declaration is obligatory' %}",
+        "error_message_approve_field_required": "{% trans 'The consent is mandatory' %}",
+      }
     }
   </script>
+
 {% endblock %}
