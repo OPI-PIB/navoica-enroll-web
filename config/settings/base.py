@@ -12,6 +12,7 @@ APPS_DIR = ROOT_DIR.path("navoica_enroll")
 
 env = environ.Env(
     NAVOICA_URL=(str, "https://navoica.pl"),
+    NAVOICA_CAMPAIGN_URL=(str, "utm_source=registration_form&utm_medium=none&utm_campaign=power"),
 
     STATEMENT1_PDF=(str, 'pdfs/wzor_oswiadczenia_uczestnika_projektu.pdf'),
     STATEMENT2_PDF=(str, 'pdfs/przetwarzanie_danych.pdf'),
@@ -95,6 +96,7 @@ THIRD_PARTY_APPS = [
 ]
 
 NAVOICA_URL = env.str("NAVOICA_URL")
+NAVOICA_CAMPAIGN_URL = env.str("NAVOICA_CAMPAIGN_URL")
 
 SOCIALACCOUNT_PROVIDERS = {
     'edx': {
