@@ -1,9 +1,9 @@
 import requests
-from allauth.account.views import logout
 from allauth.socialaccount.models import SocialToken
 from django.conf import settings
 from django.contrib import messages
 from django.contrib.auth import get_user_model
+from django.contrib.auth import logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import Http404
@@ -169,6 +169,8 @@ class UserRegistrationCourseView(UserRegistrationCourseViewBase):
         obj.course_id = self.course_info['course_id']
         obj.language_code = self.request.LANGUAGE_CODE
         obj.save()
+
+        logout(self.request)
 
         return super().form_valid(form)
 
