@@ -12,6 +12,7 @@
         href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
         crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
   <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -44,9 +45,37 @@
 
 <body>
 <header class="register-course__header">
-  <div class="container header__course d-flex flex-column py-3">
-    <span class="header__course-owner-name mb-1">{{ settings.FORM_ORGANIZER_NAME }}</span>
-    <span class="header__course-title">{% trans 'Registration form' %}</span>
+  <div class="container d-flex flex-row justify-content-between align-items-center">
+    <div class="header__course d-flex flex-column py-3">
+      <span class="header__course-owner-name mb-1">{{ settings.FORM_ORGANIZER_NAME }}</span>
+      <span class="header__course-title">{% trans 'Registration form' %}</span>
+    </div>
+
+    <form action="{% url 'set_language' %}" method="post" class="d-none js-submit-set-language">{% csrf_token %}
+      <input name="next" type="hidden" value="{{ redirect_to }}">
+      <select name="language" class="js-set-language">
+        {% get_current_language as LANGUAGE_CODE %}
+        {% get_available_languages as LANGUAGES %}
+        {% get_language_info_list for LANGUAGES as languages %}
+        {% for language in languages %}
+          {{ language.code }}
+          <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+            {{ language.name_local }} ({{ language.code }})
+          </option>
+        {% endfor %}
+      </select>
+      <input type="submit" value="Go">
+    </form>
+
+    <div class="dropdown dropdown__language py-2 align-self-end">
+      <button class="btn dropdown-toggle" type="button" id="dropdownLang" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fas fa-globe-americas"></i><span class="js-current-language ml-2"></span>
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownLang">
+        <button class="dropdown-item js-change-language" data-lang="pl" type="button">{% trans 'Polish' %}</button>
+        <button class="dropdown-item js-change-language" data-lang="en" type="button">{% trans 'English' %}</button>
+      </div>
+    </div>
   </div>
 </header>
 
