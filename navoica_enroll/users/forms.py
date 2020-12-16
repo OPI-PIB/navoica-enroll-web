@@ -4,7 +4,7 @@ from crispy_forms.layout import ButtonHolder, Div, Fieldset, HTML, Layout, \
 from django.conf import settings
 from django.contrib.auth import forms, get_user_model
 from django.core.exceptions import ValidationError
-from django.forms import BooleanField, EmailField, ModelForm, TextInput, CharField
+from django.forms import BooleanField, EmailField, ModelForm, TextInput, CharField, RadioSelect
 from django.templatetags.static import static
 from django.utils.translation import ugettext_lazy as _
 from localflavor.pl.forms import PLPESELField
@@ -40,25 +40,28 @@ class UserCreationForm(forms.UserCreationForm):
 
 
 class UserRegistrationCourseFormBase(ModelForm):
-    pesel = PLPESELField(max_length=11, label=_("PESEL"),
-                         widget=TextInput(attrs={'type': 'number'}))
+    pesel = PLPESELField(max_length=11, label=_("PESEL"),widget=TextInput(attrs={'type': 'number'}))
     postal_code = RegexField(label=_("Postal code"),regex=r"(?i)^[a-z0-9][a-z0-9\- ]{0,10}[a-z0-9]$")
     email = EmailField(label=_("E-mail address"))
     country = CharField(required=True)
 
+    no_pesel = BooleanField(required=False)
     statement1 = BooleanField(required=True)
     statement2 = BooleanField(required=True)
 
     def __init__(self, *args, **kwargs):
         super(UserRegistrationCourseFormBase, self).__init__(*args, **kwargs)
 
+        self.fields['no_pesel'].label = _(
+            "Don't have a PESEL number")
+
         self.fields['statement1'].label = _(
-            "I agree with the project participant's declaration. <a href='{url}'>PDF</a>").format(
+            "I agree with <a href='{url}' target='_blank'>the project participant's declaration.</a>").format(
             url=
             static(settings.STATEMENT1_PDF))
 
         self.fields['statement2'].label = _(
-            "I consent to the processing of my personal data to participate in the project. <a href='{url}'>PDF</a>").format(
+            "I consent to <a href='{url}' target='_blank'>the processing of my personal data to participate in the project.</a>").format(
             url=
             static(settings.STATEMENT2_PDF))
 
@@ -67,166 +70,193 @@ class UserRegistrationCourseFormBase(ModelForm):
         self.helper.layout = Layout(
             Fieldset(
                 '',
-                HTML('<p class="h4 mt-5">{}</p><hr/>'.format(
+                Div(
+                HTML('<div class="col-lg-4 pl-lg-0 px-0"><h3 class="h4 mx-0">{}</h3></div>'.format(
                     _("Participant details"))),
                 Div(
                     Div(
                         Div('first_name',
-                            css_class="col-md-6 mb-3"
+                            css_class="col-md-6 mb-md-4 mb-1"
                             ),
                         Div(
                             'last_name',
-                            css_class="col-md-6 mb-3"
+                            css_class="col-md-6 mb-md-4 mb-1"
+                        ),
+                        css_class="row"
+                    ),
+                    Div(
+                        Div(
+                            'pesel',
+                            css_class="col-md-6 mb-md-4 mb-1"
+                        ),
+                        Div(
+                            'no_pesel',
+                            css_class="col-md-6 mb-md-4 mb-1"
                         ),
                         css_class="row"
                     ),
                     Div(
                         Div('gender',
-                            css_class="col-md-4 mb-4"
+                            css_class="col-md-3 mb-md-4 mb-1"
                             ),
-                        Div(
-                            'pesel',
-                            css_class="col-md-6 mb-4"
-                        ),
                         Div(
                             'age',
-                            css_class="col-md-2 mb-2"
+                            css_class="col-md-3 mb-md-4 mb-1"
                         ),
-                        css_class="row"
-                    ),
-                    Div(
                         Div('education',
-                            css_class="col-md mb-3"
+                            css_class="col-md-6 mb-md-4 mb-1"
                             ),
                         css_class="row"
                     ),
-                    css_class="group p-3 mb-4"
-                ),
-
-                HTML('<p class="h4 mt-5">{}</p><hr/>'.format(
-                    _("Contact details"))),
+                    css_class="group mb-md-4 mb-2 col-lg-8 ml-lg-auto px-0"
+                ),css_class="d-flex flex-wrap"),
+                Div(
+                HTML('<hr class="w-100 pb-40" />'),
+                HTML('<div class="col-lg-4 pl-lg-0 px-0"><h3 class="h4 mx-0 w-67 lh-2">{}</h3></div>'.format(
+                    _("Contact details / Correspondence address"))),
                 Div(
                     Div(
-                        Div('street',
-                            css_class="col-md-4 mb-4"
-                            ),
-                        Div('street_no',
-                            css_class="col-md-2 mb-2"
-                            ),
-                        Div(
-                            'street_building_no',
-                            css_class="col-md-2 mb-2"
-                        ),
-                        Div(
-                            'postal_code',
-                            css_class="col-md-2 mb-2"
-                        ),
-                        Div('city',
-                            css_class="col-md-2 mb-2"
-                            ),
-                        css_class="row"
-                    ),
-
-                    Div(
-                        Div(
-                            'voivodeship',
-                            css_class="col-md-3 mb-3"
-                        ),
-                        Div(
-                            'county',
-                            css_class="col-md-3 mb-3"
-                        ),
-                        Div(
-                            'commune',
-                            css_class="col-md-3 mb-3"
-                        ),
-                        Div(
-                            'country',
-                            css_class="col-md-3 mb-3"
-                        ),
-                        css_class="row"
-                    ),
-
-                    Div(
                         Div('phone',
-                            css_class="col-md-6 mb-3"
+                            css_class="col-md-6 mb-md-4 mb-1"
                             ),
                         Div(
                             'email',
-                            css_class="col-md-6 mb-3"
+                            css_class="col-md-6 mb-md-4 mb-1"
                         ),
                         css_class="row"
                     ),
-                    css_class="group p-3 mb-4"
-                ),
-                HTML('<p class="h4 mt-5">{}</p><hr/>'.format(
-                    _("Details and type of support"))),
-                Div(
                     Div(
-                        Div('start_project_date',
-                            css_class="col-md-4 mb-4"
+                        Div('street',
+                            css_class="col-md-6 mb-md-4 mb-1"
+                            ),
+                        Div('street_no',
+                            css_class="col-md-3 mb-md-4 mb-1"
                             ),
                         Div(
-                            'end_project_date',
-                            css_class="col-md-4 mb-4"
+                            'street_building_no',
+                            css_class="col-md-3 mb-md-4 mb-1"
                         ),
                         Div(
-                            'start_support_date',
-                            css_class="col-md-4 mb-4"
+                            'postal_code',
+                            css_class="col-md-6 mb-md-4 mb-1"
+                        ),
+                        Div('city',
+                            css_class="col-md-6 mb-md-4 mb-1"
+                            ),
+                        css_class="row"
+                    ),
+                    Div(
+                        Div(
+                            'country',
+                            css_class="col-md-6 mb-md-4 mb-1"
+                        ),
+                        Div(
+                            'voivodeship',
+                            css_class="col-md-6 mb-md-4 mb-1"
+                        ),
+                        Div(
+                            'county',
+                            css_class="col-md-6 mb-md-4 mb-1"
+                        ),
+                        Div(
+                            'commune',
+                            css_class="col-md-6 mb-md-4 mb-1"
                         ),
                         css_class="row"
                     ),
-
+                    css_class="group mb-md-4 mb-2 col-lg-8 ml-lg-auto px-0"
+                ),css_class="d-flex flex-wrap"),
+                Div(
+                HTML('<hr class="w-100 pb-40" />'),
+                HTML('<div class="col-lg-4 pl-lg-0 px-0"><h3 class="h4 mx-0">{}</h3></div>'.format(
+                    _("Additional information"))),
+                Div(
                     Div(
                         Div('status',
-                            css_class="col-md-4 mb-4"
+                            css_class="col-md-12 mb-md-4 mb-1"
                             ),
                         Div(
                             'profession',
-                            css_class="col-md-4 mb-4"
+                            css_class="col-md-6 mb-md-4 mb-1"
                         ),
                         Div(
                             'work_name',
-                            css_class="col-md-4 mb-4"
+                            css_class="col-md-6 mb-md-4 mb-1"
                         ),
-                        css_class="row align-items-end"
+                        css_class="row"
                     ),
-
+                    Div(
+                        Div('start_project_date',
+                            css_class="col-md-12 mb-md-4 mb-1"
+                            ),
+                        Div(
+                            'end_project_date',
+                            css_class="col-md-12 mb-md-4 mb-1"
+                        ),
+                        Div(
+                            'start_support_date',
+                            css_class="col-md-12 mb-md-4 mb-1"
+                        ),
+                        css_class="row d-none"
+                    ),
                     Div(
                         Div('origin',
-                            css_class="col-md-3 mb-3"
+                            css_class="col-md-12 mb-md-4 mb-1"
                             ),
                         Div(
                             'homeless',
-                            css_class="col-md-3 mb-3"
+                            css_class="col-md-12 mb-md-4 mb-1"
                         ),
                         Div(
                             'disabled_person',
-                            css_class="col-md-3 mb-3"
+                            css_class="col-md-12 mb-md-4 mb-1"
                         ),
                         Div(
                             'social_disadvantage',
-                            css_class="col-md-3 mb-3"
+                            css_class="col-md-12 mb-md-4 mb-1"
                         ),
                         css_class="row align-items-end"
                     ),
-                    css_class="group p-3 mb-4"
-                ),
+                    css_class="group mb-md-4 mb-2 col-lg-8 ml-lg-auto px-0"
+                ),css_class="d-flex flex-wrap"),
 
             ),
-
+            Div(
+                HTML('<hr class="w-100 pb-40" />'),
+                HTML('<div class="col-lg-4 pl-lg-0 px-0"><h3 class="h4 mx-0">{}</h3></div>'.format(
+                    _("Required consents"))),
+                Div(
             'statement1', 'statement2',
-
+                css_class="group mb-md-5 mb-4  col-lg-8 ml-lg-auto px-0"
+                ),css_class="d-flex flex-wrap"),
+            Div(
+            HTML('<hr class="w-100 pb-30 my-0" />'),
+            Div(
+            HTML('<img src="/static/images/logo-navoica.svg" alt="Logo Navoica.pl" class="col-lg-2 col-xs-12 col-md-3 mr-lg-auto order-3 order-md-1 navoica-logo" />'),
+                Div(
+                HTML('<button class="btn btn-cancel rounded-0 mr-lg-5 mr-md-2 d-none">{}</button>'.format(
+                    _("Cancel"))),
             ButtonHolder(
                 Submit('submit',
-                       _("Send the form and register me for the course"),
-                       css_class='button white w-100 rounded-0')
-            ),
+                       _("Register me for the course"),
+                       css_class='button white w-100 rounded-0 btn-submit')
+            ),css_class='form-buttons d-flex flex-wrap oder-1 order-md-2 justify-content-between flex-column flex-md-row'), css_class='d-flex justify-content-between flex-wrap'
+            )),
         )
 
     class Meta:
         model = UserRegistrationCourse
         exclude = ('user', 'course_id', 'language_code')
+        widgets = {
+            'origin': RadioSelect(
+                attrs={'required': 'required'}),
+            'homeless': RadioSelect(
+                attrs={'required': 'required'}),
+            'disabled_person': RadioSelect(
+                attrs={'required': 'required'}),
+            'social_disadvantage': RadioSelect(
+                attrs={'required': 'required'})
+        }
 
 
 class UserRegistrationCourseForm(UserRegistrationCourseFormBase):
@@ -243,11 +273,11 @@ class UserRegistrationCourseEnglishForm(UserRegistrationCourseFormBase
         self.fields['commune'].required = False
 
         self.fields['statement1'].label = _(
-            "I agree with the project participant's declaration. <a href='{url}'>PDF</a>").format(
+            "I agree with <a href='{url}' target='_blank'>the project participant's declaration.</a>").format(
             url=
             static(settings.STATEMENT1_EN_PDF))
 
         self.fields['statement2'].label = _(
-            "I consent to the processing of my personal data to participate in the project. <a href='{url}'>PDF</a>").format(
+            "I consent to <a href='{url}' target='_blank'>the processing of my personal data to participate in the project.</a>").format(
             url=
             static(settings.STATEMENT2_EN_PDF))
