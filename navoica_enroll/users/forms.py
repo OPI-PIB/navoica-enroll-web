@@ -7,7 +7,8 @@ from django.core.exceptions import ValidationError
 from django.forms import BooleanField, EmailField, ModelForm, TextInput, CharField, RadioSelect
 from django.templatetags.static import static
 from django.utils.translation import ugettext_lazy as _
-from localflavor.pl.forms import PLPESELField, PLPostalCodeField
+from localflavor.pl.forms import PLPESELField
+from django.forms.fields import RegexField
 
 from .models import UserRegistrationCourse
 
@@ -39,9 +40,8 @@ class UserCreationForm(forms.UserCreationForm):
 
 
 class UserRegistrationCourseFormBase(ModelForm):
-    pesel = PLPESELField(max_length=11, label=_("PESEL"),
-                         widget=TextInput(attrs={'type': 'number'}), required=False)
-    postal_code = PLPostalCodeField(label=_("Postal code"))
+    pesel = PLPESELField(max_length=11, label=_("PESEL"),widget=TextInput(attrs={'type': 'number'}))
+    postal_code = RegexField(label=_("Postal code"),regex=r"(?i)^[a-z0-9][a-z0-9\- ]{0,10}[a-z0-9]$")
     email = EmailField(label=_("E-mail address"))
     country = CharField(required=True)
 

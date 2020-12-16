@@ -47,42 +47,45 @@ class TestUserCreationForm:
 class TestUserRegisterForm(TestCase):
     fixtures = ['users.json', ]
 
+
+    def setUp(self):
+        self.user = User.objects.get(id=1)
+        self.valid_form = {
+            'first_name': self.user.first_name,
+            'last_name': self.user.last_name,
+            'gender': 'M',
+            'pesel': '53022858449',
+            'age': 30,
+            'education': 3,
+            'street': "Test",
+            'street_no': "Test",
+            'street_building_no': "Test",
+            'postal_code': "00-001",
+            'city': 'Szczecin',
+            'voivodeship': 'west_pomerania',
+            'county': 'szczecin',
+            'country': 'Polska',
+            'commune': 'Test',
+            'start_project_date': datetime.now(),
+            'end_project_date': datetime.now(),
+            'start_support_date': datetime.now(),
+            'phone': 432423,
+            'email': 'longemaillongemaillongemaillongemail@longemaillongemaillongemaillongemail.pl',
+            'status': 'Employed',
+            'profession': 'Farmer',
+            'work_name': "Test",
+            'origin': "y",
+            'homeless': "n",
+            'disabled_person': "n",
+            'social_disadvantage': "n",
+            'statement1': True,
+            'statement2': True
+        }
+
     def test_register_pl(self):
-        user = User.objects.get(id=1)
+
         form = UserRegistrationCourseForm(
-            {
-                'first_name': user.first_name,
-                'last_name': user.last_name,
-                'gender': 'M',
-                'pesel': '53022858449',
-                'age': 30,
-                'education': 3,
-                'street': "Test",
-                'street_no': "Test",
-                'street_building_no': "Test",
-                'postal_code': "00-001",
-                'city': 'Szczecin',
-                'voivodeship': 'west_pomerania',
-                'county': 'szczecin',
-                'country': 'Polska',
-                'commune': 'Test',
-                'start_project_date': datetime.now(),
-                'end_project_date': datetime.now(),
-                'start_support_date': datetime.now(),
-                'phone': 432423,
-                'email': 'longemaillongemaillongemaillongemail@longemaillongemaillongemaillongemail.pl',
-                'status': 'Employed',
-                'profession': 'Farmer',
-                'work_name': "Test",
-                'origin': "y",
-                'homeless': "n",
-                'disabled_person': "n",
-                'social_disadvantage': "n",
-                'statement1': True,
-                'statement2': True
-
-            }
-
+            self.valid_form
         )
 
         assert form.is_valid()
@@ -91,9 +94,34 @@ class TestUserRegisterForm(TestCase):
 
         assert not obj.pk
 
-        obj.user = user
+        obj.user = self.user
         obj.save()
 
         assert obj.pk
 
         assert obj.email == 'longemaillongemaillongemaillongemail@longemaillongemaillongemaillongemail.pl'
+
+
+    def test_postalcode(self):
+
+        tmp_form = self.valid_form
+        tmp_form['postal_code'] = "55-080" #polish
+        form = UserRegistrationCourseForm(
+            self.valid_form
+        )
+        assert form.is_valid()
+
+        tmp_form = self.valid_form
+        tmp_form['postal_code'] = "99501" #US postal code
+        form = UserRegistrationCourseForm(
+            self.valid_form
+        )
+        assert form.is_valid()
+
+        tmp_form = self.valid_form
+        tmp_form['postal_code'] = "asd234ss"  # invalid postal code
+        form = UserRegistrationCourseForm(
+            self.valid_form
+        )
+        assert not form.is_valid()
+
