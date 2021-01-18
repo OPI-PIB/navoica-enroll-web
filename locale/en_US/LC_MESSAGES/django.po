@@ -2,20 +2,23 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
+# Translators:
+# Paula Wasylów <Paula.Wasylow@opi.org.pl>, 2020
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-27 12:52+0100\n"
+"POT-Creation-Date: 2020-12-16 12:57+0100\n"
 "PO-Revision-Date: 2020-09-30 07:34+0000\n"
-"Language-Team: English (United States) (https://www.transifex.com/navoica/"
-"teams/104253/en_US/)\n"
-"Language: en_US\n"
+"Last-Translator: Paula Wasylów <Paula.Wasylow@opi.org.pl>, 2020\n"
+"Language-Team: English (United States) (https://www.transifex.com/navoica/teams/104253/en_US/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: en_US\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: navoica_enroll/providers/edx/provider.py:14
@@ -105,7 +108,8 @@ msgstr ""
 #: navoica_enroll/templates/account/email.html:54
 msgid ""
 "You currently do not have any e-mail address set up. You should really add "
-"an e-mail address so you can receive notifications, reset your password, etc."
+"an e-mail address so you can receive notifications, reset your password, "
+"etc."
 msgstr ""
 
 #: navoica_enroll/templates/account/email.html:60
@@ -159,8 +163,8 @@ msgstr ""
 
 #: navoica_enroll/templates/account/login.html:19
 msgid ""
-"You will be redirected to the registration form in a moment, but in order to "
-"fill it in, you must have an account on Navoica.pl.All personal data "
+"You will be redirected to the registration form in a moment, but in order to"
+" fill it in, you must have an account on Navoica.pl.All personal data "
 "included in the registration form will be gathered and processed by the "
 "course organiser - the university."
 msgstr ""
@@ -201,8 +205,8 @@ msgstr ""
 
 #: navoica_enroll/templates/account/password_reset.html:16
 msgid ""
-"Forgotten your password? Enter your e-mail address below, and we'll send you "
-"an e-mail allowing you to reset it."
+"Forgotten your password? Enter your e-mail address below, and we'll send you"
+" an e-mail allowing you to reset it."
 msgstr ""
 
 #: navoica_enroll/templates/account/password_reset.html:23
@@ -284,8 +288,7 @@ msgstr ""
 #: navoica_enroll/templates/account/verification_sent.html:10
 msgid ""
 "We have sent an e-mail to you for verification. Follow the\n"
-"    link provided to finalize the signup process. Please contact us if you "
-"do\n"
+"    link provided to finalize the signup process. Please contact us if you do\n"
 "    not receive it within a few minutes."
 msgstr ""
 
@@ -317,23 +320,23 @@ msgid ""
 "  "
 msgstr ""
 
-#: navoica_enroll/templates/base.html:42
+#: navoica_enroll/templates/base.html:49
 msgid "Registration form"
+msgstr "Registration form"
+
+#: navoica_enroll/templates/base.html:66 navoica_enroll/templates/base.html:85
+msgid "Logo of Knowledge Education Development"
 msgstr ""
 
-#: navoica_enroll/templates/base.html:59 navoica_enroll/templates/base.html:78
-msgid "Logo Fundusze Europejskie Wiedza Edukacja Rozwój"
+#: navoica_enroll/templates/base.html:67 navoica_enroll/templates/base.html:86
+msgid "Logo of The Republic of Poland"
 msgstr ""
 
-#: navoica_enroll/templates/base.html:60 navoica_enroll/templates/base.html:79
-msgid "Logo Rzeczpospolita Polska"
+#: navoica_enroll/templates/base.html:68 navoica_enroll/templates/base.html:87
+msgid "Logo of European Social Fund"
 msgstr ""
 
-#: navoica_enroll/templates/base.html:61 navoica_enroll/templates/base.html:80
-msgid "Logo Unia Europejska Europejski Fudnusz Społeczny"
-msgstr ""
-
-#: navoica_enroll/templates/base.html:68
+#: navoica_enroll/templates/base.html:75
 msgid ""
 "Registration form for users of courses implemented with co-financing from "
 "the ESF, NCBR funds"
@@ -346,18 +349,18 @@ msgstr ""
 
 #: navoica_enroll/templates/users/form_registration.html:12
 msgid ""
-"Wypełnienie formularza jest warunkiem przystąpienia do kursu. <strong>Pola "
-"obowiązkowe zostały oznaczone gwiazdką.</strong> Po przesłaniu formularza "
-"zostaniesz zarejstrowany/a na kurs."
+"Filling in this form is a prerequisite for taking the course. <strong>The "
+"mandatory fields are marked with an asterisk.</strong> After submitting the "
+"form, you will be registered for the course."
 msgstr ""
 
 #: navoica_enroll/templates/users/form_registration.html:13
-msgid "Więcej informacji"
+msgid "More information"
 msgstr ""
 
 #: navoica_enroll/templates/users/form_registration.html:13
 #: navoica_enroll/templates/users/form_registration.html:20
-msgid "Dlaczego gromadzenie danych o użytkownikach jest niezbędne?"
+msgid "Why is the collection of user data necessary?"
 msgstr ""
 
 #: navoica_enroll/templates/users/form_registration.html:14
@@ -372,20 +375,95 @@ msgstr ""
 
 #: navoica_enroll/templates/users/form_registration.html:26
 msgid ""
-"Kurs został sfinansowany ze środków Unii Europejskiej i środków budżetu "
-"państwa. Warunki dofinansowania obligują uczelnię - organizatora kursu do "
-"zbierania danych o uczestnikach. Dane osobowe, które zostaną przesłane za "
-"pośrednictwem formularza rejestracyjnego, będą gromadzone, przetwarzane oraz "
-"weryfikowane przez organizatora kursu. Wypełnienie formularza jest warunkiem "
-"przystąpienia do kursu."
+"The course is funded by the European Union and the Polish state budget. The "
+"conditions of funding oblige the university, the organizer of the course, to"
+" collect data about the participants. Personal data from the registration "
+"form, will be collected, processed and verified by the course organizer. "
+"Filling in the form is a prerequisite to join the course."
 msgstr ""
 
-#: navoica_enroll/templates/users/form_registration.html:63
+#: navoica_enroll/templates/users/form_registration.html:35
+msgid "The form contains errors"
+msgstr ""
+
+#: navoica_enroll/templates/users/form_registration.html:35
+msgid "Correct or complete the missing information"
+msgstr ""
+
+#: navoica_enroll/templates/users/form_registration.html:49
 msgid "Choose county..."
 msgstr ""
 
-#: navoica_enroll/templates/users/form_registration.html:64
+#: navoica_enroll/templates/users/form_registration.html:50
 msgid "Choose voivodeship..."
+msgstr ""
+
+#: navoica_enroll/templates/users/form_registration.html:51
+msgid "Choose employed status..."
+msgstr ""
+
+#: navoica_enroll/templates/users/form_registration.html:53
+msgid "Choose profession..."
+msgstr ""
+
+#: navoica_enroll/templates/users/form_registration.html:57
+msgid "Field required"
+msgstr ""
+
+#: navoica_enroll/templates/users/form_registration.html:58
+msgid "The field can contain up to 100 characters"
+msgstr ""
+
+#: navoica_enroll/templates/users/form_registration.html:59
+msgid "Max. 300 characters"
+msgstr ""
+
+#: navoica_enroll/templates/users/form_registration.html:60
+msgid "Max. 1000 characters"
+msgstr ""
+
+#: navoica_enroll/templates/users/form_registration.html:61
+msgid "Max. 30 characters"
+msgstr ""
+
+#: navoica_enroll/templates/users/form_registration.html:62
+msgid "Max. 10 characters"
+msgstr ""
+
+#: navoica_enroll/templates/users/form_registration.html:63
+msgid "Max. 12 characters"
+msgstr ""
+
+#: navoica_enroll/templates/users/form_registration.html:64
+msgid "Max. 6 characters"
+msgstr ""
+
+#: navoica_enroll/templates/users/form_registration.html:65
+msgid "Min. 8 characters"
+msgstr ""
+
+#: navoica_enroll/templates/users/form_registration.html:66
+msgid "Incorrect age"
+msgstr ""
+
+#: navoica_enroll/templates/users/form_registration.html:67
+msgid "Incorrect PESEL number"
+msgstr ""
+
+#: navoica_enroll/templates/users/form_registration.html:68
+msgid "Incorrect e-mail address"
+msgstr ""
+
+#: navoica_enroll/templates/users/form_registration.html:69
+msgid "The answer is obligatory"
+msgstr ""
+
+#: navoica_enroll/templates/users/form_registration.html:70
+msgid "The acceptance of the declaration is obligatory"
+msgstr ""
+
+#: navoica_enroll/templates/users/form_registration.html:71
+msgid "The consent is mandatory"
 msgstr ""
 
 #: navoica_enroll/templates/users/user_detail.html:4
@@ -404,11 +482,11 @@ msgstr ""
 msgid "Users"
 msgstr ""
 
-#: navoica_enroll/users/forms.py:24
+#: navoica_enroll/users/forms.py:25
 msgid "This username has already been taken."
 msgstr ""
 
-#: navoica_enroll/users/forms.py:42 navoica_enroll/users/models.py:28
+#: navoica_enroll/users/forms.py:43 navoica_enroll/users/models.py:28
 msgid "PESEL"
 msgstr ""
 
@@ -430,6 +508,8 @@ msgid ""
 "I agree with <a href='{url}' target='_blank'>the project participant's "
 "declaration.</a>"
 msgstr ""
+"I agree with <a href='{url}' target='_blank'>the project participant's "
+"declaration.</a>"
 
 #: navoica_enroll/users/forms.py:64 navoica_enroll/users/forms.py:281
 #, python-brace-format
@@ -437,30 +517,32 @@ msgid ""
 "I consent to <a href='{url}' target='_blank'>the processing of my personal "
 "data to participate in the project.</a>"
 msgstr ""
+"I consent to <a href='{url}' target='_blank'>the processing of my personal "
+"data to participate in the project.</a>"
 
 #: navoica_enroll/users/forms.py:75
 msgid "Participant details"
-msgstr ""
+msgstr "Participant details"
 
 #: navoica_enroll/users/forms.py:116
 msgid "Contact details / Correspondence address"
-msgstr ""
+msgstr "Contact details / Correspondence address"
 
 #: navoica_enroll/users/forms.py:172
 msgid "Additional information"
-msgstr ""
+msgstr "Additional information"
 
 #: navoica_enroll/users/forms.py:227
 msgid "Required consents"
-msgstr ""
+msgstr "Required consents"
 
 #: navoica_enroll/users/forms.py:238
 msgid "Cancel"
-msgstr ""
+msgstr "Cancel"
 
 #: navoica_enroll/users/forms.py:241
 msgid "Register me for the course"
-msgstr ""
+msgstr "Register me for the course"
 
 #: navoica_enroll/users/models.py:12
 msgid "Name of User"
@@ -480,7 +562,7 @@ msgstr ""
 
 #: navoica_enroll/users/models.py:24
 msgid "Choose gender..."
-msgstr ""
+msgstr "Gender..."
 
 #: navoica_enroll/users/models.py:25
 msgid "Male"
@@ -504,7 +586,7 @@ msgstr ""
 
 #: navoica_enroll/users/models.py:34
 msgid "Choose grade..."
-msgstr ""
+msgstr "Grade..."
 
 #: navoica_enroll/users/models.py:35
 msgid "Pre-primary"
@@ -560,7 +642,7 @@ msgstr ""
 
 #: navoica_enroll/users/models.py:60
 msgid "Country"
-msgstr ""
+msgstr "Country"
 
 #: navoica_enroll/users/models.py:63
 msgid "Phone"
@@ -590,10 +672,6 @@ msgstr ""
 msgid "Start support date"
 msgstr ""
 
-#: navoica_enroll/users/models.py:75
-msgid "Choose employed status..."
-msgstr ""
-
 #: navoica_enroll/users/models.py:76
 msgid "Employed"
 msgstr ""
@@ -612,10 +690,6 @@ msgstr ""
 
 #: navoica_enroll/users/models.py:82
 msgid "Status"
-msgstr ""
-
-#: navoica_enroll/users/models.py:87
-msgid "Choose profession..."
 msgstr ""
 
 #: navoica_enroll/users/models.py:88
