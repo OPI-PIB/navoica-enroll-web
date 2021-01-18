@@ -152,3 +152,35 @@ Po uruchomieniu uruchamiamy migracje danych i tworzymy własnego użytkownika ad
 
     docker-compose -f production.yml exec django python manage.py createsuperuser
 
+
+### Dodanie nazwy formularza:
+
+FORM_ORGANIZER_NAME=
+
+np. organizator kursu/szkolenia
+
+FORM_ORGANIZER_NAME=Uniwersytet Kardynała Stefana Wyszyńskiego w Warszawie
+
+
+### ---- FRONTEND ---- 
+
+## Automatyczne generowanie/aktualizowanie css z scss
+
+npm run compile:css:watch
+
+## Testowanie kodu
+
+npm run lint
+
+## Testowanie kodu scss
+
+npm run lint:styles
+
+## Testowanie kodu javascript
+
+npm run lint:scripts
+
+## Testy lokalne javascript
+
+npm test
+

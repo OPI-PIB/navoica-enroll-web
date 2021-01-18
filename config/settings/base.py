@@ -330,3 +330,6 @@ try:
         ["git -C %s describe --tags" % ROOT_DIR], shell=True).decode('UTF-8')
 except subprocess.CalledProcessError as e:
     PLATFORM_VERSION = "HEAD"
+
+
+FORM_ORGANIZER_NAME = env.str("FORM_ORGANIZER_NAME")
