@@ -12,6 +12,7 @@ from django.utils.decorators import method_decorator
 from django.utils.translation import ugettext_lazy as _
 from django.views.generic import DetailView, RedirectView, UpdateView
 from django.views.generic.edit import FormView
+from dateutil import parser
 
 from .forms import UserRegistrationCourseEnglishForm, UserRegistrationCourseForm
 
@@ -72,10 +73,15 @@ class UserRegistrationCourseViewBase(FormView):
 
     def get_initial(self):
         initial = super().get_initial()
+        print(self.course_info)
         if self.request.user.is_authenticated:
             initial['email'] = self.request.user.email
             initial['first_name'] = self.request.user.first_name
             initial['last_name'] = self.request.user.last_name
+            if 'start' in self.course_info:
+                initial['start_support_date'] = parser.parse(self.course_info['start'])
+            if 'end' in self.course_info:
+                initial['end_project_date'] = parser.parse(self.course_info['end'])
         if self.request.LANGUAGE_CODE:
             initial['country'] = 'Polska'
 
