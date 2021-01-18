@@ -142,9 +142,10 @@ class UserRegistrationCourseView(UserRegistrationCourseViewBase):
             ),
             headers=headers)
 
-        self.success_url = "{}/courses/{}".format(
+        self.success_url = "{}/courses/{}?{}".format(
             settings.NAVOICA_URL,
-            self.course_info['course_id']
+            self.course_info['course_id'],
+            settings.NAVOICA_CAMPAIGN_URL
         )
 
         course_enrollment = response.json()

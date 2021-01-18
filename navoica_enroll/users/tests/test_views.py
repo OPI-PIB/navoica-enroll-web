@@ -171,10 +171,10 @@ class TestUserEnrollView(WebTest):
 
             response = form.submit()
             self.assertEqual(response.status_code, 302)
-
+            self.assertEqual(
+                "{}/courses/{}?{}".format(settings.NAVOICA_URL, self.course_id, settings.NAVOICA_CAMPAIGN_URL),
+                response.url)
             # user should be loggout before redirection
             self.assertTrue(
                 '%s=""' % settings.SESSION_COOKIE_NAME in response.headers['Set-Cookie']
             )
-
-            self.assertEqual("{}/courses/{}".format(settings.NAVOICA_URL, self.course_id), response.url)
