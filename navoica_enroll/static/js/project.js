@@ -578,6 +578,36 @@ function loadRegisterForm() {
       hideAlertOnSubmit();
     }
   });
+
+  function changeLanguage() {
+    let setLang = document.querySelector(".js-set-language");
+    let submitSetLang = document.querySelector(".js-submit-set-language");
+    let changeLangBtn = document.querySelectorAll(".js-change-language");
+    let currentLanguageText = document.querySelector(".js-current-language");
+
+    currentLanguageText.textContent = setLang.value.toUpperCase();
+
+    Array.from(changeLangBtn).forEach(function (button) {
+      button.addEventListener(
+        "click",
+        function () {
+          let opts = setLang.options;
+          let lang = button.getAttribute("data-lang");
+          for (let i = 0; i < opts.length; i++) {
+            if (opts[i].value === lang) {
+              let langIndex = opts[i].index;
+              setLang.selectedIndex = langIndex;
+            }
+          }
+          submitSetLang.submit();
+          currentLanguageText.textContent = lang.toUpperCase();
+        },
+        true
+      );
+    });
+  }
+
+  changeLanguage();
 }
 
 document.addEventListener("DOMContentLoaded", loadRegisterForm);
