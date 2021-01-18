@@ -165,7 +165,7 @@ class TestUserEnrollView(WebTest):
 
             }
 
-            form = response.form
+            form = response.forms[1]
             for key, value in d.items():
                 form[key] = value
 
