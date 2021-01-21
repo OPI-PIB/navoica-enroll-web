@@ -76,7 +76,8 @@ class UserRegistrationCourse(models.Model):
         _("Employed"),
         _("Registered unemployed"),
         _("Unregistered unemployed"),
-        _("Unemployed, not looking for work")
+        _("Unemployed, not looking for work"),
+        _("Student")
     ]
 
     status = models.CharField(_("Status"), max_length=1000,
