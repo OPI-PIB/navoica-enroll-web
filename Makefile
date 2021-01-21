@@ -44,7 +44,8 @@ stop:
 	docker stop navoica-enroll-web_traefik_1
 
 restart:
-	docker-compose -f production.yml restart
+	docker-compose -f production.yml stop
+	docker-compose -f production.yml up -d
 
 start:
 	docker stop navoica-enroll-web_traefik_1
