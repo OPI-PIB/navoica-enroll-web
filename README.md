@@ -6,7 +6,7 @@ Do działania systemu wymagane są
 
 * Zaintalowany Docker i Docker Compose
 * Dostęp do użytkowania dockera przez użytkownika bez 'sudo'
-* Otwarte port 80 i 443. Certyfikat SSL zostanie pobrany automatycznie zgodnie z wybraną domeną.
+* Otwarte port 80 i 443. Certyfikat SSL zostanie pobrany automatycznie zgodnie z wybraną domeną. **Jeżeli oba porty nie są dostępne** albo aplikacja działa za reverse-proxy, load balancer itp. Można skorzystać z portu 81 i ustawić aplikacje wg własnych preferencji.
 * Git
 
 ## Wersja automatyczna instalacji:
@@ -122,19 +122,10 @@ Edytuj wg potrzeby. Przykładowe wartości poniżej:
 
     NAVOICA_URL=https://draft.navoica.pl
 
+    CERTBOT_EMAIL=enroll@example.com
+    
+    EMAIL=enroll@example.com
 
-
-Zmodyfikuj ustawienia serwera HTTP:
-
-    cd compose/production/traefik/
-
-    mv traefik.yml.example traefik.yml
-
-   `Edytuj plik traefik.yml`
-
-    zmień zmienne __DOMAIN__ i __EMAIL__
-
-Pamiętaj żeby __DOMAIN__ było zgodne z ustawieniami w `.django` z `DOMAIN` i `DJANGO_ALLOWED_HOSTS`
 
 ### Budowanie i uruchamianie Dockera
 
