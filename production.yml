@@ -3,7 +3,7 @@ version: '3'
 volumes:
   production_postgres_data: {}
   production_postgres_data_backups: {}
-  production_traefik: {}
+  letsencrypt: {}
 
 services:
   django:
@@ -33,18 +33,22 @@ services:
     env_file:
       - .envs/.production/.postgres
 
-  traefik:
-    build:
-      context: .
-      dockerfile: ./compose/production/traefik/Dockerfile
-    image: navoica_enroll_production_traefik
+  nginx:
+    restart: always
+    image: staticfloat/nginx-certbot
+    ports:
+      - 81:81/tcp
+      - 80:80/tcp
+      - 443:443/tcp
+    environment:
+      ENVSUBST_VARS: DOMAIN
+    env_file:
+      - .envs/.production/.django
     depends_on:
       - django
     volumes:
-      - production_traefik:/etc/traefik/acme
-    ports:
-      - "0.0.0.0:80:80"
-      - "0.0.0.0:443:443"
+      - ./compose/production/nginx:/etc/nginx/user.conf.d:ro
+      - letsencrypt:/etc/letsencrypt
 
   redis:
     image: redis:5.0

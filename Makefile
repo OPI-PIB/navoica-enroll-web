@@ -11,6 +11,7 @@ RANDOM_STRING := $(shell openssl rand -hex 24)
 update:
 	git checkout master
 	git pull
+	docker stop navoica-enroll-web_traefik_1 #fallback
 	docker-compose -f production.yml build
 	docker-compose -f production.yml up -d
 	@echo "waiting 10sec for postgresql to boot up"
@@ -20,19 +21,15 @@ update:
 
 setup:
 	rm -rf .envs/.production/ || true
-	rm compose/production/traefik/traefik.yml || true
 
 	cp -av .envs/.production_example/ .envs/.production/
 	sed -i "s/__DOMAIN__/${ENROLL_DOMAIN}/g" '.envs/.production/.django'
 	sed -i "s/__DJANGO_SECRET_KEY__/${RANDOM_STRING}/g" '.envs/.production/.django'
-
-
-	cp compose/production/traefik/traefik.yml.example compose/production/traefik/traefik.yml
-	sed -i "s/__DOMAIN__/${ENROLL_DOMAIN}/g" 'compose/production/traefik/traefik.yml'
-	sed -i "s/__EMAIL__/${ENROLL_EMAIL}/g" 'compose/production/traefik/traefik.yml'
+	sed -i "s/__EMAIL__/${ENROLL_EMAIL}/g" '.envs/.production/.django'
 
 	docker-compose -f production.yml build
 	docker-compose -f production.yml up -d
+	docker stop navoica-enroll-web_traefik_1 #fallback
 	@echo "waiting 10sec for postgresql to boot up"
 	sleep 10
 	docker-compose -f production.yml exec django python manage.py migrate
@@ -44,8 +41,14 @@ destroy:
 
 stop:
 	docker-compose -f production.yml stop
+	docker stop navoica-enroll-web_traefik_1
+
+restart:
+	docker-compose -f production.yml stop
+	docker-compose -f production.yml up -d
 
 start:
+	docker stop navoica-enroll-web_traefik_1
 	docker-compose -f production.yml up -d
 	@echo "waiting 10sec for postgresql to boot up"
 	sleep 10

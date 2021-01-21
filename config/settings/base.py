@@ -259,7 +259,7 @@ EMAIL_TIMEOUT = 5
 # Django Admin URL.
 ADMIN_URL = "admin/"
 # https://docs.djangoproject.com/en/dev/ref/settings/#admins
-ADMINS = [("""Krzysztof Hoffmann""", "krzysztof.hoffmann@opi.org.pl")]
+ADMINS = [("Admin Enroll Form Navoica.pl", env("EMAIL", default="krzysztof.hoffmann@opi.org.pl" ))]
 # https://docs.djangoproject.com/en/dev/ref/settings/#managers
 MANAGERS = ADMINS
 

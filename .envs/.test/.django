@@ -4,6 +4,7 @@ USE_DOCKER=no
 IPYTHONDIR=/app/.ipython
 NAVOICA_URL=https://navoica.pl
 DOMAIN=enroll.navoica.pl
+FORM_ORGANIZER_NAME=Organizator
 
 #STATEMENT1_PDF=
 #STATEMENT2_PDF=
