@@ -17,15 +17,11 @@ Pobierz aktualny kod z repozytorium:
 
 Ustaw zmienne środowiskowe:
 
-    export ENROLL_DOMAIN = domena.pl
+    export ENROLL_DOMAIN=domena.pl
 
-    export ENROLL_EMAIL = adres_do_kontaktu@domena.pl
+    export ENROLL_EMAIL=adres_do_kontaktu@domena.pl
     
 [Opcjonalnie] zapisze je do `~/.bashrc` do pożniejszego wykorzystania
-
-Pobierz aktualne repo z githuba:
-
-    git clone https://github.com/OPI-PIB/navoica-enroll-web.git
     
 Przejdź do katalogu:
 

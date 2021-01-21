@@ -43,7 +43,7 @@ class UserRegistrationCourseFormBase(ModelForm):
     pesel = PLPESELField(max_length=11, label=_("PESEL"),widget=TextInput(attrs={'type': 'number'}), required=False)
     postal_code = RegexField(label=_("Postal code"),regex=r"(?i)^[a-z0-9][a-z0-9\- ]{0,10}[a-z0-9]$")
     email = EmailField(label=_("E-mail address"))
-    country = CharField(required=True)
+    country = CharField(required=True,label=_("Country"))
 
     no_pesel = BooleanField(required=False)
     statement1 = BooleanField(required=True)
