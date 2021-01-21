@@ -1,20 +1,26 @@
 import requests
+from allauth.socialaccount import providers
 from allauth.socialaccount.models import SocialToken
+from allauth.socialaccount.templatetags.socialaccount import provider_login_url, ProviderLoginURLNode
+from allauth.utils import get_request_param
 from django.conf import settings
 from django.contrib import messages
 from django.contrib.auth import get_user_model
 from django.contrib.auth import logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.http import Http404
+from django.http import Http404, HttpResponse
+from django.shortcuts import redirect
 from django.urls import reverse
 from django.utils.decorators import method_decorator
 from django.utils.translation import ugettext_lazy as _
-from django.views.generic import DetailView, RedirectView, UpdateView
+from django.views import View
+from django.views.generic import DetailView, RedirectView, UpdateView, TemplateView
 from django.views.generic.edit import FormView
 from dateutil import parser
 
 from .forms import UserRegistrationCourseEnglishForm, UserRegistrationCourseForm
+from ..providers.edx.provider import EdxProvider
 
 User = get_user_model()
 
@@ -58,6 +64,24 @@ class UserRedirectView(LoginRequiredMixin, RedirectView):
 
 
 user_redirect_view = UserRedirectView.as_view()
+
+
+class CustomLoginView(View):
+    def get(self, request, *args, **kwargs):
+
+        try:
+            provider = next(
+                provider for provider in providers.registry.get_list() if type(provider) == EdxProvider
+            )
+
+            param_next = get_request_param(request, "next")
+            query = {'next': param_next}
+            url = provider.get_login_url(request, **query)
+            return redirect(url)
+
+
+        except StopIteration:
+            return HttpResponse('Provider is not configured. Contact Admin.')
 
 
 class UserRegistrationCourseViewBase(FormView):
