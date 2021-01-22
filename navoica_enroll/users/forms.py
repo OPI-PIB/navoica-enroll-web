@@ -76,95 +76,95 @@ class UserRegistrationCourseFormBase(ModelForm):
                 Div(
                     Div(
                         Div('first_name',
-                            css_class="col-md-6 mb-md-4 mb-1"
+                            css_class="col-md-6 register-course__input-container"
                             ),
                         Div(
                             'last_name',
-                            css_class="col-md-6 mb-md-4 mb-1"
+                            css_class="col-md-6 register-course__input-container"
                         ),
                         css_class="row"
                     ),
                     Div(
                         Div(
                             'pesel',
-                            css_class="col-md-6 mb-md-4 mb-1"
+                            css_class="col-md-6 register-course__input-container"
                         ),
                         Div(
                             'no_pesel',
-                            css_class="col-md-6 mb-md-4 mb-1"
+                            css_class="col-md-6 register-course__input-container"
                         ),
                         css_class="row"
                     ),
                     Div(
                         Div('gender',
-                            css_class="col-md-3 mb-md-4 mb-1"
+                            css_class="col-md-3 register-course__input-container"
                             ),
                         Div(
                             'age',
-                            css_class="col-md-3 mb-md-4 mb-1"
+                            css_class="col-md-3 register-course__input-container"
                         ),
                         Div('education',
-                            css_class="col-md-6 mb-md-4 mb-1"
+                            css_class="col-md-6 register-course__input-container"
                             ),
                         css_class="row"
                     ),
-                    css_class="group mb-md-4 mb-2 col-lg-8 ml-lg-auto px-0"
+                    css_class="group col-lg-8 ml-lg-auto px-0"
                 ),css_class="d-flex flex-wrap"),
                 Div(
                 HTML('<hr class="w-100 pb-40" />'),
-                HTML('<div class="col-lg-4 pl-lg-0 px-0"><h3 class="h4 mx-0 w-67 lh-2">{}</h3></div>'.format(
+                HTML('<div class="col-lg-4 pl-lg-0 px-0"><h3 class="h4 mx-0 w-67">{}</h3></div>'.format(
                     _("Contact details / Correspondence address"))),
                 Div(
                     Div(
                         Div('phone',
-                            css_class="col-md-6 mb-md-4 mb-1"
+                            css_class="col-md-6 register-course__input-container"
                             ),
                         Div(
                             'email',
-                            css_class="col-md-6 mb-md-4 mb-1"
+                            css_class="col-md-6 register-course__input-container"
                         ),
                         css_class="row"
                     ),
                     Div(
                         Div('street',
-                            css_class="col-md-6 mb-md-4 mb-1"
+                            css_class="col-md-6 register-course__input-container"
                             ),
                         Div('street_no',
-                            css_class="col-md-3 mb-md-4 mb-1"
+                            css_class="col-md-3 register-course__input-container"
                             ),
                         Div(
                             'street_building_no',
-                            css_class="col-md-3 mb-md-4 mb-1"
+                            css_class="col-md-3 register-course__input-container"
                         ),
                         Div(
                             'postal_code',
-                            css_class="col-md-6 mb-md-4 mb-1"
+                            css_class="col-md-6 register-course__input-container"
                         ),
                         Div('city',
-                            css_class="col-md-6 mb-md-4 mb-1"
+                            css_class="col-md-6 register-course__input-container"
                             ),
                         css_class="row"
                     ),
                     Div(
                         Div(
                             'country',
-                            css_class="col-md-6 mb-md-4 mb-1"
+                            css_class="col-md-6 register-course__input-container"
                         ),
                         Div(
                             'voivodeship',
-                            css_class="col-md-6 mb-md-4 mb-1"
+                            css_class="col-md-6 register-course__input-container"
                         ),
                         Div(
                             'county',
-                            css_class="col-md-6 mb-md-4 mb-1"
+                            css_class="col-md-6 register-course__input-container"
                         ),
                         Div(
                             'commune',
-                            css_class="col-md-6 mb-md-4 mb-1"
+                            css_class="col-md-6 register-course__input-container"
                         ),
                         css_class="row"
                     ),
-                    css_class="group mb-md-4 mb-2 col-lg-8 ml-lg-auto px-0"
+                    css_class="group col-lg-8 ml-lg-auto px-0"
                 ),css_class="d-flex flex-wrap"),
                 Div(
                 HTML('<hr class="w-100 pb-40" />'),
@@ -173,51 +173,51 @@ class UserRegistrationCourseFormBase(ModelForm):
                 Div(
                     Div(
                         Div('status',
-                            css_class="col-md-12 mb-md-4 mb-1"
+                            css_class="col-md-12 register-course__input-container"
                             ),
                         Div(
                             'profession',
-                            css_class="col-md-6 mb-md-4 mb-1"
+                            css_class="col-md-6 register-course__input-container"
                         ),
                         Div(
                             'work_name',
-                            css_class="col-md-6 mb-md-4 mb-1"
+                            css_class="col-md-6 register-course__input-container"
                         ),
                         css_class="row"
                     ),
                     Div(
                         Div('start_project_date',
-                            css_class="col-md-12 mb-md-4 mb-1"
+                            css_class="col-md-12 register-course__input-container"
                             ),
                         Div(
                             'end_project_date',
-                            css_class="col-md-12 mb-md-4 mb-1"
+                            css_class="col-md-12 register-course__input-container"
                         ),
                         Div(
                             'start_support_date',
-                            css_class="col-md-12 mb-md-4 mb-1"
+                            css_class="col-md-12 register-course__input-container"
                         ),
                         css_class="row d-none"
                     ),
                     Div(
                         Div('origin',
-                            css_class="col-md-12 mb-md-4 mb-1"
+                            css_class="col-md-12 register-course__input-container"
                             ),
                         Div(
                             'homeless',
-                            css_class="col-md-12 mb-md-4 mb-1"
+                            css_class="col-md-12 register-course__input-container"
                         ),
                         Div(
                             'disabled_person',
-                            css_class="col-md-12 mb-md-4 mb-1"
+                            css_class="col-md-12 register-course__input-container"
                         ),
                         Div(
                             'social_disadvantage',
-                            css_class="col-md-12 mb-md-4 mb-1"
+                            css_class="col-md-12 register-course__input-container"
                         ),
                         css_class="row align-items-end"
                     ),
-                    css_class="group mb-md-4 mb-2 col-lg-8 ml-lg-auto px-0"
+                    css_class="group col-lg-8 ml-lg-auto px-0"
                 ),css_class="d-flex flex-wrap"),
 
             ),

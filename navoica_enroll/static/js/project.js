@@ -18,8 +18,6 @@ function loadRegisterForm() {
   parentNoPesel.classList.add("align-self-center");
   let parentParentNopesel = parentNoPesel.parentNode;
   parentParentNopesel.classList.add("d-flex");
-  parentParentNopesel.classList.add("h-100");
-  parentParentNopesel.classList.add("mt-2");
 
   if (hintWorkName) {
     hintWorkName.classList.add("mb-5");

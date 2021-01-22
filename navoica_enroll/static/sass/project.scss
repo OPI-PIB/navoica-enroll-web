@@ -126,6 +126,10 @@ body {
     font: normal normal 600 1.625rem/2.25rem Open Sans;
     color: #212529;
   }
+
+  &__input-container {
+    margin-bottom: 40px;
+  }
 }
 
 .dropdown__language {
@@ -210,6 +214,29 @@ input[type='number'] {
 
 .custom-checkbox#div_id_no_pesel {
   align-self: center;
+  height: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 28px;
+
+  @media screen and (max-width: 767px) {
+    padding-top: 0;
+  }
+
+  & .custom-control-label {
+    margin-top: 10px;
+  }
+
+  & .error-message {
+    padding-top: 8px;
+    margin-right: auto;
+
+    @media screen and (max-width: 767px) {
+      padding-top: 0;
+    }
+  }
 }
 
 .custom-checkbox .custom-control-label {
@@ -273,21 +300,23 @@ input[type='number'] {
 
 .w-67 {
   width: 67%;
-}
 
-.lh-2 {
-  line-height: 2rem !important;
+  @media screen and (max-width: 767px) {
+    width: 74%;
+  }
 }
 
 hr {
   border-top: 1px solid #D1D6DC;
+  margin-top: 15px;
+  margin-bottom: 0;
 }
 
 hr.pb-40 {
   padding-bottom: 2.5rem;
 
   @media screen and (max-width: 767px) {
-    padding-bottom: 1.5rem;
+    padding-bottom: 1.875rem;
   }
 }
 
@@ -381,6 +410,10 @@ hr.pb-30 {
     border-radius: 0;
     background-color: transparent;
     z-index: 1;
+  }
+
+  .form-group {
+    margin-bottom: 0;
   }
 
   .custom-control.custom-radio {
@@ -525,10 +558,14 @@ hr.pb-30 {
     color: #008B8B;
     font-weight: 700;
     letter-spacing: .02em;
-    line-height: 1;
+    line-height: 1.625rem;
     text-transform: uppercase;
     word-spacing: .04em;
     font-size: inherit;
+
+    @media screen and (max-width: 991px) {
+      margin-bottom: 30px;
+    }
   }
 
   a {
