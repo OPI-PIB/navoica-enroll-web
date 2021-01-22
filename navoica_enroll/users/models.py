@@ -25,9 +25,7 @@ class UserRegistrationCourse(models.Model):
         ('M', _('Male')),
         ('F', _('Female')),
     ], max_length=1)
-    pesel = models.CharField(_("PESEL"), null=True, blank=True, max_length=11,
-                             help_text=_(
-                                 "For people who do not have a PESEL number, type in NONE."))
+    pesel = models.CharField(_("PESEL"), null=True, blank=True, max_length=11)
     age = models.SmallIntegerField(_("Age"), default="")
     education = models.CharField(_("Education"), max_length=1,
                                  choices=[
@@ -41,10 +39,8 @@ class UserRegistrationCourse(models.Model):
                                  )
     street = models.CharField(_("Street"), max_length=300,
                               help_text=_("Enter the address correspondence."))
-    street_no = models.CharField(_("Street no"), max_length=10,
-                                 help_text=_("May contain letters"))
-    street_building_no = models.CharField(_("Building no"), max_length=10, null=True, blank=True,
-                                          help_text=_("May contain letters"))
+    street_no = models.CharField(_("Street no"), max_length=10)
+    street_building_no = models.CharField(_("Building no"), max_length=10, null=True, blank=True)
     postal_code = models.CharField(_("Postal code"), max_length=6)
     city = models.CharField(_("City"), max_length=30)
     voivodeship = models.CharField(_("Voivodeship"), default="", max_length=30, null=True,
@@ -60,10 +56,8 @@ class UserRegistrationCourse(models.Model):
     country = models.CharField(_("Country"), max_length=30, null=True,
                                blank=True)
 
-    phone = models.CharField(_("Phone"), max_length=30, help_text=_(
-        "Provide the contact telephone number."))
-    email = models.CharField(_("E-mail"), max_length=254,
-                             help_text=_("Enter the address mail for contact."))
+    phone = models.CharField(_("Phone"), max_length=30)
+    email = models.CharField(_("E-mail"), max_length=254)
     start_project_date = models.DateField(_("Start project date"),
                                           default=timezone.now)
     end_project_date = models.DateField(_("End project date"),
@@ -105,8 +99,7 @@ class UserRegistrationCourse(models.Model):
                                   choices=[(t, t) for t in
                                            PROFESSIONS])
 
-    work_name = models.CharField(_("Job title"), max_length=1000, help_text=_(
-        "Abbreviations not allowed, full name of the institution"))
+    work_name = models.CharField(_("Job title"), max_length=1000)
 
 
 
