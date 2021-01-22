@@ -388,8 +388,7 @@ hr.pb-30 {
       width: 100%; } }
 
 #student-form .btn-submit {
-  height: 34px;
-  padding: 0 50px; }
+  padding: 4px 50px; }
   @media screen and (max-width: 400px) {
     #student-form .btn-submit {
       padding: 0;

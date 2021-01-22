@@ -20,8 +20,11 @@ function loadRegisterForm() {
   parentParentNopesel.classList.add("d-flex");
   parentParentNopesel.classList.add("h-100");
   parentParentNopesel.classList.add("mt-2");
-  hintWorkName.classList.add("mb-5");
-  hintWorkName.classList.add("mb-md-0");
+
+  if (hintWorkName) {
+    hintWorkName.classList.add("mb-5");
+    hintWorkName.classList.add("mb-md-0");
+  }
 
   function enableInputsLocation() {
     countyInput.removeAttribute("disabled");
@@ -259,10 +262,19 @@ function loadRegisterForm() {
       },
     },
     phone: {
-      pattern: /^[0-9]{1,30}$/,
+      pattern: /^(\(?\+?[0-9]*\)?)?[0-9\- \(\)]{1,30}$/,
       isValid: false,
-      message: function (validationTranslates) {
-        return validationTranslates.error_message_30_char_required;
+      message: function (validationTranslates, el) {
+        if (!/^(\(?\+?[0-9]*\)?)?[0-9\- \(\)]{1,30}$/.test(el.value)) {
+          return (
+            validationTranslates && validationTranslates.error_message_phone
+          );
+        } else if (el.value && el.value.length > 30) {
+          return (
+            validationTranslates &&
+            validationTranslates.error_message_30_char_required
+          );
+        }
       },
     },
     email: {
@@ -470,7 +482,7 @@ function loadRegisterForm() {
         if (!validation[target.name].pattern.test(target.value)) {
           setErrorField(target);
           setErrorMessage(
-            validation[target.name].message(validationTranslates),
+            validation[target.name].message(validationTranslates, target),
             target
           );
           let hintElem = target.nextElementSibling;
