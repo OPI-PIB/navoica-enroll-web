@@ -2,27 +2,29 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # Małgorzata Kaczmarczyk-Koza <Malgorzata.Kaczmarczyk@opi.org.pl>, 2020
 # Krzysztof Hoffmann <Krzysztof.Hoffmann@opi.org.pl>, 2020
 # Paula Wasylów <Paula.Wasylow@opi.org.pl>, 2020
 # Emilia Dolega <emilia.dolega@opi.org.pl>, 2021
-# 
+#
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-16 12:57+0100\n"
+"POT-Creation-Date: 2021-01-22 16:20+0100\n"
 "PO-Revision-Date: 2020-09-30 07:34+0000\n"
 "Last-Translator: Emilia Dolega <emilia.dolega@opi.org.pl>, 2021\n"
 "Language-Team: Polish (https://www.transifex.com/navoica/teams/104253/pl/)\n"
+"Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: pl\n"
-"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n"
+"%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n"
+"%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
 
 #: navoica_enroll/providers/edx/provider.py:14
 msgid "Log in to Navoica.pl"
@@ -90,7 +92,7 @@ msgid "Unverified"
 msgstr "Niezweryfikowane"
 
 #: navoica_enroll/templates/account/email.html:35
-#: navoica_enroll/users/models.py:36
+#: navoica_enroll/users/models.py:34
 msgid "Primary"
 msgstr "Podstawowe"
 
@@ -113,8 +115,7 @@ msgstr "Uwaga:"
 #: navoica_enroll/templates/account/email.html:54
 msgid ""
 "You currently do not have any e-mail address set up. You should really add "
-"an e-mail address so you can receive notifications, reset your password, "
-"etc."
+"an e-mail address so you can receive notifications, reset your password, etc."
 msgstr ""
 "Aktualnie nie masz skonfigurowanego żadnego adresu e-mail. Powinieneś dodać "
 "adres e-mail, aby móc otrzymywać powiadomienia, resetować hasło itd."
@@ -144,7 +145,8 @@ msgid ""
 "      address for user %(user_display)s."
 msgstr ""
 "Czy możesz\n"
-"      potwierdzić, że <a href=\"mailto:%(email)s\">%(email)s</a> to adres e-mail\n"
+"      potwierdzić, że <a href=\"mailto:%(email)s\">%(email)s</a> to adres e-"
+"mail\n"
 "      użytkownika %(user_display)s?"
 
 #: navoica_enroll/templates/account/email_confirm.html:24
@@ -161,7 +163,8 @@ msgid ""
 msgstr ""
 "Ten link potwierdzający e-mail wygasł lub jest nieprawidłowy.\n"
 "      Proszę\n"
-"      <a href=\"%(email_url)s\">wyślij ponowną prośbę o potwierdzenie adresu e-mail</a>\n"
+"      <a href=\"%(email_url)s\">wyślij ponowną prośbę o potwierdzenie adresu "
+"e-mail</a>\n"
 "      "
 
 #: navoica_enroll/templates/account/login.html:7
@@ -180,8 +183,8 @@ msgstr ""
 
 #: navoica_enroll/templates/account/login.html:19
 msgid ""
-"You will be redirected to the registration form in a moment, but in order to"
-" fill it in, you must have an account on Navoica.pl.All personal data "
+"You will be redirected to the registration form in a moment, but in order to "
+"fill it in, you must have an account on Navoica.pl.All personal data "
 "included in the registration form will be gathered and processed by the "
 "course organiser - the university."
 msgstr ""
@@ -229,8 +232,8 @@ msgstr "Zresetuj hasło"
 
 #: navoica_enroll/templates/account/password_reset.html:16
 msgid ""
-"Forgotten your password? Enter your e-mail address below, and we'll send you"
-" an e-mail allowing you to reset it."
+"Forgotten your password? Enter your e-mail address below, and we'll send you "
+"an e-mail allowing you to reset it."
 msgstr ""
 "Zapomniałeś/aś swojego hasła? Wpisz poniżej swój adres e-mail, a my wyślemy "
 "Ci e-mail umożliwiający jego zresetowanie."
@@ -324,11 +327,13 @@ msgstr "Zweryfikuj swój adres e-mail"
 #: navoica_enroll/templates/account/verification_sent.html:10
 msgid ""
 "We have sent an e-mail to you for verification. Follow the\n"
-"    link provided to finalize the signup process. Please contact us if you do\n"
+"    link provided to finalize the signup process. Please contact us if you "
+"do\n"
 "    not receive it within a few minutes."
 msgstr ""
 "Wysłaliśmy Ci wiadomość e-mail w celach weryfikacjnych. Kliknij w\n"
-"    link, aby sfinalizować proces rejestracji . Skontaktuj się z nami, jeśli\n"
+"    link, aby sfinalizować proces rejestracji . Skontaktuj się z nami, "
+"jeśli\n"
 "    nie otrzymasz jej w przeciągu kilku minut."
 
 #: navoica_enroll/templates/account/verified_email_required.html:12
@@ -370,23 +375,23 @@ msgstr ""
 "Zdalna rejestracja na kurs na stronie Navoica\n"
 "  "
 
-#: navoica_enroll/templates/base.html:49
+#: navoica_enroll/templates/base.html:51
 msgid "Registration form"
 msgstr "Formularz rejestracyjny"
 
-#: navoica_enroll/templates/base.html:66 navoica_enroll/templates/base.html:85
+#: navoica_enroll/templates/base.html:95 navoica_enroll/templates/base.html:114
 msgid "Logo of Knowledge Education Development"
 msgstr "Logo Fundusze Europejskie Wiedza Edukacja Rozwój"
 
-#: navoica_enroll/templates/base.html:67 navoica_enroll/templates/base.html:86
+#: navoica_enroll/templates/base.html:96 navoica_enroll/templates/base.html:115
 msgid "Logo of The Republic of Poland"
 msgstr "Logo Rzeczpospolita Polska"
 
-#: navoica_enroll/templates/base.html:68 navoica_enroll/templates/base.html:87
+#: navoica_enroll/templates/base.html:97 navoica_enroll/templates/base.html:116
 msgid "Logo of European Social Fund"
 msgstr "Logo Unia Europejska Europejski Fundusz Społeczny"
 
-#: navoica_enroll/templates/base.html:75
+#: navoica_enroll/templates/base.html:104
 msgid ""
 "Registration form for users of courses implemented with co-financing from "
 "the ESF, NCBR funds"
@@ -437,17 +442,17 @@ msgstr ""
 #: navoica_enroll/templates/users/form_registration.html:26
 msgid ""
 "The course is funded by the European Union and the Polish state budget. The "
-"conditions of funding oblige the university, the organizer of the course, to"
-" collect data about the participants. Personal data from the registration "
+"conditions of funding oblige the university, the organizer of the course, to "
+"collect data about the participants. Personal data from the registration "
 "form, will be collected, processed and verified by the course organizer. "
 "Filling in the form is a prerequisite to join the course."
 msgstr ""
 "Kurs został sfinansowany ze środków Unii Europejskiej i środków budżetu "
 "państwa. Warunki dofinansowania obligują uczelnię - organizatora kursu do "
 "zbierania danych o uczestnikach. Dane osobowe, które zostaną przesłane za "
-"pośrednictwem formularza rejestracyjnego, będą gromadzone, przetwarzane oraz"
-" weryfikowane przez organizatora kursu. Wypełnienie formularza jest "
-"warunkiem przystąpienia do kursu."
+"pośrednictwem formularza rejestracyjnego, będą gromadzone, przetwarzane oraz "
+"weryfikowane przez organizatora kursu. Wypełnienie formularza jest warunkiem "
+"przystąpienia do kursu."
 
 #: navoica_enroll/templates/users/form_registration.html:35
 msgid "The form contains errors"
@@ -533,6 +538,12 @@ msgstr "Zaakceptowanie oświadczenia jest obowiązkowe"
 msgid "The consent is mandatory"
 msgstr "Wyrażenie zgody jest obowiązkowe"
 
+#: navoica_enroll/templates/users/form_registration.html:72
+#, fuzzy
+#| msgid "Provide the contact telephone number."
+msgid "Provide the contact telephone number"
+msgstr "Należy podać numer telefonu do kontaktu."
+
 #: navoica_enroll/templates/users/user_detail.html:4
 msgid "User: "
 msgstr "Użytkownik:"
@@ -557,13 +568,17 @@ msgstr "Ta nazwa jest już zajęta"
 msgid "PESEL"
 msgstr "PESEL"
 
-#: navoica_enroll/users/forms.py:44 navoica_enroll/users/models.py:48
+#: navoica_enroll/users/forms.py:44 navoica_enroll/users/models.py:44
 msgid "Postal code"
 msgstr "Kod pocztowy"
 
 #: navoica_enroll/users/forms.py:45
 msgid "E-mail address"
 msgstr "Adres poczty elektronicznej"
+
+#: navoica_enroll/users/forms.py:46 navoica_enroll/users/models.py:56
+msgid "Country"
+msgstr "Kraj"
 
 #: navoica_enroll/users/forms.py:56
 msgid "Don't have a PESEL number"
@@ -575,8 +590,8 @@ msgid ""
 "I agree with <a href='{url}' target='_blank'>the project participant's "
 "declaration.</a>"
 msgstr ""
-"Akceptuję <a href='{url}' target='_blank'>oświdczenie uczestnika "
-"projektu.</a>"
+"Akceptuję <a href='{url}' target='_blank'>oświdczenie uczestnika projektu.</"
+"a>"
 
 #: navoica_enroll/users/forms.py:64 navoica_enroll/users/forms.py:281
 #, python-brace-format
@@ -639,240 +654,232 @@ msgstr "Mężczyzna"
 msgid "Female"
 msgstr "Kobieta"
 
-#: navoica_enroll/users/models.py:30
-msgid "For people who do not have a PESEL number, type in NONE."
-msgstr "Podaj wiek w chwili przystąpienia do projektu"
-
-#: navoica_enroll/users/models.py:31
+#: navoica_enroll/users/models.py:29
 msgid "Age"
 msgstr "Wiek"
 
-#: navoica_enroll/users/models.py:32
+#: navoica_enroll/users/models.py:30
 msgid "Education"
 msgstr "Wykształcenie"
 
-#: navoica_enroll/users/models.py:34
+#: navoica_enroll/users/models.py:32
 msgid "Choose grade..."
 msgstr "Wybierz poziom wykształcenia..."
 
-#: navoica_enroll/users/models.py:35
+#: navoica_enroll/users/models.py:33
 msgid "Pre-primary"
 msgstr "Niższe niż podstawowe"
 
-#: navoica_enroll/users/models.py:37
+#: navoica_enroll/users/models.py:35
 msgid "Secondary"
 msgstr "Średnie"
 
-#: navoica_enroll/users/models.py:38
+#: navoica_enroll/users/models.py:36
 msgid "High school"
 msgstr "Policealne"
 
-#: navoica_enroll/users/models.py:39
+#: navoica_enroll/users/models.py:37
 msgid "Higher"
 msgstr "Wyższe"
 
-#: navoica_enroll/users/models.py:42
+#: navoica_enroll/users/models.py:40
 msgid "Street"
 msgstr "Ulica"
 
-#: navoica_enroll/users/models.py:43
+#: navoica_enroll/users/models.py:41
 msgid "Enter the address correspondence."
-msgstr "Należy podać adres kontaktowy, korespondencyjny."
+msgstr "Należy podać adres korespondencyjny."
 
-#: navoica_enroll/users/models.py:44
+#: navoica_enroll/users/models.py:42
 msgid "Street no"
 msgstr "Nr budynku"
 
-#: navoica_enroll/users/models.py:45 navoica_enroll/users/models.py:47
-msgid "May contain letters"
-msgstr "Może zawierać litery"
-
-#: navoica_enroll/users/models.py:46
+#: navoica_enroll/users/models.py:43
 msgid "Building no"
 msgstr "Nr lokalu"
 
-#: navoica_enroll/users/models.py:49
+#: navoica_enroll/users/models.py:45
 msgid "City"
 msgstr "Miejscowość"
 
-#: navoica_enroll/users/models.py:50
+#: navoica_enroll/users/models.py:46
 msgid "Voivodeship"
 msgstr "Województwo"
 
-#: navoica_enroll/users/models.py:54
+#: navoica_enroll/users/models.py:50
 msgid "County"
 msgstr "Powiat"
 
-#: navoica_enroll/users/models.py:57
+#: navoica_enroll/users/models.py:53
 msgid "Commune"
 msgstr "Gmina"
 
-#: navoica_enroll/users/models.py:60
-msgid "Country"
-msgstr "Kraj"
-
-#: navoica_enroll/users/models.py:63
+#: navoica_enroll/users/models.py:59
 msgid "Phone"
 msgstr "Telefon kontaktowy"
 
-#: navoica_enroll/users/models.py:64
-msgid "Provide the contact telephone number."
-msgstr "Należy podać numer telefonu do kontaktu."
-
-#: navoica_enroll/users/models.py:65
+#: navoica_enroll/users/models.py:60
 msgid "E-mail"
 msgstr "Adres poczty elektronicznej"
 
-#: navoica_enroll/users/models.py:66
-msgid "Enter the address mail for contact."
-msgstr "Wpisz adres e-mail do kontaktu."
-
-#: navoica_enroll/users/models.py:67
+#: navoica_enroll/users/models.py:61
 msgid "Start project date"
 msgstr "Data rozpoczęcia udziału w projekcie"
 
-#: navoica_enroll/users/models.py:69
+#: navoica_enroll/users/models.py:63
 msgid "End project date"
 msgstr "Data zakończenia udziału w projekcie"
 
-#: navoica_enroll/users/models.py:71
+#: navoica_enroll/users/models.py:65
 msgid "Start support date"
 msgstr "Data rozpoczęcia otrzymania wsparcia"
 
-#: navoica_enroll/users/models.py:76
+#: navoica_enroll/users/models.py:70
 msgid "Employed"
 msgstr "Osoba pracująca"
 
-#: navoica_enroll/users/models.py:77
+#: navoica_enroll/users/models.py:71
 msgid "Registered unemployed"
 msgstr "Osoba bezrobotna zarejestrowana w ewidencji urzędów pracy"
 
-#: navoica_enroll/users/models.py:78
+#: navoica_enroll/users/models.py:72
 msgid "Unregistered unemployed"
 msgstr "Osoba bezrobotna niezarejestrowana w ewidencji urzędów pracy"
 
-#: navoica_enroll/users/models.py:79
+#: navoica_enroll/users/models.py:73
 msgid "Unemployed, not looking for work"
 msgstr "Osoba bierna zawodowo"
 
-#: navoica_enroll/users/models.py:82
+#: navoica_enroll/users/models.py:74
+msgid "Student"
+msgstr ""
+
+#: navoica_enroll/users/models.py:77
 msgid "Status"
 msgstr "Jaki jest obecnie Twój status na rynku pracy?"
 
-#: navoica_enroll/users/models.py:88
+#: navoica_enroll/users/models.py:83
 msgid "Vocational teacher"
 msgstr "Nauczyciel kształcenia zawodowego"
 
-#: navoica_enroll/users/models.py:89
+#: navoica_enroll/users/models.py:84
 msgid "General education teacher"
 msgstr "Nauczyciel kształcenia ogólnego"
 
-#: navoica_enroll/users/models.py:90
+#: navoica_enroll/users/models.py:85
 msgid "Kindergarten teacher"
 msgstr "Nauczyciel wychowania przedszkolnego"
 
-#: navoica_enroll/users/models.py:91
+#: navoica_enroll/users/models.py:86
 msgid "Employee in higher education institution"
 msgstr "Pracownik instytucji szkolnictwa wyższego"
 
-#: navoica_enroll/users/models.py:92
+#: navoica_enroll/users/models.py:87
 msgid "Labor market institution employee"
 msgstr "Pracownik instytucji rynku pracy"
 
-#: navoica_enroll/users/models.py:93
+#: navoica_enroll/users/models.py:88
 msgid "Health care worker"
 msgstr "Pracownik instytucji systemu ochrony zdrowia"
 
-#: navoica_enroll/users/models.py:94
+#: navoica_enroll/users/models.py:89
 msgid "Farmer"
 msgstr "Rolnik"
 
-#: navoica_enroll/users/models.py:95
+#: navoica_enroll/users/models.py:90
 msgid "Key employee in social assistance and integration institution"
 msgstr "Kluczowy pracownik instytucji pomocy i integracji społecznej"
 
-#: navoica_enroll/users/models.py:96
+#: navoica_enroll/users/models.py:91
 msgid "Employee in family and foster care support institution"
 msgstr "Pracownik instytucji systemu wspierania rodziny i pieczy zastępczej"
 
-#: navoica_enroll/users/models.py:97
+#: navoica_enroll/users/models.py:92
 msgid "Employee in social economy support center"
 msgstr "Pracownik ośrodka wsparcia ekonomii społecznej"
 
-#: navoica_enroll/users/models.py:98
+#: navoica_enroll/users/models.py:93
 msgid "Employee in psychological and pedagogical counseling center"
 msgstr "Pracownik poradni psychologiczno-pedagogicznej"
 
-#: navoica_enroll/users/models.py:99
+#: navoica_enroll/users/models.py:94
 msgid "Practical vocational instructor"
 msgstr "Instruktor praktycznej nauki zawodu"
 
-#: navoica_enroll/users/models.py:100
+#: navoica_enroll/users/models.py:95
 msgid "Other"
 msgstr "inny"
 
-#: navoica_enroll/users/models.py:103
+#: navoica_enroll/users/models.py:98
 msgid "Profession"
 msgstr "Wykonywany zawód"
 
-#: navoica_enroll/users/models.py:107
+#: navoica_enroll/users/models.py:102
 msgid "Job title"
 msgstr "Nazwa zakładu pracy"
 
-#: navoica_enroll/users/models.py:108
-msgid "Abbreviations not allowed, full name of the institution"
-msgstr "Skróty nie dopuszczane, pełna nazwa instytucji"
-
-#: navoica_enroll/users/models.py:112
+#: navoica_enroll/users/models.py:106
 msgid "Migrant / ethnic minority"
 msgstr ""
-"Czy należysz do mniejszości narodowej lub etnicznej, jesteś migrantem, osobą"
-" obcego pochodzenia?"
+"Czy należysz do mniejszości narodowej lub etnicznej, jesteś migrantem, osobą "
+"obcego pochodzenia?"
 
-#: navoica_enroll/users/models.py:113 navoica_enroll/users/models.py:119
-#: navoica_enroll/users/models.py:126 navoica_enroll/users/models.py:133
+#: navoica_enroll/users/models.py:107 navoica_enroll/users/models.py:113
+#: navoica_enroll/users/models.py:120 navoica_enroll/users/models.py:127
 msgid "Yes"
 msgstr "Tak"
 
-#: navoica_enroll/users/models.py:114 navoica_enroll/users/models.py:120
-#: navoica_enroll/users/models.py:127 navoica_enroll/users/models.py:134
+#: navoica_enroll/users/models.py:108 navoica_enroll/users/models.py:114
+#: navoica_enroll/users/models.py:121 navoica_enroll/users/models.py:128
 msgid "No"
 msgstr "Nie"
 
-#: navoica_enroll/users/models.py:115 navoica_enroll/users/models.py:121
-#: navoica_enroll/users/models.py:128 navoica_enroll/users/models.py:135
+#: navoica_enroll/users/models.py:109 navoica_enroll/users/models.py:115
+#: navoica_enroll/users/models.py:122 navoica_enroll/users/models.py:129
 msgid "Prefer not to tell"
 msgstr "Nie chcę ujawniać"
 
-#: navoica_enroll/users/models.py:118
+#: navoica_enroll/users/models.py:112
 msgid "Homeless"
 msgstr ""
 "Czy jesteś osobą bezdomną lub dotkniętą wykluczeniem z dostępu do mieszkań?"
 
-#: navoica_enroll/users/models.py:124
+#: navoica_enroll/users/models.py:118
 msgid "Disabled person"
 msgstr "Czy jesteś osobą z niepełnosprawnościami?"
 
-#: navoica_enroll/users/models.py:131
+#: navoica_enroll/users/models.py:125
 msgid "Socially disadvantaged"
 msgstr "Czy jesteś osobą w niekorzystnej sytuacji społecznej?"
 
-#: navoica_enroll/users/models.py:147
+#: navoica_enroll/users/models.py:141
 msgid "Registration for course"
 msgstr "Rejestracje na kurs"
 
-#: navoica_enroll/users/models.py:148
+#: navoica_enroll/users/models.py:142
 msgid "Registrations for course"
 msgstr "Rejestracje na kurs "
 
-#: navoica_enroll/users/views.py:43
+#: navoica_enroll/users/views.py:50
 msgid "Infos successfully updated"
 msgstr "Informacja zaaktualizowana"
 
-#: navoica_enroll/users/views.py:126
+#: navoica_enroll/users/views.py:156
 msgid "Course does not exist"
 msgstr "Kurs nie istnieje"
 
-#: navoica_enroll/users/views.py:146
+#: navoica_enroll/users/views.py:177
 msgid "You are already enrolled in this course"
 msgstr "Jesteś już zapisany/a na kurs"
+
+#~ msgid "For people who do not have a PESEL number, type in NONE."
+#~ msgstr "Podaj wiek w chwili przystąpienia do projektu"
+
+#~ msgid "May contain letters"
+#~ msgstr "Może zawierać litery"
+
+#~ msgid "Enter the address mail for contact."
+#~ msgstr "Wpisz adres e-mail do kontaktu."
+
+#~ msgid "Abbreviations not allowed, full name of the institution"
+#~ msgstr "Skróty nie dopuszczane, pełna nazwa instytucji"

@@ -80,6 +80,9 @@ body {
   font: normal normal 600 1.625rem/2.25rem Open Sans;
   color: #212529; }
 
+.register-course__input-container {
+  margin-bottom: 40px; }
+
 .dropdown__language {
   font-size: 1rem;
   line-height: 1.375rem;
@@ -142,7 +145,24 @@ input[type='number'] {
   opacity: .4; }
 
 .custom-checkbox#div_id_no_pesel {
-  align-self: center; }
+  align-self: center;
+  height: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 28px; }
+  @media screen and (max-width: 767px) {
+    .custom-checkbox#div_id_no_pesel {
+      padding-top: 0; } }
+  .custom-checkbox#div_id_no_pesel .custom-control-label {
+    margin-top: 10px; }
+  .custom-checkbox#div_id_no_pesel .error-message {
+    padding-top: 8px;
+    margin-right: auto; }
+    @media screen and (max-width: 767px) {
+      .custom-checkbox#div_id_no_pesel .error-message {
+        padding-top: 0; } }
 
 .custom-checkbox .custom-control-label {
   padding-left: .25rem; }
@@ -195,18 +215,20 @@ input[type='number'] {
 
 .w-67 {
   width: 67%; }
-
-.lh-2 {
-  line-height: 2rem !important; }
+  @media screen and (max-width: 767px) {
+    .w-67 {
+      width: 74%; } }
 
 hr {
-  border-top: 1px solid #D1D6DC; }
+  border-top: 1px solid #D1D6DC;
+  margin-top: 15px;
+  margin-bottom: 0; }
 
 hr.pb-40 {
   padding-bottom: 2.5rem; }
   @media screen and (max-width: 767px) {
     hr.pb-40 {
-      padding-bottom: 1.5rem; } }
+      padding-bottom: 1.875rem; } }
 
 hr.pb-30 {
   padding-bottom: 1.875rem; }
@@ -279,6 +301,9 @@ hr.pb-30 {
   border-radius: 0;
   background-color: transparent;
   z-index: 1; }
+
+#student-form .form-group {
+  margin-bottom: 0; }
 
 #student-form .custom-control.custom-radio {
   display: inline-block;
@@ -398,10 +423,13 @@ hr.pb-30 {
   color: #008B8B;
   font-weight: 700;
   letter-spacing: .02em;
-  line-height: 1;
+  line-height: 1.625rem;
   text-transform: uppercase;
   word-spacing: .04em;
   font-size: inherit; }
+  @media screen and (max-width: 991px) {
+    #student-form .h4 {
+      margin-bottom: 30px; } }
 
 #student-form a {
   color: #008080;
