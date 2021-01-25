@@ -13,7 +13,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='userregistrationcourse',
             name='age',
-            field=models.SmallIntegerField(default='', verbose_name='Age'),
+            field=models.SmallIntegerField(default=0, verbose_name='Age'),
         ),
         migrations.AlterField(
             model_name='userregistrationcourse',

@@ -8,6 +8,7 @@ from django.utils.translation import ugettext_lazy as _
 from localflavor.pl.pl_administrativeunits import ADMINISTRATIVE_UNIT_CHOICES
 from localflavor.pl.pl_voivodeships import VOIVODESHIP_CHOICES
 
+
 class User(AbstractUser):
     name = CharField(_("Name of User"), blank=True, null=True, max_length=255)
 
@@ -26,7 +27,7 @@ class UserRegistrationCourse(models.Model):
         ('F', _('Female')),
     ], max_length=1)
     pesel = models.CharField(_("PESEL"), null=True, blank=True, max_length=11)
-    age = models.SmallIntegerField(_("Age"), default="")
+    age = models.SmallIntegerField(_("Age"), default=0)
     education = models.CharField(_("Education"), max_length=1,
                                  choices=[
                                      ('', _('Choose grade...')),
@@ -101,8 +102,6 @@ class UserRegistrationCourse(models.Model):
 
     work_name = models.CharField(_("Job title"), max_length=1000)
 
-
-
     origin = models.CharField(_("Migrant / ethnic minority"), max_length=1, default="", choices=[
         ('y', _("Yes")),
         ('n', _("No")),
@@ -123,14 +122,14 @@ class UserRegistrationCourse(models.Model):
 
                                        ])
     social_disadvantage = models.CharField(_("Socially disadvantaged"),
-                                           max_length=1,  default="",choices=[
+                                           max_length=1, default="", choices=[
             ('y', _("Yes")),
             ('n', _("No")),
             ('r', _("Prefer not to tell"))
         ])
 
-    course_id = models.CharField(max_length=1000)
-    language_code = models.CharField(max_length=1000)
+    course_id = models.CharField(_("Course ID"), max_length=1000)
+    language_code = models.CharField(_("Form language"), max_length=1000)
     user = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
 
     def __str__(self):

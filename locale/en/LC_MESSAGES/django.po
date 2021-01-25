@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-01-22 11:53+0100\n"
+"POT-Creation-Date: 2021-01-25 08:35+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -84,7 +84,7 @@ msgid "Unverified"
 msgstr "Unverified"
 
 #: navoica_enroll/templates/account/email.html:35
-#: navoica_enroll/users/models.py:34
+#: navoica_enroll/users/models.py:35
 msgid "Primary"
 msgstr "Primary"
 
@@ -544,6 +544,10 @@ msgstr "My Info"
 msgid "Update"
 msgstr "Update"
 
+#: navoica_enroll/users/admin.py:31
+msgid "Export CSV"
+msgstr "Export CSV"
+
 #: navoica_enroll/users/apps.py:7
 msgid "Users"
 msgstr "Users"
@@ -552,11 +556,11 @@ msgstr "Users"
 msgid "This username has already been taken."
 msgstr "This username has already been taken."
 
-#: navoica_enroll/users/forms.py:43 navoica_enroll/users/models.py:28
+#: navoica_enroll/users/forms.py:43 navoica_enroll/users/models.py:29
 msgid "PESEL"
 msgstr "PESEL"
 
-#: navoica_enroll/users/forms.py:44 navoica_enroll/users/models.py:44
+#: navoica_enroll/users/forms.py:44 navoica_enroll/users/models.py:45
 msgid "Postal code"
 msgstr "Postal code"
 
@@ -564,7 +568,7 @@ msgstr "Postal code"
 msgid "E-mail address"
 msgstr "E-mail address"
 
-#: navoica_enroll/users/forms.py:46 navoica_enroll/users/models.py:56
+#: navoica_enroll/users/forms.py:46 navoica_enroll/users/models.py:57
 msgid "Country"
 msgstr "Country"
 
@@ -614,236 +618,244 @@ msgstr "Cancel"
 msgid "Register me for the course"
 msgstr "Register me for the course"
 
-#: navoica_enroll/users/models.py:12
+#: navoica_enroll/users/models.py:13
 msgid "Name of User"
 msgstr "Name of User"
 
-#: navoica_enroll/users/models.py:21
+#: navoica_enroll/users/models.py:22
 msgid "First Name"
 msgstr "First Name"
 
-#: navoica_enroll/users/models.py:22
+#: navoica_enroll/users/models.py:23
 msgid "Last name"
 msgstr "Last name"
 
-#: navoica_enroll/users/models.py:23
+#: navoica_enroll/users/models.py:24
 msgid "Gender"
 msgstr "Gender"
 
-#: navoica_enroll/users/models.py:24
+#: navoica_enroll/users/models.py:25
 msgid "Choose gender..."
 msgstr "Choose gender..."
 
-#: navoica_enroll/users/models.py:25
+#: navoica_enroll/users/models.py:26
 msgid "Male"
 msgstr "Male"
 
-#: navoica_enroll/users/models.py:26
+#: navoica_enroll/users/models.py:27
 msgid "Female"
 msgstr "Female"
 
-#: navoica_enroll/users/models.py:29
+#: navoica_enroll/users/models.py:30
 msgid "Age"
 msgstr "Age"
 
-#: navoica_enroll/users/models.py:30
+#: navoica_enroll/users/models.py:31
 msgid "Education"
 msgstr "Education"
 
-#: navoica_enroll/users/models.py:32
+#: navoica_enroll/users/models.py:33
 msgid "Choose grade..."
 msgstr "Choose grade..."
 
-#: navoica_enroll/users/models.py:33
+#: navoica_enroll/users/models.py:34
 msgid "Pre-primary"
 msgstr "Pre-primary"
 
-#: navoica_enroll/users/models.py:35
+#: navoica_enroll/users/models.py:36
 msgid "Secondary"
 msgstr "Secondary"
 
-#: navoica_enroll/users/models.py:36
+#: navoica_enroll/users/models.py:37
 msgid "High school"
 msgstr "High school"
 
-#: navoica_enroll/users/models.py:37
+#: navoica_enroll/users/models.py:38
 msgid "Higher"
 msgstr "Higher"
 
-#: navoica_enroll/users/models.py:40
+#: navoica_enroll/users/models.py:41
 msgid "Street"
 msgstr "Street"
 
-#: navoica_enroll/users/models.py:41
+#: navoica_enroll/users/models.py:42
 msgid "Enter the address correspondence."
 msgstr "Enter the address correspondence."
 
-#: navoica_enroll/users/models.py:42
+#: navoica_enroll/users/models.py:43
 msgid "Street no"
 msgstr "Street no"
 
-#: navoica_enroll/users/models.py:43
+#: navoica_enroll/users/models.py:44
 msgid "Building no"
 msgstr "Building no"
 
-#: navoica_enroll/users/models.py:45
+#: navoica_enroll/users/models.py:46
 msgid "City"
 msgstr "City"
 
-#: navoica_enroll/users/models.py:46
+#: navoica_enroll/users/models.py:47
 msgid "Voivodeship"
 msgstr "Voivodeship"
 
-#: navoica_enroll/users/models.py:50
+#: navoica_enroll/users/models.py:51
 msgid "County"
 msgstr "County"
 
-#: navoica_enroll/users/models.py:53
+#: navoica_enroll/users/models.py:54
 msgid "Commune"
 msgstr "Commune"
 
-#: navoica_enroll/users/models.py:59
+#: navoica_enroll/users/models.py:60
 msgid "Phone"
 msgstr "Phone"
 
-#: navoica_enroll/users/models.py:60
+#: navoica_enroll/users/models.py:61
 msgid "E-mail"
 msgstr "E-mail"
 
-#: navoica_enroll/users/models.py:61
+#: navoica_enroll/users/models.py:62
 msgid "Start project date"
 msgstr "Start project date"
 
-#: navoica_enroll/users/models.py:63
+#: navoica_enroll/users/models.py:64
 msgid "End project date"
 msgstr "End project date"
 
-#: navoica_enroll/users/models.py:65
+#: navoica_enroll/users/models.py:66
 msgid "Start support date"
 msgstr "Start support date"
 
-#: navoica_enroll/users/models.py:70
+#: navoica_enroll/users/models.py:71
 msgid "Employed"
 msgstr "Employed"
 
-#: navoica_enroll/users/models.py:71
+#: navoica_enroll/users/models.py:72
 msgid "Registered unemployed"
 msgstr "Registered unemployed"
 
-#: navoica_enroll/users/models.py:72
+#: navoica_enroll/users/models.py:73
 msgid "Unregistered unemployed"
 msgstr "Unregistered unemployed"
 
-#: navoica_enroll/users/models.py:73
+#: navoica_enroll/users/models.py:74
 msgid "Unemployed, not looking for work"
 msgstr "Unemployed, not looking for work"
 
-#: navoica_enroll/users/models.py:74
+#: navoica_enroll/users/models.py:75
 msgid "Student"
-msgstr ""
+msgstr "Student"
 
-#: navoica_enroll/users/models.py:77
+#: navoica_enroll/users/models.py:78
 msgid "Status"
 msgstr "What is your current status on the labor market?"
 
-#: navoica_enroll/users/models.py:83
+#: navoica_enroll/users/models.py:84
 msgid "Vocational teacher"
 msgstr "Vocational teacher"
 
-#: navoica_enroll/users/models.py:84
+#: navoica_enroll/users/models.py:85
 msgid "General education teacher"
 msgstr "General education teacher"
 
-#: navoica_enroll/users/models.py:85
+#: navoica_enroll/users/models.py:86
 msgid "Kindergarten teacher"
 msgstr "Kindergarten teacher"
 
-#: navoica_enroll/users/models.py:86
+#: navoica_enroll/users/models.py:87
 msgid "Employee in higher education institution"
 msgstr "Employee in higher education institution"
 
-#: navoica_enroll/users/models.py:87
+#: navoica_enroll/users/models.py:88
 msgid "Labor market institution employee"
 msgstr "Labor market institution employee"
 
-#: navoica_enroll/users/models.py:88
+#: navoica_enroll/users/models.py:89
 msgid "Health care worker"
 msgstr "Health care worker"
 
-#: navoica_enroll/users/models.py:89
+#: navoica_enroll/users/models.py:90
 msgid "Farmer"
 msgstr "Farmer"
 
-#: navoica_enroll/users/models.py:90
+#: navoica_enroll/users/models.py:91
 msgid "Key employee in social assistance and integration institution"
 msgstr "Key employee in social assistance and integration institution"
 
-#: navoica_enroll/users/models.py:91
+#: navoica_enroll/users/models.py:92
 msgid "Employee in family and foster care support institution"
 msgstr "Employee in family and foster care support institution"
 
-#: navoica_enroll/users/models.py:92
+#: navoica_enroll/users/models.py:93
 msgid "Employee in social economy support center"
 msgstr "Employee in social economy support center"
 
-#: navoica_enroll/users/models.py:93
+#: navoica_enroll/users/models.py:94
 msgid "Employee in psychological and pedagogical counseling center"
 msgstr "Employee in psychological and pedagogical counseling center"
 
-#: navoica_enroll/users/models.py:94
+#: navoica_enroll/users/models.py:95
 msgid "Practical vocational instructor"
 msgstr "Practical vocational instructor"
 
-#: navoica_enroll/users/models.py:95
+#: navoica_enroll/users/models.py:96
 msgid "Other"
 msgstr "Other"
 
-#: navoica_enroll/users/models.py:98
+#: navoica_enroll/users/models.py:99
 msgid "Profession"
 msgstr "Profession"
 
-#: navoica_enroll/users/models.py:102
+#: navoica_enroll/users/models.py:103
 msgid "Job title"
 msgstr "Job title"
 
-#: navoica_enroll/users/models.py:106
+#: navoica_enroll/users/models.py:105
 msgid "Migrant / ethnic minority"
 msgstr ""
 "Do you belong to a national or ethnic minority, are you a migrant, a person "
 "of foreign origin?"
 
-#: navoica_enroll/users/models.py:107 navoica_enroll/users/models.py:113
-#: navoica_enroll/users/models.py:120 navoica_enroll/users/models.py:127
+#: navoica_enroll/users/models.py:106 navoica_enroll/users/models.py:112
+#: navoica_enroll/users/models.py:119 navoica_enroll/users/models.py:126
 msgid "Yes"
 msgstr "Yes"
 
-#: navoica_enroll/users/models.py:108 navoica_enroll/users/models.py:114
-#: navoica_enroll/users/models.py:121 navoica_enroll/users/models.py:128
+#: navoica_enroll/users/models.py:107 navoica_enroll/users/models.py:113
+#: navoica_enroll/users/models.py:120 navoica_enroll/users/models.py:127
 msgid "No"
 msgstr "No"
 
-#: navoica_enroll/users/models.py:109 navoica_enroll/users/models.py:115
-#: navoica_enroll/users/models.py:122 navoica_enroll/users/models.py:129
+#: navoica_enroll/users/models.py:108 navoica_enroll/users/models.py:114
+#: navoica_enroll/users/models.py:121 navoica_enroll/users/models.py:128
 msgid "Prefer not to tell"
 msgstr "Prefer not to tell"
 
-#: navoica_enroll/users/models.py:112
+#: navoica_enroll/users/models.py:111
 msgid "Homeless"
 msgstr "Are you homeless or excluded from housing?"
 
-#: navoica_enroll/users/models.py:118
+#: navoica_enroll/users/models.py:117
 msgid "Disabled person"
 msgstr "Are you a person with a disability?"
 
-#: navoica_enroll/users/models.py:125
+#: navoica_enroll/users/models.py:124
 msgid "Socially disadvantaged"
 msgstr "Are you a socially disadvantaged person?"
 
-#: navoica_enroll/users/models.py:141
+#: navoica_enroll/users/models.py:131
+msgid "Course ID"
+msgstr "Course ID"
+
+#: navoica_enroll/users/models.py:132
+msgid "Form language"
+msgstr "Form language"
+
+#: navoica_enroll/users/models.py:140
 msgid "Registration for course"
 msgstr "Registration for course"
 
-#: navoica_enroll/users/models.py:142
+#: navoica_enroll/users/models.py:141
 msgid "Registrations for course"
 msgstr "Registrations for course"
 
