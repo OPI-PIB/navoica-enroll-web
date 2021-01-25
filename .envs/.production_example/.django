@@ -7,6 +7,8 @@ DJANGO_ADMIN_URL=admin/
 DJANGO_ALLOWED_HOSTS=__DOMAIN__
 DOMAIN=__DOMAIN__
 NAVOICA_URL=https://navoica.pl
+CERTBOT_EMAIL=__EMAIL__
+EMAIL=__EMAIL__
 
 #STATEMENT1_PDF=
 #STATEMENT2_PDF=
@@ -40,4 +42,7 @@ SENTRY_DSN=https://3ec2192965104f3da05de5c0f1967e07@sentry.navoica.pl/13
 # Redis
 # ------------------------------------------------------------------------------
 REDIS_URL=redis://redis:6379/0
+
+# Form Name
+FORM_ORGANIZER_NAME=
 

@@ -12,6 +12,8 @@ from navoica_enroll.users.views import UserRedirectView, UserUpdateView
 
 pytestmark = pytest.mark.django_db
 
+import datetime
+
 
 class TestUserUpdateView:
     """
@@ -84,6 +86,12 @@ class TestUserEnrollView(WebTest):
             self.assertIn(settings.STATEMENT1_PDF, response.context['form'].fields['statement1'].label, )
             self.assertIn(settings.STATEMENT2_PDF, response.context['form'].fields['statement2'].label, )
 
+            # all dates should be equal because of missing 'start' and 'end' data returned from api ( mocked above)
+            self.assertTrue(
+                response.context['form']['start_project_date'].initial.date() == response.context['form'][
+                    'start_support_date'].initial.date() == response.context['form']['end_project_date'].initial.date()
+            )
+
             ###english form
             response = self.app.get(reverse('form', args=[self.course_id]), headers={'Accept-Language': 'en'})
             self.assertEqual(response.status_code, 200)
@@ -91,3 +99,82 @@ class TestUserEnrollView(WebTest):
             # check if we have correct pdf files
             self.assertIn(settings.STATEMENT1_EN_PDF, response.context['form'].fields['statement1'].label, )
             self.assertIn(settings.STATEMENT2_EN_PDF, response.context['form'].fields['statement2'].label, )
+
+    def test_register(self):
+        User = get_user_model()
+        user = User.objects.get(
+            pk=1
+        )
+        self.assertEqual(user.username, 'admin')
+        self.app.set_user(user)
+
+        with requests_mock.Mocker() as mock:
+            mock.get("{}{}{}".format(settings.NAVOICA_URL, "/api/courses/v1/courses/", self.course_id),
+                     json={'course_id': self.course_id, "end": datetime.datetime(2021, 12, 1).isoformat(),
+                           "start": datetime.datetime(2020, 1, 1).isoformat(), }, status_code=200)
+
+            mock.get("{}{}{}".format(settings.NAVOICA_URL, "/api/enrollment/v1/enrollment/", self.course_id),
+                     json={'is_active': False},
+                     status_code=200)
+
+            mock.post("{}{}".format(settings.NAVOICA_URL, "/api/enrollment/v1/enrollment"), status_code=200)
+
+            response = self.app.get(reverse('form', args=[self.course_id]))
+            self.assertEqual(response.status_code, 200)
+            self.assertEqual(type(response.context['form']), UserRegistrationCourseEnglishForm)
+
+            self.assertEqual(
+                response.context['form']['start_project_date'].initial.date(), datetime.date.today()
+            )
+
+            self.assertEqual(
+                response.context['form']['start_support_date'].initial.date(), datetime.datetime(2020, 1, 1).date()
+            )
+
+            self.assertEqual(
+                response.context['form']['end_project_date'].initial.date(), datetime.datetime(2021, 12, 1).date()
+            )
+
+            d = {
+                'first_name': user.first_name,
+                'last_name': user.last_name,
+                'gender': 'M',
+                'pesel': '53022858449',
+                'age': 30,
+                'education': 3,
+                'street': "Test",
+                'street_no': "Test",
+                'street_building_no': "Test",
+                'postal_code': "00-001",
+                'city': 'Szczecin',
+                'voivodeship': 'west_pomerania',
+                'county': 'szczecin',
+                'country': 'Polska',
+                'commune': 'Test',
+                'phone': 432423,
+                'email': 'longemaillongemaillongemaillongemail@longemaillongemaillongemaillongemail.pl',
+                'status': 'Employed',
+                'profession': 'Farmer',
+                'work_name': "Test",
+                'origin': "y",
+                'homeless': "n",
+                'disabled_person': "n",
+                'social_disadvantage': "n",
+                'statement1': True,
+                'statement2': True
+
+            }
+
+            form = response.forms[1]
+            for key, value in d.items():
+                form[key] = value
+
+            response = form.submit()
+            self.assertEqual(response.status_code, 302)
+            self.assertEqual(
+                "{}/courses/{}?{}".format(settings.NAVOICA_URL, self.course_id, settings.NAVOICA_CAMPAIGN_URL),
+                response.url)
+            # user should be loggout before redirection
+            self.assertTrue(
+                '%s=""' % settings.SESSION_COOKIE_NAME in response.headers['Set-Cookie']
+            )

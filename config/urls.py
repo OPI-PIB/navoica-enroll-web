@@ -7,7 +7,7 @@ from django.views.generic import TemplateView
 from rest_framework.authtoken.views import obtain_auth_token
 
 from navoica_enroll.users.views import UserRegistrationCourseView, \
-    UserRegistrationTestView
+    UserRegistrationTestView, CustomLoginView
 
 urlpatterns = [
                   path("",
@@ -18,6 +18,7 @@ urlpatterns = [
                       TemplateView.as_view(template_name="pages/about.html"),
                       name="about"
                   ),
+                  path('i18n/', include('django.conf.urls.i18n')),
                   # Django Admin, use {% url 'admin:index' %}
                   path(settings.ADMIN_URL, admin.site.urls),
                   # User management
@@ -27,6 +28,7 @@ urlpatterns = [
 
                   path("users/",
                        include("navoica_enroll.users.urls", namespace="users")),
+                  path("accounts/login/", CustomLoginView.as_view(), ),
                   path("accounts/", include("allauth.urls")),
                   # Your stuff: custom urls includes go here
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

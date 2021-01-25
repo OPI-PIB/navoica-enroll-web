@@ -22,15 +22,15 @@ class UserRegistrationCourse(models.Model):
     first_name = models.CharField(_("First Name"), max_length=100)
     last_name = models.CharField(_("Last name"), max_length=100)
     gender = models.CharField(_("Gender"), choices=[
+        ('', _('Choose gender...')),
         ('M', _('Male')),
         ('F', _('Female')),
     ], max_length=1)
-    pesel = models.CharField(_("PESEL"), null=True, blank=True, max_length=11,
-                             help_text=_(
-                                 "For people who do not have a PESEL number, type in NONE."))
-    age = models.SmallIntegerField(_("Age"), default=18)
+    pesel = models.CharField(_("PESEL"), null=True, blank=True, max_length=11)
+    age = models.SmallIntegerField(_("Age"), default=0)
     education = models.CharField(_("Education"), max_length=1,
                                  choices=[
+                                     ('', _('Choose grade...')),
                                      ('1', _('Pre-primary')),
                                      ('2', _('Primary')),
                                      ('3', _('Secondary')),
@@ -40,17 +40,15 @@ class UserRegistrationCourse(models.Model):
                                  )
     street = models.CharField(_("Street"), max_length=300,
                               help_text=_("Enter the address correspondence."))
-    street_no = models.CharField(_("Street no"), max_length=10,
-                                 help_text=_("May contain letters"))
-    street_building_no = models.CharField(_("Building no"), max_length=10, null=True, blank=True,
-                                          help_text=_("May contain letters"))
+    street_no = models.CharField(_("Street no"), max_length=10)
+    street_building_no = models.CharField(_("Building no"), max_length=10, null=True, blank=True)
     postal_code = models.CharField(_("Postal code"), max_length=6)
     city = models.CharField(_("City"), max_length=30)
-    voivodeship = models.CharField(_("Voivodeship"), max_length=30, null=True,
+    voivodeship = models.CharField(_("Voivodeship"), default="", max_length=30, null=True,
                                    blank=True,
                                    choices=sorted(VOIVODESHIP_CHOICES,
                                                   key=lambda x: x[1]))
-    county = models.CharField(_("County"), max_length=30, null=True, blank=True,
+    county = models.CharField(_("County"), default="", max_length=30, null=True, blank=True,
                               choices=sorted(ADMINISTRATIVE_UNIT_CHOICES_FIXED,
                                              key=lambda x: x[1]))
     commune = models.CharField(_("Commune"), max_length=30, null=True,
@@ -59,10 +57,8 @@ class UserRegistrationCourse(models.Model):
     country = models.CharField(_("Country"), max_length=30, null=True,
                                blank=True)
 
-    phone = models.CharField(_("Phone"), max_length=30, help_text=_(
-        "Provide the contact telephone number."))
-    email = models.CharField(_("E-mail"), max_length=254,
-                             help_text=_("Enter the address mail for contact."))
+    phone = models.CharField(_("Phone"), max_length=30)
+    email = models.CharField(_("E-mail"), max_length=254)
     start_project_date = models.DateField(_("Start project date"),
                                           default=timezone.now)
     end_project_date = models.DateField(_("End project date"),
@@ -71,10 +67,12 @@ class UserRegistrationCourse(models.Model):
                                           default=timezone.now)
 
     STATUSES = [
+        "",
         _("Employed"),
         _("Registered unemployed"),
         _("Unregistered unemployed"),
-        _("Unemployed, not looking for work")
+        _("Unemployed, not looking for work"),
+        _("Student")
     ]
 
     status = models.CharField(_("Status"), max_length=1000,
@@ -82,6 +80,7 @@ class UserRegistrationCourse(models.Model):
                               )
 
     PROFESSIONS = [
+        "",
         _("Vocational teacher"),
         _("General education teacher"),
         _("Kindergarten teacher"),
@@ -101,23 +100,21 @@ class UserRegistrationCourse(models.Model):
                                   choices=[(t, t) for t in
                                            PROFESSIONS])
 
-    work_name = models.CharField(_("Job title"), max_length=1000, help_text=_(
-        "Abbreviations not allowed, full name of the institution"))
-    origin = models.CharField(_("Migrant / ethnic minority"), max_length=1,
-                              choices=[
-                                  ('y', _("Yes")),
-                                  ('n', _("No")),
-                                  ('r', _("Prefer not to tell"))
+    work_name = models.CharField(_("Job title"), max_length=1000)
 
-                              ]
-                              )
-    homeless = models.CharField(_("Homeless"), max_length=1, choices=[
+    origin = models.CharField(_("Migrant / ethnic minority"), max_length=1, default="", choices=[
         ('y', _("Yes")),
         ('n', _("No")),
         ('r', _("Prefer not to tell"))
 
     ])
-    disabled_person = models.CharField(_("Disabled person"), max_length=1,
+    homeless = models.CharField(_("Homeless"), max_length=1, default="", choices=[
+        ('y', _("Yes")),
+        ('n', _("No")),
+        ('r', _("Prefer not to tell"))
+
+    ])
+    disabled_person = models.CharField(_("Disabled person"), max_length=1, default="",
                                        choices=[
                                            ('y', _("Yes")),
                                            ('n', _("No")),
@@ -125,15 +122,14 @@ class UserRegistrationCourse(models.Model):
 
                                        ])
     social_disadvantage = models.CharField(_("Socially disadvantaged"),
-                                           max_length=1, choices=[
+                                           max_length=1, default="", choices=[
             ('y', _("Yes")),
             ('n', _("No")),
             ('r', _("Prefer not to tell"))
-
         ])
 
-    course_id = models.CharField(max_length=1000)
-    language_code = models.CharField(max_length=1000)
+    course_id = models.CharField(_("Course ID"), max_length=1000)
+    language_code = models.CharField(_("Form language"), max_length=1000)
     user = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
 
     def __str__(self):

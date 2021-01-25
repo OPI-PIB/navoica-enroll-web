@@ -12,6 +12,7 @@ APPS_DIR = ROOT_DIR.path("navoica_enroll")
 
 env = environ.Env(
     NAVOICA_URL=(str, "https://navoica.pl"),
+    NAVOICA_CAMPAIGN_URL=(str, "utm_source=registration_form&utm_medium=none&utm_campaign=power"),
 
     STATEMENT1_PDF=(str, 'pdfs/wzor_oswiadczenia_uczestnika_projektu.pdf'),
     STATEMENT2_PDF=(str, 'pdfs/przetwarzanie_danych.pdf'),
@@ -91,10 +92,10 @@ THIRD_PARTY_APPS = [
     'navoica_enroll.providers.edx',
     "rest_framework",
     'localflavor',
-    'django_csv_exports',
 ]
 
 NAVOICA_URL = env.str("NAVOICA_URL")
+NAVOICA_CAMPAIGN_URL = env.str("NAVOICA_CAMPAIGN_URL")
 
 SOCIALACCOUNT_PROVIDERS = {
     'edx': {
@@ -257,7 +258,7 @@ EMAIL_TIMEOUT = 5
 # Django Admin URL.
 ADMIN_URL = "admin/"
 # https://docs.djangoproject.com/en/dev/ref/settings/#admins
-ADMINS = [("""Krzysztof Hoffmann""", "krzysztof.hoffmann@opi.org.pl")]
+ADMINS = [("Admin Enroll Form Navoica.pl", env("EMAIL", default="krzysztof.hoffmann@opi.org.pl" ))]
 # https://docs.djangoproject.com/en/dev/ref/settings/#managers
 MANAGERS = ADMINS
 
@@ -328,3 +329,6 @@ try:
         ["git -C %s describe --tags" % ROOT_DIR], shell=True).decode('UTF-8')
 except subprocess.CalledProcessError as e:
     PLATFORM_VERSION = "HEAD"
+
+
+FORM_ORGANIZER_NAME = env.str("FORM_ORGANIZER_NAME")

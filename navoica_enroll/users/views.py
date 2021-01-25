@@ -1,19 +1,26 @@
 import requests
-from allauth.account.views import logout
+from allauth.socialaccount import providers
 from allauth.socialaccount.models import SocialToken
+from allauth.socialaccount.templatetags.socialaccount import provider_login_url, ProviderLoginURLNode
+from allauth.utils import get_request_param
 from django.conf import settings
 from django.contrib import messages
 from django.contrib.auth import get_user_model
+from django.contrib.auth import logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.http import Http404
+from django.http import Http404, HttpResponse
+from django.shortcuts import redirect
 from django.urls import reverse
 from django.utils.decorators import method_decorator
 from django.utils.translation import ugettext_lazy as _
-from django.views.generic import DetailView, RedirectView, UpdateView
+from django.views import View
+from django.views.generic import DetailView, RedirectView, UpdateView, TemplateView
 from django.views.generic.edit import FormView
+from dateutil import parser
 
 from .forms import UserRegistrationCourseEnglishForm, UserRegistrationCourseForm
+from ..providers.edx.provider import EdxProvider
 
 User = get_user_model()
 
@@ -59,6 +66,24 @@ class UserRedirectView(LoginRequiredMixin, RedirectView):
 user_redirect_view = UserRedirectView.as_view()
 
 
+class CustomLoginView(View):
+    def get(self, request, *args, **kwargs):
+
+        try:
+            provider = next(
+                provider for provider in providers.registry.get_list() if type(provider) == EdxProvider
+            )
+
+            param_next = get_request_param(request, "next")
+            query = {'next': param_next}
+            url = provider.get_login_url(request, **query)
+            return redirect(url)
+
+
+        except StopIteration:
+            return HttpResponse('Provider is not configured. Contact Admin.')
+
+
 class UserRegistrationCourseViewBase(FormView):
     template_name = 'users/form_registration.html'
     success_url = '/thanks/'
@@ -72,10 +97,15 @@ class UserRegistrationCourseViewBase(FormView):
 
     def get_initial(self):
         initial = super().get_initial()
+        print(self.course_info)
         if self.request.user.is_authenticated:
             initial['email'] = self.request.user.email
             initial['first_name'] = self.request.user.first_name
             initial['last_name'] = self.request.user.last_name
+            if 'start' in self.course_info:
+                initial['start_support_date'] = parser.parse(self.course_info['start'])
+            if 'end' in self.course_info:
+                initial['end_project_date'] = parser.parse(self.course_info['end'])
         if self.request.LANGUAGE_CODE:
             initial['country'] = 'Polska'
 
@@ -136,9 +166,10 @@ class UserRegistrationCourseView(UserRegistrationCourseViewBase):
             ),
             headers=headers)
 
-        self.success_url = "{}/courses/{}".format(
+        self.success_url = "{}/courses/{}?{}".format(
             settings.NAVOICA_URL,
-            self.course_info['course_id']
+            self.course_info['course_id'],
+            settings.NAVOICA_CAMPAIGN_URL
         )
 
         course_enrollment = response.json()
@@ -169,6 +200,8 @@ class UserRegistrationCourseView(UserRegistrationCourseViewBase):
         obj.course_id = self.course_info['course_id']
         obj.language_code = self.request.LANGUAGE_CODE
         obj.save()
+
+        logout(self.request)
 
         return super().form_valid(form)
 
