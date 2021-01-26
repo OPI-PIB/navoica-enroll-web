@@ -331,4 +331,4 @@ except subprocess.CalledProcessError as e:
     PLATFORM_VERSION = "HEAD"
 
 
-FORM_ORGANIZER_NAME = env.str("FORM_ORGANIZER_NAME")
+FORM_ORGANIZER_NAME = env.str("FORM_ORGANIZER_NAME", default="")
