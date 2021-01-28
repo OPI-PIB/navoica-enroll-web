@@ -94,6 +94,23 @@ Proszę zalogować się do panelu administatora i przejść do sekcji:
 Następnie wybrać rekordy i wybrać z listy Akcję: "Export selected objects as csv file"
 
 
+## Aktualizacja formularza do najnowszej wersji
+
+Przed aktualizacją zalecamy backup bazy danych:
+
+    docker-compose -f production.yml exec postgres backup
+
+Aby aktualizować formularz do najnowszej wersji należy wykonać komende 
+
+    make update
+
+Powyższa operacja wykona się poprawnie jedynie w momencie jeżeli źródło *navoica-enroll-web* zostało sklonowane poprzez *git clone ...* jeżeli natomiast pobrało się paczkę .zip i rozpakowało należy wykonać najpierw:
+
+    git init
+    git remote add origin https://github.com/OPI-PIB/navoica-enroll-web.git
+    git reset origin/master 
+    make update
+
 ---------------
 ---------------
 

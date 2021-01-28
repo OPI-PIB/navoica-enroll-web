@@ -8,6 +8,8 @@ from django.utils.translation import ugettext_lazy as _
 from localflavor.pl.pl_administrativeunits import ADMINISTRATIVE_UNIT_CHOICES
 from localflavor.pl.pl_voivodeships import VOIVODESHIP_CHOICES
 
+from navoica_enroll.users.administrative_units import ADMINISTRATIVE_UNIT_CHOICES_PL
+
 
 class User(AbstractUser):
     name = CharField(_("Name of User"), blank=True, null=True, max_length=255)
@@ -17,7 +19,6 @@ class User(AbstractUser):
 
 
 class UserRegistrationCourse(models.Model):
-    ADMINISTRATIVE_UNIT_CHOICES_FIXED = ADMINISTRATIVE_UNIT_CHOICES + (('szczecin', 'Szczecin'),)
 
     first_name = models.CharField(_("First Name"), max_length=100)
     last_name = models.CharField(_("Last name"), max_length=100)
@@ -49,7 +50,7 @@ class UserRegistrationCourse(models.Model):
                                    choices=sorted(VOIVODESHIP_CHOICES,
                                                   key=lambda x: x[1]))
     county = models.CharField(_("County"), default="", max_length=30, null=True, blank=True,
-                              choices=sorted(ADMINISTRATIVE_UNIT_CHOICES_FIXED,
+                              choices=sorted(ADMINISTRATIVE_UNIT_CHOICES_PL,
                                              key=lambda x: x[1]))
     commune = models.CharField(_("Commune"), max_length=30, null=True,
                                blank=True)
