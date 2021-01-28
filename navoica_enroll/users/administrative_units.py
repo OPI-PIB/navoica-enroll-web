@@ -1,0 +1,385 @@
+from slugify import slugify
+
+units_raw = """ aleksandrowski
+ augustowski
+ bartoszycki
+ bełchatowski
+ będziński
+ bialski
+Biała Podlaska
+ białobrzeski
+ białogardzki
+ białostocki
+Białystok
+ bielski
+ bielski
+Bielsko-Biała
+ bieruńsko-lędziński
+ bieszczadzki
+ biłgorajski
+ bocheński
+ bolesławiecki
+ braniewski
+ brodnicki
+ brzeski
+ brzeski
+ brzeziński
+ brzozowski
+ buski
+ bydgoski
+Bydgoszcz
+Bytom
+ bytowski
+Chełm
+ chełmiński
+ chełmski
+ chodzieski
+ chojnicki
+Chorzów
+ choszczeński
+ chrzanowski
+ ciechanowski
+ cieszyński
+ czarnkowsko-trzcianecki
+Częstochowa
+ częstochowski
+ człuchowski
+Dąbrowa Górnicza
+ dąbrowski
+ dębicki
+ drawski
+ działdowski
+ dzierżoniowski
+Elbląg
+ elbląski
+ ełcki
+ garwoliński
+Gdańsk
+ gdański
+Gdynia
+ giżycki
+Gliwice
+ gliwicki
+ głogowski
+ głubczycki
+ gnieźnieński
+ goleniowski
+ golubsko-dobrzyński
+ gołdapski
+ gorlicki
+ gorzowski
+Gorzów Wielkopolski
+ gostyniński
+ gostyński
+ górowski
+ grajewski
+ grodziski
+ grodziski
+ grójecki
+Grudziądz
+ grudziądzki
+ gryficki
+ gryfiński
+ hajnowski
+ hrubieszowski
+ iławski
+ inowrocławski
+ janowski
+ jarociński
+ jarosławski
+ jasielski
+Jastrzębie-Zdrój
+ jaworski
+Jaworzno
+Jelenia Góra
+ jędrzejowski
+ kaliski
+Kalisz
+ kamiennogórski
+ kamieński
+ karkonoski[d]
+ kartuski
+Katowice
+ kazimierski
+ kędzierzyńsko-kozielski
+ kępiński
+ kętrzyński
+Kielce
+ kielecki
+ kluczborski
+ kłobucki
+ kłodzki
+ kolbuszowski
+ kolneński
+ kolski
+ kołobrzeski
+ konecki
+Konin
+ koniński
+Koszalin
+ koszaliński
+ kościański
+ kościerski
+ kozienicki
+ krakowski
+Kraków
+ krapkowicki
+ krasnostawski
+ kraśnicki
+Krosno
+ krośnieński
+ krośnieński
+ krotoszyński
+ kutnowski
+ kwidzyński
+ legionowski
+Legnica
+ legnicki
+ leski
+ leszczyński
+Leszno
+ leżajski
+ lęborski
+ lidzbarski
+ limanowski
+ lipnowski
+ lipski
+ lubaczowski
+ lubański
+ lubartowski
+ lubelski
+ lubiński
+Lublin
+ lubliniecki
+ lwówecki
+ łańcucki
+ łaski
+ łęczycki
+ łęczyński
+ łobeski
+Łomża
+ łomżyński
+ łosicki
+ łowicki
+ łódzki wschodni
+Łódź
+ łukowski
+ makowski
+ malborski
+ miechowski
+ mielecki
+ międzychodzki
+ międzyrzecki
+ mikołowski
+ milicki
+ miński
+ mławski
+ mogileński
+ moniecki
+ mrągowski
+Mysłowice
+ myszkowski
+ myślenicki
+ myśliborski
+ nakielski
+ namysłowski
+ nidzicki
+ niżański
+ nowodworski
+ nowodworski
+ nowomiejski
+ nowosądecki
+ nowosolski
+ nowotarski
+ nowotomyski
+Nowy Sącz
+ nyski
+ obornicki
+ olecki
+ oleski
+ oleśnicki
+ olkuski
+Olsztyn
+ olsztyński
+ oławski
+ opatowski
+ opoczyński
+Opole
+ opolski
+ opolski
+ ostrołęcki
+Ostrołęka
+ ostrowiecki
+ ostrowski
+ ostrowski
+ ostródzki
+ ostrzeszowski
+ oświęcimski
+ otwocki
+ pabianicki
+ pajęczański
+ parczewski
+ piaseczyński
+Piekary Śląskie
+ pilski
+ pińczowski
+ piotrkowski
+Piotrków Trybunalski
+ piski
+ pleszewski
+Płock
+ płocki
+ płoński
+ poddębicki
+ policki
+ polkowicki
+Poznań
+ poznański
+ proszowicki
+ prudnicki
+ pruszkowski
+ przasnyski
+ przemyski
+Przemyśl
+ przeworski
+ przysuski
+ pszczyński
+ pucki
+ puławski
+ pułtuski
+ pyrzycki
+ raciborski
+Radom
+ radomski
+ radomszczański
+ radziejowski
+ radzyński
+ rawicki
+ rawski
+ ropczycko-sędziszowski
+Ruda Śląska
+ rybnicki
+Rybnik
+ rycki
+ rypiński
+ rzeszowski
+Rzeszów
+ sandomierski
+ sanocki
+ sejneński
+ sępoleński
+Siedlce
+ siedlecki
+Siemianowice Śląskie
+ siemiatycki
+ sieradzki
+ sierpecki
+ skarżyski
+Skierniewice
+ skierniewicki
+ sławieński
+ słubicki
+ słupecki
+Słupsk
+ słupski
+ sochaczewski
+ sokołowski
+ sokólski
+Sopot
+Sosnowiec
+ stalowowolski
+ starachowicki
+ stargardzki
+ starogardzki
+ staszowski
+ strzelecki
+ strzelecko-drezdenecki
+ strzeliński
+ strzyżowski
+ sulęciński
+ suski
+ suwalski
+Suwałki
+ szamotulski
+Szczecin
+ szczecinecki
+ szczycieński
+ sztumski
+ szydłowiecki
+ średzki
+ średzki
+ śremski
+ świdnicki
+ świdnicki
+ świdwiński
+ świebodziński
+ świecki
+Świętochłowice
+Świnoujście
+Tarnobrzeg
+ tarnobrzeski
+ tarnogórski
+ tarnowski
+Tarnów
+ tatrzański
+ tczewski
+ tomaszowski
+ tomaszowski
+Toruń
+ toruński
+ trzebnicki
+ tucholski
+ turecki
+Tychy
+ wadowicki
+Wałbrzych
+ wałbrzyski
+ wałecki
+Warszawa
+ warszawski zachodni
+ wąbrzeski
+ wągrowiecki
+ wejherowski
+ węgorzewski
+ węgrowski
+ wielicki
+ wieluński
+ wieruszowski
+Włocławek
+ włocławski
+ włodawski
+ włoszczowski
+ wodzisławski
+ wolsztyński
+ wołomiński
+ wołowski
+Wrocław
+ wrocławski
+ wrzesiński
+ wschowski
+ wysokomazowiecki
+ wyszkowski
+Zabrze
+ zambrowski
+ zamojski
+Zamość
+ zawierciański
+ ząbkowicki
+ zduńskowolski
+ zgierski
+ zgorzelecki
+Zielona Góra
+ zielonogórski
+ złotoryjski
+ złotowski
+ zwoleński
+ żagański
+ żarski
+ żniński
+Żory
+ żuromiński
+ żyrardowski
+ żywiecki"""
+
+
+ADMINISTRATIVE_UNIT_CHOICES_PL = ( (slugify(unit.strip()), unit.strip()) for unit in units_raw.split("\n"))
