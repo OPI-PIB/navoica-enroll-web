@@ -1,10 +1,10 @@
-from csv_export.views import CSVExportView
 from django.contrib import admin
 from django.contrib.auth import admin as auth_admin, get_user_model
 from django.utils.translation import ugettext_lazy as _
 
 from navoica_enroll.users.forms import UserChangeForm, UserCreationForm
 from navoica_enroll.users.models import UserRegistrationCourse
+from navoica_enroll.users.views import CSVExportViewCustom
 
 User = get_user_model()
 
@@ -31,7 +31,7 @@ class UserRegistrationCourseAdmin(admin.ModelAdmin):
     list_filter = ('course_id', "start_project_date", "end_project_date", "start_support_date")
 
     def export_data_csv(self, request, queryset):
-        view = CSVExportView(queryset=queryset, fields='__all__')
+        view = CSVExportViewCustom(queryset=queryset, fields='__all__')
         return view.get(request)
 
     export_data_csv.short_description = _('Export CSV')
