@@ -5,7 +5,6 @@ from django.db.models import CharField
 from django.urls import reverse
 from django.utils import timezone
 from django.utils.translation import ugettext_lazy as _
-from localflavor.pl.pl_administrativeunits import ADMINISTRATIVE_UNIT_CHOICES
 from localflavor.pl.pl_voivodeships import VOIVODESHIP_CHOICES
 
 from navoica_enroll.users.administrative_units import ADMINISTRATIVE_UNIT_CHOICES_PL
@@ -136,6 +135,13 @@ class UserRegistrationCourse(models.Model):
     def __str__(self):
         return "{}: {} {}".format(self.course_id, self.user.first_name,
                                   self.user.last_name)
+
+    @property
+    def navoica_id(self):
+        try:
+            return self.user.socialaccount_set.filter(provider='edx')[0].extra_data['id']
+        except:
+            return ""
 
     class Meta:
         verbose_name = _("Registration for course")

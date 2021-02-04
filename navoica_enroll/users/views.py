@@ -1,23 +1,25 @@
 import requests
+import six
 from allauth.socialaccount import providers
 from allauth.socialaccount.models import SocialToken
-from allauth.socialaccount.templatetags.socialaccount import provider_login_url, ProviderLoginURLNode
 from allauth.utils import get_request_param
+from csv_export.views import CSVExportView
+from dateutil import parser
 from django.conf import settings
 from django.contrib import messages
 from django.contrib.auth import get_user_model
 from django.contrib.auth import logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.core.exceptions import FieldDoesNotExist
 from django.http import Http404, HttpResponse
 from django.shortcuts import redirect
 from django.urls import reverse
 from django.utils.decorators import method_decorator
 from django.utils.translation import ugettext_lazy as _
 from django.views import View
-from django.views.generic import DetailView, RedirectView, UpdateView, TemplateView
+from django.views.generic import DetailView, RedirectView, UpdateView
 from django.views.generic.edit import FormView
-from dateutil import parser
 
 from .forms import UserRegistrationCourseEnglishForm, UserRegistrationCourseForm
 from ..providers.edx.provider import EdxProvider
@@ -231,3 +233,38 @@ class UserRegistrationTestView(UserRegistrationCourseViewBase):
         obj.save()
 
         return super().form_valid(form)
+
+
+class CSVExportViewCustom(CSVExportView):
+    def get_field_value(self, obj, field_name):
+        """ Override if a custom value or behaviour is required for specific fields. """
+        if '__' not in field_name:
+            if hasattr(obj, 'all') and hasattr(obj, 'iterator'):
+                return ','.join([getattr(ro, field_name) for ro in obj.all()])
+
+            try:
+                field = obj._meta.get_field(field_name)
+            except FieldDoesNotExist as e:
+                if not hasattr(obj, field_name):
+                    raise e
+                # field_name is a property.
+                return getattr(obj, field_name)
+
+            value = field.value_from_object(obj)
+            if field.many_to_many:
+                return ','.join([six.text_type(ro) for ro in value])
+            elif field.choices:
+                return value
+            return field.value_from_object(obj)
+        else:
+            related_field_names = field_name.split('__')
+            related_obj = getattr(obj, related_field_names[0])
+            related_field_name = '__'.join(related_field_names[1:])
+            return self.get_field_value(related_obj, related_field_name)
+
+    def get_fields(self, queryset):
+        opts = queryset.model._meta
+        field_names = [field.name for field in opts.fields]
+        field_names += ['navoica_id']
+
+        return field_names
