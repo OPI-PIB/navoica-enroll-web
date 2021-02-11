@@ -96,11 +96,11 @@ class UserRegistrationCourse(models.Model):
         _("Other"),
     ]
 
-    profession = models.CharField(_("Profession"), max_length=1000,
+    profession = models.CharField(_("Profession"), max_length=1000, null=True, blank=True,
                                   choices=[(t, t) for t in
                                            PROFESSIONS])
 
-    work_name = models.CharField(_("Job title"), max_length=1000)
+    work_name = models.CharField(_("Job title"), max_length=1000, null=True, blank=True, )
 
     origin = models.CharField(_("Migrant / ethnic minority"), max_length=1, default="", choices=[
         ('y', _("Yes")),
