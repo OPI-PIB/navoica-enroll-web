@@ -134,6 +134,307 @@ function loadRegisterForm() {
 
   const fields = document.querySelectorAll(".js-field");
 
+  const validation = {
+    first_name: {
+      pattern: /^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŚŽ∂ð ,.'-]{1,100}$/,
+      isValid: false,
+      isRequired: true,
+      message: function (validationTranslates) {
+        return validationTranslates.error_message_100_char_required;
+      },
+    },
+    last_name: {
+      pattern: /^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŚŽ∂ð ,.'-]{1,100}$/,
+      isValid: false,
+      isRequired: true,
+      message: function (validationTranslates) {
+        return validationTranslates.error_message_100_char_required;
+      },
+    },
+    pesel: {
+      pattern: /^[0-9]{11}$/,
+      isValid: false,
+      isRequired: true,
+      message: function (validationTranslates) {
+        return validationTranslates.error_message_pesel;
+      },
+    },
+    no_pesel: {
+      isValid: false,
+      isRequired: true,
+      validateFn: function (el) {
+        if (peselInput.value) {
+          removeErrorField(el);
+          clearErrorMessage(el);
+        } else {
+          if (!el.checked || isFieldWithSpacesOnly(el)) {
+            setErrorMessage(validationTranslates.error_message_required, el);
+          } else {
+            removeErrorField(el);
+            clearErrorMessage(el);
+            removeErrorField(peselInput);
+            clearErrorMessage(peselInput);
+          }
+        }
+      },
+    },
+    gender: {
+      isValid: false,
+      isRequired: true,
+      validateFn: function (el) {
+        if (!el.value) {
+          setErrorMessage(validationTranslates.error_message_required, el);
+        } else {
+          removeErrorField(el);
+          clearErrorMessage(el);
+        }
+      },
+    },
+    age: {
+      pattern: /^[0-9]{1,3}$/,
+      isValid: false,
+      isRequired: true,
+      message: function (validationTranslates) {
+        return validationTranslates.error_message_age;
+      },
+    },
+    education: {
+      isValid: false,
+      isRequired: true,
+      validateFn: function (el) {
+        if (!el.value) {
+          setErrorMessage(validationTranslates.error_message_required, el);
+        } else {
+          removeErrorField(el);
+          clearErrorMessage(el);
+        }
+      },
+    },
+    phone: {
+      pattern: /^(\(?\+?[0-9]*\)?)?[0-9\- \(\)]{1,30}$/,
+      isValid: false,
+      isRequired: true,
+      message: function (validationTranslates, el) {
+        if (!/^(\(?\+?[0-9]*\)?)?[0-9\- \(\)]{1,30}$/.test(el.value)) {
+          return (
+            validationTranslates && validationTranslates.error_message_phone
+          );
+        } else if (el.value && el.value.length > 30) {
+          return (
+            validationTranslates &&
+            validationTranslates.error_message_30_char_required
+          );
+        }
+      },
+    },
+    email: {
+      pattern: /^(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])$/,
+      isValid: false,
+      isRequired: true,
+      message: function (validationTranslates) {
+        return validationTranslates.error_message_email;
+      },
+    },
+    street: {
+      pattern: /^([a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŚŽ∂ð0-9 ,.'-]{1,300})*(\S+[\w ]+)$/,
+      isValid: false,
+      isRequired: true,
+      message: function (validationTranslates) {
+        return validationTranslates.error_message_300_char_required;
+      },
+    },
+    street_no: {
+      pattern: /^([a-zA-Z0-9]{1,10})*(\S+)$/,
+      isValid: false,
+      isRequired: true,
+      message: function (validationTranslates) {
+        return validationTranslates.error_message_10_char_required;
+      },
+    },
+    street_building_no: {
+      pattern: /^([a-zA-Z0-9]{1,10})*(\S+)$/,
+      isValid: false,
+      isRequired: false,
+      message: function (validationTranslates) {
+        return validationTranslates.error_message_10_char_required;
+      },
+    },
+    postal_code: {
+      pattern: /^[a-z0-9][a-z0-9\-]{0,10}[a-z0-9]\S+$/,
+      isValid: false,
+      isRequired: true,
+      message: function (validationTranslates) {
+        return validationTranslates.error_message_12_char_required;
+      },
+    },
+    city: {
+      pattern: /^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŚŽ∂ð ,.'-]{1,30}\S+[\w ]+$/,
+      isValid: false,
+      isRequired: true,
+      message: function (validationTranslates) {
+        return validationTranslates.error_message_30_char_required;
+      },
+    },
+    country: {
+      pattern: /^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŚŽ∂ð ,.'-]{1,30}\S+[\w ]+$/,
+      isValid: false,
+      isRequired: true,
+      message: function (validationTranslates) {
+        return validationTranslates.error_message_30_char_required;
+      },
+    },
+    voivodeship: {
+      isValid: false,
+      isRequired: true,
+      validateFn: function (el) {
+        if (!el.value) {
+          setErrorMessage(validationTranslates.error_message_required, el);
+        } else {
+          removeErrorField(el);
+          clearErrorMessage(el);
+        }
+      },
+    },
+    county: {
+      isValid: false,
+      isRequired: true,
+      validateFn: function (el) {
+        if (!el.value) {
+          setErrorMessage(validationTranslates.error_message_required, el);
+        } else {
+          removeErrorField(el);
+          clearErrorMessage(el);
+        }
+      },
+    },
+    commune: {
+      isValid: false,
+      isRequired: true,
+      validateFn: function (el) {
+        if (!el.value || isFieldWithSpacesOnly(el)) {
+          setErrorMessage(validationTranslates.error_message_required, el);
+        } else if (
+          !/^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŚŽ∂ð ,.'-]{1,30}\S+[\w ]+$/.test(
+            el.value
+          )
+        ) {
+          setErrorField(el);
+          setErrorMessage(
+            validationTranslates.error_message_30_char_required,
+            el
+          );
+        } else {
+          removeErrorField(el);
+          clearErrorMessage(el);
+        }
+      },
+    },
+    status: {
+      isValid: false,
+      isRequired: true,
+      validateFn: function (el) {
+        if (!el.value) {
+          setErrorMessage(validationTranslates.error_message_required, el);
+        } else {
+          removeErrorField(el);
+          clearErrorMessage(el);
+        }
+      },
+    },
+    profession: {
+      isValid: false,
+      isRequired: true,
+      validateFn: function (el) {
+        if (!el.value) {
+          setErrorMessage(validationTranslates.error_message_required, el);
+        } else {
+          removeErrorField(el);
+          clearErrorMessage(el);
+        }
+      },
+    },
+    work_name: {
+      isValid: false,
+      isRequired: true,
+      validateFn: function (el) {
+        if (!el.value || isFieldWithSpacesOnly(el)) {
+          setErrorMessage(validationTranslates.error_message_required, el);
+        } else if (
+          !/^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŚŽ∂ð ,.'-]{1,30}\S+[\w ]+$/.test(
+            el.value
+          )
+        ) {
+          setErrorField(el);
+          setErrorMessage(
+            validationTranslates.error_message_1000_char_required,
+            el
+          );
+        } else {
+          removeErrorField(el);
+          clearErrorMessage(el);
+        }
+      },
+    },
+    origin: {
+      isValid: false,
+      isRequired: true,
+      validateFn: function (el) {
+        validateRadioField(el, "[id^=id_origin]");
+      },
+    },
+    homeless: {
+      isValid: false,
+      isRequired: true,
+      validateFn: function (el) {
+        validateRadioField(el, "[id^=id_homeless]");
+      },
+    },
+    disabled_person: {
+      isValid: false,
+      isRequired: true,
+      validateFn: function (el) {
+        validateRadioField(el, "[id^=id_disabled_person]");
+      },
+    },
+    social_disadvantage: {
+      isValid: false,
+      isRequired: true,
+      validateFn: function (el) {
+        validateRadioField(el, "[id^=id_social_disadvantage]");
+      },
+    },
+    statement1: {
+      isValid: false,
+      isRequired: true,
+      validateFn: function (el) {
+        if (!el.checked) {
+          setErrorMessage(
+            validationTranslates.error_message_accept_field_required,
+            el
+          );
+        } else {
+          removeErrorField(el);
+          clearErrorMessage(el);
+        }
+      },
+    },
+    statement2: {
+      isValid: false,
+      isRequired: true,
+      validateFn: function (el) {
+        if (!el.checked) {
+          setErrorMessage(
+            validationTranslates.error_message_approve_field_required,
+            el
+          );
+        } else {
+          removeErrorField(el);
+          clearErrorMessage(el);
+        }
+      },
+    },
+  };
+
   function setErrorMessage(msg, el) {
     const errorElem = document.querySelector("#div_id_" + el.name);
     const errorElemMsg = errorElem && errorElem.querySelector(".error-message");
@@ -143,11 +444,17 @@ function loadRegisterForm() {
   function setErrorField(el) {
     el.setAttribute("aria-invalid", true);
     el.classList.add("error-field");
+    if (validation) {
+      validation[el.name].isValid = false;
+    }
   }
 
   function removeErrorField(el) {
     el.removeAttribute("aria-invalid");
     el.classList.remove("error-field");
+    if (validation) {
+      validation[el.name].isValid = true;
+    }
     let errorBackend = el.nextElementSibling;
     if (errorBackend && errorBackend.classList.contains("invalid-feedback")) {
       el.classList.remove("is-invalid");
@@ -158,12 +465,6 @@ function loadRegisterForm() {
   function clearErrorMessage(el) {
     const errorElem = document.querySelector("#div_id_" + el.name);
     errorElem.querySelector(".error-message").textContent = "";
-  }
-
-  function isValidRegisterValidation() {
-    Array.from(fields).forEach(function (field) {
-      return field.getAttribute("aria-invalid") !== "true";
-    });
   }
 
   function validateRadioField(el, selectorNameStr) {
@@ -189,280 +490,6 @@ function loadRegisterForm() {
   function isFieldWithSpacesOnly(el) {
     return /^ *$/.test(el.value);
   }
-
-  const validation = {
-    first_name: {
-      pattern: /^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŚŽ∂ð ,.'-]{1,100}$/,
-      isValid: false,
-      message: function (validationTranslates) {
-        return validationTranslates.error_message_100_char_required;
-      },
-    },
-    last_name: {
-      pattern: /^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŚŽ∂ð ,.'-]{1,100}$/,
-      isValid: false,
-      message: function (validationTranslates) {
-        return validationTranslates.error_message_100_char_required;
-      },
-    },
-    pesel: {
-      pattern: /^[0-9]{11}$/,
-      isValid: false,
-      message: function (validationTranslates) {
-        return validationTranslates.error_message_pesel;
-      },
-    },
-    no_pesel: {
-      isValid: false,
-      validateFn: function (el) {
-        if (peselInput.value) {
-          removeErrorField(el);
-          clearErrorMessage(el);
-        } else {
-          if (!el.checked || isFieldWithSpacesOnly(el)) {
-            setErrorMessage(validationTranslates.error_message_required, el);
-          } else {
-            removeErrorField(el);
-            clearErrorMessage(el);
-            removeErrorField(peselInput);
-            clearErrorMessage(peselInput);
-          }
-        }
-      },
-    },
-    gender: {
-      isValid: false,
-      validateFn: function (el) {
-        if (!el.value) {
-          setErrorMessage(validationTranslates.error_message_required, el);
-        } else {
-          removeErrorField(el);
-          clearErrorMessage(el);
-        }
-      },
-    },
-    age: {
-      pattern: /^[0-9]{1,3}$/,
-      isValid: false,
-      message: function (validationTranslates) {
-        return validationTranslates.error_message_age;
-      },
-    },
-    education: {
-      isValid: false,
-      validateFn: function (el) {
-        if (!el.value) {
-          setErrorMessage(validationTranslates.error_message_required, el);
-        } else {
-          removeErrorField(el);
-          clearErrorMessage(el);
-        }
-      },
-    },
-    phone: {
-      pattern: /^(\(?\+?[0-9]*\)?)?[0-9\- \(\)]{1,30}$/,
-      isValid: false,
-      message: function (validationTranslates, el) {
-        if (!/^(\(?\+?[0-9]*\)?)?[0-9\- \(\)]{1,30}$/.test(el.value)) {
-          return (
-            validationTranslates && validationTranslates.error_message_phone
-          );
-        } else if (el.value && el.value.length > 30) {
-          return (
-            validationTranslates &&
-            validationTranslates.error_message_30_char_required
-          );
-        }
-      },
-    },
-    email: {
-      pattern: /^(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])$/,
-      isValid: false,
-      message: function (validationTranslates) {
-        return validationTranslates.error_message_email;
-      },
-    },
-    street: {
-      pattern: /^([a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŚŽ∂ð0-9 ,.'-]{1,300})*(\S+[\w ]+)$/,
-      isValid: false,
-      message: function (validationTranslates) {
-        return validationTranslates.error_message_300_char_required;
-      },
-    },
-    street_no: {
-      pattern: /^([a-zA-Z0-9]{1,10})*(\S+)$/,
-      isValid: false,
-      message: function (validationTranslates) {
-        return validationTranslates.error_message_10_char_required;
-      },
-    },
-    street_building_no: {
-      pattern: /^([a-zA-Z0-9]{1,10})*(\S+)$/,
-      isValid: false,
-      message: function (validationTranslates) {
-        return validationTranslates.error_message_10_char_required;
-      },
-    },
-    postal_code: {
-      pattern: /^[a-z0-9][a-z0-9\-]{0,10}[a-z0-9]\S+$/,
-      isValid: false,
-      message: function (validationTranslates) {
-        return validationTranslates.error_message_12_char_required;
-      },
-    },
-    city: {
-      pattern: /^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŚŽ∂ð ,.'-]{1,30}\S+[\w ]+$/,
-      isValid: false,
-      message: function (validationTranslates) {
-        return validationTranslates.error_message_30_char_required;
-      },
-    },
-    country: {
-      pattern: /^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŚŽ∂ð ,.'-]{1,30}\S+[\w ]+$/,
-      isValid: false,
-      message: function (validationTranslates) {
-        return validationTranslates.error_message_30_char_required;
-      },
-    },
-    voivodeship: {
-      isValid: false,
-      validateFn: function (el) {
-        if (!el.value) {
-          setErrorMessage(validationTranslates.error_message_required, el);
-        } else {
-          removeErrorField(el);
-          clearErrorMessage(el);
-        }
-      },
-    },
-    county: {
-      isValid: false,
-      validateFn: function (el) {
-        if (!el.value) {
-          setErrorMessage(validationTranslates.error_message_required, el);
-        } else {
-          removeErrorField(el);
-          clearErrorMessage(el);
-        }
-      },
-    },
-    commune: {
-      isValid: false,
-      validateFn: function (el) {
-        if (!el.value || isFieldWithSpacesOnly(el)) {
-          setErrorMessage(validationTranslates.error_message_required, el);
-        } else if (
-          !/^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŚŽ∂ð ,.'-]{1,30}\S+[\w ]+$/.test(
-            el.value
-          )
-        ) {
-          setErrorField(el);
-          setErrorMessage(
-            validationTranslates.error_message_30_char_required,
-            el
-          );
-        } else {
-          removeErrorField(el);
-          clearErrorMessage(el);
-        }
-      },
-    },
-    status: {
-      isValid: false,
-      validateFn: function (el) {
-        if (!el.value) {
-          setErrorMessage(validationTranslates.error_message_required, el);
-        } else {
-          removeErrorField(el);
-          clearErrorMessage(el);
-        }
-      },
-    },
-    profession: {
-      isValid: false,
-      validateFn: function (el) {
-        if (!el.value) {
-          setErrorMessage(validationTranslates.error_message_required, el);
-        } else {
-          removeErrorField(el);
-          clearErrorMessage(el);
-        }
-      },
-    },
-    work_name: {
-      isValid: false,
-      validateFn: function (el) {
-        if (!el.value || isFieldWithSpacesOnly(el)) {
-          setErrorMessage(validationTranslates.error_message_required, el);
-        } else if (
-          !/^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŚŽ∂ð ,.'-]{1,30}\S+[\w ]+$/.test(
-            el.value
-          )
-        ) {
-          setErrorField(el);
-          setErrorMessage(
-            validationTranslates.error_message_1000_char_required,
-            el
-          );
-        } else {
-          removeErrorField(el);
-          clearErrorMessage(el);
-        }
-      },
-    },
-    origin: {
-      isValid: false,
-      validateFn: function (el) {
-        validateRadioField(el, "[id^=id_origin]");
-      },
-    },
-    homeless: {
-      isValid: false,
-      validateFn: function (el) {
-        validateRadioField(el, "[id^=id_homeless]");
-      },
-    },
-    disabled_person: {
-      isValid: false,
-      validateFn: function (el) {
-        validateRadioField(el, "[id^=id_disabled_person]");
-      },
-    },
-    social_disadvantage: {
-      isValid: false,
-      validateFn: function (el) {
-        validateRadioField(el, "[id^=id_social_disadvantage]");
-      },
-    },
-    statement1: {
-      isValid: false,
-      validateFn: function (el) {
-        if (!el.checked) {
-          setErrorMessage(
-            validationTranslates.error_message_accept_field_required,
-            el
-          );
-        } else {
-          removeErrorField(el);
-          clearErrorMessage(el);
-        }
-      },
-    },
-    statement2: {
-      isValid: false,
-      validateFn: function (el) {
-        if (!el.checked) {
-          setErrorMessage(
-            validationTranslates.error_message_approve_field_required,
-            el
-          );
-        } else {
-          removeErrorField(el);
-          clearErrorMessage(el);
-        }
-      },
-    },
-  };
 
   function validateForm(target) {
     if (target.value === "" || isFieldWithSpacesOnly(target)) {
@@ -563,6 +590,7 @@ function loadRegisterForm() {
 
   statusJobInput.addEventListener("change", function () {
     changeVisibilityJob(this.value);
+    validateAllFields(this);
   });
 
   peselInput.addEventListener("input", function () {
@@ -573,17 +601,25 @@ function loadRegisterForm() {
     checkPeselInput();
   });
 
-  submitBtn.addEventListener("click", function () {
+  submitBtn.addEventListener("click", function (e) {
     checkPeselInput();
 
     Array.from(fields).forEach(function (field) {
       validateForm(field);
+      validateAllFields(field);
     });
 
-    let isValidForm = isValidRegisterValidation();
+    let validationList = Object.values(validation).map(function (field) {
+      return field && field.isValid;
+    });
+
+    let isValidForm = validationList.every(function (el) {
+      return el === true;
+    });
 
     if (!isValidForm) {
       showAlertOnSubmit();
+      e.preventDefault();
     } else {
       hideAlertOnSubmit();
     }
