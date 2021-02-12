@@ -191,7 +191,7 @@ function loadRegisterForm() {
       },
     },
     age: {
-      pattern: /^[0-9]{1,3}$/,
+      pattern: /(?:\b|-)([1-9]{1,2}[0]?|100)\b/,
       isValid: false,
       isRequired: true,
       message: function (validationTranslates) {
@@ -493,8 +493,11 @@ function loadRegisterForm() {
 
   function validateForm(target) {
     if (target.value === "" || isFieldWithSpacesOnly(target)) {
-      setErrorField(target);
-      setErrorMessage(validationTranslates.error_message_required, target);
+      if (validation && validation[target.name].isRequired) {
+        setErrorField(target);
+        setErrorMessage(validationTranslates.error_message_required, target);
+      }
+
       let hintElem = target.nextElementSibling;
       if (hintElem && hintElem.classList.contains("text-muted")) {
         hintElem.classList.add("d-none");
@@ -610,6 +613,10 @@ function loadRegisterForm() {
     });
 
     let validationList = Object.values(validation).map(function (field) {
+      if (!field.isRequired) {
+        field.isValid = true;
+      }
+
       return field && field.isValid;
     });
 

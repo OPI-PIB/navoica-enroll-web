@@ -232,7 +232,7 @@ class UserRegistrationCourseFormBase(ModelForm):
             Div(
             HTML('<hr class="w-100 pb-30 my-0" />'),
             Div(
-            HTML('<img src="/static/images/logo-navoica.svg" alt="Logo Navoica.pl" class="col-lg-2 col-xs-12 col-md-3 mr-lg-auto order-3 order-md-1 navoica-logo" />'),
+            HTML('<div class="col-lg-2 col-xs-12 col-md-3 mr-lg-auto order-3 order-md-1 d-flex"><img src="/static/images/logo-navoica.svg" alt="Logo Navoica.pl" class="navoica-logo img-fluid align-self-center" /></div>'),
                 Div(
                 HTML('<button class="btn btn-cancel rounded-0 mr-lg-5 mr-md-2 d-none">{}</button>'.format(
                     _("Cancel"))),
@@ -240,7 +240,7 @@ class UserRegistrationCourseFormBase(ModelForm):
                 Submit('submit',
                        _("Register me for the course"),
                        css_class='button white w-100 rounded-0 btn-submit')
-            ),css_class='form-buttons d-flex flex-wrap oder-1 order-md-2 justify-content-between flex-column flex-md-row'), css_class='d-flex justify-content-between flex-wrap'
+            ),css_class='form-buttons d-flex flex-wrap oder-1 order-md-2 justify-content-between flex-column flex-md-row'), css_class='d-flex justify-content-between flex-wrap align-items-center'
             )),
         )
 

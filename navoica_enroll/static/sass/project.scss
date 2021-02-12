@@ -516,6 +516,10 @@ hr.pb-30 {
   }
 
   .navoica-logo {
+    max-width: 8.75rem;
+    @media screen and (max-width: 991px) {
+      max-width: 7rem;
+    }
     @media screen and (max-width: 767px) {
       max-width: 175px;
       margin: 0 auto;
@@ -549,7 +553,7 @@ hr.pb-30 {
   .btn-submit {
     padding: 4px 50px;
     @media screen and (max-width: 400px) {
-      padding: 0;
+      padding: 4px 0;
       width: 100%;
     }
   }
