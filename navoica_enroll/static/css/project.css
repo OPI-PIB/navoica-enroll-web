@@ -388,10 +388,15 @@ hr.pb-30 {
 #student-form select:focus option:first-of-type {
   display: none; }
 
-@media screen and (max-width: 767px) {
-  #student-form .navoica-logo {
-    max-width: 175px;
-    margin: 0 auto; } }
+#student-form .navoica-logo {
+  max-width: 8.75rem; }
+  @media screen and (max-width: 991px) {
+    #student-form .navoica-logo {
+      max-width: 7rem; } }
+  @media screen and (max-width: 767px) {
+    #student-form .navoica-logo {
+      max-width: 175px;
+      margin: 0 auto; } }
 
 @media screen and (max-width: 767px) {
   #student-form .form-buttons {
@@ -416,7 +421,7 @@ hr.pb-30 {
   padding: 4px 50px; }
   @media screen and (max-width: 400px) {
     #student-form .btn-submit {
-      padding: 0;
+      padding: 4px 0;
       width: 100%; } }
 
 #student-form .h4 {
