@@ -2,12 +2,14 @@
 
 # Formularz Rejestacyjny Navoica
 
-Do działania systemu wymagane są 
+Do działania systemu wymagane są: 
 
 * Zaintalowany Docker i Docker Compose
 * Dostęp do użytkowania dockera przez użytkownika bez 'sudo'
-* Otwarte port 80 i 443. Certyfikat SSL zostanie pobrany automatycznie zgodnie z wybraną domeną. **Jeżeli oba porty nie są dostępne** albo aplikacja działa za reverse-proxy, load balancer itp. Można skorzystać z portu 81 i ustawić aplikacje wg własnych preferencji.
+* Otwarte porty 80 i 443. Certyfikat SSL zostanie pobrany automatycznie zgodnie z wybraną domeną. **Jeżeli oba porty nie są dostępne** albo aplikacja działa za reverse-proxy, load balancer itp. można skorzystać z portu 81 i ustawić aplikację wg własnych preferencji.
 * Git
+
+Zalecamy, aby adres URL formularza, dla poczucia bezpieczeństwa użytkowników, zawierał w sobie hasło "navoica", np. navoica.domenauczelni.edu.pl.
 
 ## Wersja automatyczna instalacji:
 
