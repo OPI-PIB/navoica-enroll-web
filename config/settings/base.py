@@ -19,6 +19,10 @@ env = environ.Env(
 
     STATEMENT1_EN_PDF=(str, 'pdfs/minimum_scope_of_the_participants_personal_data.pdf'),
     STATEMENT2_EN_PDF=(str, 'pdfs/process_personal_data.pdf'),
+
+    #user can only fill one time form for each course
+    ALLOW_MULTIPLE_REGISTRATION=(bool, False),
+
 )
 
 READ_DOT_ENV_FILE = env.bool("DJANGO_READ_DOT_ENV_FILE", default=False)
@@ -323,6 +327,8 @@ STATEMENT1_PDF = env.str("STATEMENT1_PDF")
 STATEMENT2_PDF = env.str("STATEMENT2_PDF")
 STATEMENT1_EN_PDF = env.str("STATEMENT1_EN_PDF")
 STATEMENT2_EN_PDF = env.str("STATEMENT2_EN_PDF")
+
+ALLOW_MULTIPLE_REGISTRATION = env.bool("ALLOW_MULTIPLE_REGISTRATION")
 
 try:
     PLATFORM_VERSION = subprocess.check_output(
