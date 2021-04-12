@@ -99,7 +99,6 @@ class UserRegistrationCourseViewBase(FormView):
 
     def get_initial(self):
         initial = super().get_initial()
-        print(self.course_info)
         if self.request.user.is_authenticated:
             initial['email'] = self.request.user.email
             initial['first_name'] = self.request.user.first_name
@@ -168,14 +167,14 @@ class UserRegistrationCourseView(UserRegistrationCourseViewBase):
             ),
             headers=headers)
 
-        self.success_url = "{}/courses/{}?{}".format(
+        self.success_url = "{}/courses/{}/course/?{}".format(
             settings.NAVOICA_URL,
             self.course_info['course_id'],
             settings.NAVOICA_CAMPAIGN_URL
         )
 
         course_enrollment = response.json()
-        if course_enrollment['is_active']:
+        if course_enrollment['is_active'] and not settings.ALLOW_MULTIPLE_REGISTRATION:
             messages.error(request, _("You are already enrolled in this course"))
             raise Http404()
 

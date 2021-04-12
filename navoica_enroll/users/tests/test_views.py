@@ -174,7 +174,7 @@ class TestUserEnrollView(WebTest):
             response = form.submit()
             self.assertEqual(response.status_code, 302)
             self.assertEqual(
-                "{}/courses/{}?{}".format(settings.NAVOICA_URL, self.course_id, settings.NAVOICA_CAMPAIGN_URL),
+                "{}/courses/{}/course/?{}".format(settings.NAVOICA_URL, self.course_id, settings.NAVOICA_CAMPAIGN_URL),
                 response.url)
             # user should be loggout before redirection
             self.assertTrue(
@@ -233,7 +233,7 @@ class TestUserEnrollView(WebTest):
             response = form.submit(headers={'Accept-Language': 'pl'})
             self.assertEqual(response.status_code, 302)
             self.assertEqual(
-                "{}/courses/{}?{}".format(settings.NAVOICA_URL, self.course_id, settings.NAVOICA_CAMPAIGN_URL),
+                "{}/courses/{}/course/?{}".format(settings.NAVOICA_URL, self.course_id, settings.NAVOICA_CAMPAIGN_URL),
                 response.url)
             # user should be loggout before redirection
             self.assertTrue(
@@ -242,3 +242,31 @@ class TestUserEnrollView(WebTest):
 
             UserRegistrationCourseAdmin.export_data_csv(self=None, request=None,
                                                         queryset=UserRegistrationCourse.objects.all())
+
+
+    def test_double_register_same_user(self):
+
+        User = get_user_model()
+        user = User.objects.get(
+            pk=2
+        )
+        self.assertEqual(user.username, 'user')
+        self.app.set_user(user)
+
+        with requests_mock.Mocker() as mock:
+            mock.get("{}{}{}".format(settings.NAVOICA_URL, "/api/courses/v1/courses/", self.course_id),
+                     json={'course_id': self.course_id, "end": datetime.datetime(2021, 12, 1).isoformat(),
+                           "start": datetime.datetime(2020, 1, 1).isoformat(), }, status_code=200)
+
+            #let simulate: user is already enrolled for course; should prevent to see form
+            mock.get("{}{}{}".format(settings.NAVOICA_URL, "/api/enrollment/v1/enrollment/", self.course_id),
+                     json={'is_active': True},
+                     status_code=200)
+            response = self.app.get(reverse('form', args=[self.course_id]), headers={'Accept-Language': 'pl'},status=404)
+            self.assertEqual(response.status_code, 404)
+
+            #bypass above restriction
+            with self.settings(ALLOW_MULTIPLE_REGISTRATION=True):
+                response = self.app.get(reverse('form', args=[self.course_id]), headers={'Accept-Language': 'pl'},)
+                self.assertEqual(response.status_code, 200)
+
