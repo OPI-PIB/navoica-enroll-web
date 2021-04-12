@@ -174,7 +174,7 @@ class TestUserEnrollView(WebTest):
             response = form.submit()
             self.assertEqual(response.status_code, 302)
             self.assertEqual(
-                "{}/courses/{}?{}".format(settings.NAVOICA_URL, self.course_id, settings.NAVOICA_CAMPAIGN_URL),
+                "{}/courses/{}/course/?{}".format(settings.NAVOICA_URL, self.course_id, settings.NAVOICA_CAMPAIGN_URL),
                 response.url)
             # user should be loggout before redirection
             self.assertTrue(
@@ -233,7 +233,7 @@ class TestUserEnrollView(WebTest):
             response = form.submit(headers={'Accept-Language': 'pl'})
             self.assertEqual(response.status_code, 302)
             self.assertEqual(
-                "{}/courses/{}?{}".format(settings.NAVOICA_URL, self.course_id, settings.NAVOICA_CAMPAIGN_URL),
+                "{}/courses/{}/course/?{}".format(settings.NAVOICA_URL, self.course_id, settings.NAVOICA_CAMPAIGN_URL),
                 response.url)
             # user should be loggout before redirection
             self.assertTrue(
