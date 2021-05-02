@@ -174,7 +174,7 @@ class UserRegistrationCourseView(UserRegistrationCourseViewBase):
         )
 
         course_enrollment = response.json()
-        if course_enrollment['is_active'] and not settings.ALLOW_MULTIPLE_REGISTRATION:
+        if (course_enrollment['is_active'] or course_enrollment == "") and not settings.ALLOW_MULTIPLE_REGISTRATION:
             messages.error(request, _("You are already enrolled in this course"))
             raise Http404()
 
