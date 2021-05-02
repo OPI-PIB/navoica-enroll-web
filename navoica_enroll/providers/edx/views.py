@@ -20,7 +20,7 @@ class EdxOAuth2Adapter(OAuth2Adapter):
     access_token_method = "POST"
     authorize_url = '{0}/oauth2/authorize/'.format(
         provider_base_url)
-    profile_url = '{0}/api/user/v1/me'.format(provider_base_url)
+    profile_url = '{0}/api/navoica/v1/user/me'.format(provider_base_url)
     account_url = '{0}/api/user/v1/accounts/{1}'
     supports_state = False
     redirect_uri_protocol = 'https'
