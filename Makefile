@@ -11,7 +11,6 @@ RANDOM_STRING := $(shell openssl rand -hex 24)
 update:
 	git checkout master
 	git pull
-	docker stop navoica-enroll-web_traefik_1 #fallback
 	docker-compose -f production.yml build
 	docker-compose -f production.yml up -d
 	@echo "waiting 10sec for postgresql to boot up"
@@ -29,7 +28,6 @@ setup:
 
 	docker-compose -f production.yml build
 	docker-compose -f production.yml up -d
-	docker stop navoica-enroll-web_traefik_1 #fallback
 	@echo "waiting 10sec for postgresql to boot up"
 	sleep 10
 	docker-compose -f production.yml exec django python manage.py migrate
@@ -41,14 +39,12 @@ destroy:
 
 stop:
 	docker-compose -f production.yml stop
-	docker stop navoica-enroll-web_traefik_1
 
 restart:
 	docker-compose -f production.yml stop
 	docker-compose -f production.yml up -d
 
 start:
-	docker stop navoica-enroll-web_traefik_1
 	docker-compose -f production.yml up -d
 	@echo "waiting 10sec for postgresql to boot up"
 	sleep 10
