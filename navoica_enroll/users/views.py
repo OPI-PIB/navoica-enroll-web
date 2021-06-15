@@ -1,3 +1,5 @@
+import json
+
 import requests
 import six
 from allauth.socialaccount import providers
@@ -23,6 +25,7 @@ from django.views.generic.edit import FormView
 
 from .forms import UserRegistrationCourseEnglishForm, UserRegistrationCourseForm
 from ..providers.edx.provider import EdxProvider
+from ..variables import STATUSES_OPTIONS
 
 User = get_user_model()
 
@@ -114,6 +117,7 @@ class UserRegistrationCourseViewBase(FormView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
+        context['statuses_options_json'] = json.dumps(STATUSES_OPTIONS)
         context['course_info'] = self.course_info
         return context
 

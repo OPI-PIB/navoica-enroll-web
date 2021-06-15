@@ -7,7 +7,7 @@ from django.utils import timezone
 from django.utils.translation import ugettext_lazy as _
 from localflavor.pl.pl_voivodeships import VOIVODESHIP_CHOICES
 
-from navoica_enroll.users.administrative_units import ADMINISTRATIVE_UNIT_CHOICES_PL
+from navoica_enroll.users.administrative_units import ADMINISTRATIVE_UNIT_CHOICES_PL, NATIONALITIES_CHOICES
 
 
 class User(AbstractUser):
@@ -18,9 +18,9 @@ class User(AbstractUser):
 
 
 class UserRegistrationCourse(models.Model):
-
     first_name = models.CharField(_("First Name"), max_length=100)
     last_name = models.CharField(_("Last name"), max_length=100)
+    nationality = models.CharField(_("Nationality"), max_length=100, choices=NATIONALITIES_CHOICES)
     gender = models.CharField(_("Gender"), choices=[
         ('', _('Choose gender...')),
         ('M', _('Male')),
@@ -66,18 +66,20 @@ class UserRegistrationCourse(models.Model):
     start_support_date = models.DateField(_("Start support date"),
                                           default=timezone.now)
 
-    STATUSES = [
-        "",
-        _("Employed"),
-        _("Registered unemployed"),
-        _("Unregistered unemployed"),
-        _("Unemployed, not looking for work"),
-        _("Student")
-    ]
+    STATUSES = (
+        ('', _('Choose status...')),
+        ('employed', _('Employed')),
+        ('registered', _('Registered unemployed')),
+        ('unregistered', _('Unregistered unemployed')),
+        ('looking', _('Unemployed, not looking for work')),
+        ('student', _('Student')),
+    )
 
     status = models.CharField(_("Status"), max_length=1000,
-                              choices=[(t, t) for t in STATUSES]
+                              choices=STATUSES
                               )
+
+    status_info = models.CharField(_("Status additional information"), max_length=1000, null=True, blank=True)
 
     PROFESSIONS = [
         "",
