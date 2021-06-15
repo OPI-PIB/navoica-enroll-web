@@ -360,9 +360,9 @@ function loadRegisterForm() {
         if (!el.value || isFieldWithSpacesOnly(el)) {
           setErrorMessage(validationTranslates.error_message_required, el);
         } else if (
-          !/^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŚŽ∂ð ,.'-]{1,30}\S+[\w ]+$/.test(
-            el.value
-          )
+           !/^(.*){1,30}/.test(
+               el.value
+           )
         ) {
           setErrorField(el);
           setErrorMessage(
