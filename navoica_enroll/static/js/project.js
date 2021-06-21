@@ -263,7 +263,7 @@ function loadRegisterForm() {
       },
     },
     postal_code: {
-      pattern: /^[a-z0-9][a-z0-9\-]{0,10}[a-z0-9]\S+$/,
+      pattern: /^[a-z0-9][a-z0-9\- ]{0,10}[a-z0-9]$/i,
       isValid: false,
       isRequired: true,
       message: function (validationTranslates) {
