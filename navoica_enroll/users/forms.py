@@ -45,7 +45,7 @@ class UserRegistrationCourseFormBase(ModelForm):
     email = EmailField(label=_("E-mail address"))
     country = CharField(required=True, label=_("Country"))
 
-    status_info = CharField(required=True, label=_("Status additional information"), widget=Select())
+    status_info = CharField(required=False, label=_("Status additional information"), widget=Select())
 
     no_pesel = BooleanField(required=False)
     statement1 = BooleanField(required=True)
