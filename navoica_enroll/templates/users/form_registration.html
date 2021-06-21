@@ -5,41 +5,53 @@
   {{ course_info.name }}{% endblock %}
 
 {% block content %}
-<div id="student-form" class="pt-2">
-  <h1 class="register-course__title">{% trans "Register for a course: " %}</h1>
-  <h2 class="register-course__subtitle mb-3">{{ course_info.name }}</h2>
+  <div id="student-form" class="pt-2">
+    <h1 class="register-course__title">{% trans "Register for a course: " %}</h1>
+    <h2 class="register-course__subtitle mb-3">{{ course_info.name }}</h2>
 
-  <p>{% trans "Filling in this form is a prerequisite for taking the course. <strong>The mandatory fields are marked with an asterisk.</strong> After submitting the form, you will be registered for the course."%}</p>
-  <p class="pb-5 mb-0">{% trans "More information" %}: <a href="#" data-toggle="modal" data-target="#modal-video" class="text-semi-bold">{% trans "Why is the collection of user data necessary?" %}</a></p>
-  <!--<p>{% trans "To participate in the course, fill in the registration form below with your details (mandatory fields have been marked with an asterisk). The information provided should be complete and consistent with the facts. Then accept the participant's statement and agree to the processing of personal data in order to participate in the project. After submitting the form, you will be registered for the course. Participation in the course is free." %}</p>-->
+    <p>{% trans "Filling in this form is a prerequisite for taking the course. <strong>The mandatory fields are marked with an asterisk.</strong> After submitting the form, you will be registered for the course." %}</p>
+    <p class="pb-5 mb-0">{% trans "More information" %}: <a href="#" data-toggle="modal" data-target="#modal-video"
+                                                            class="text-semi-bold">{% trans "Why is the collection of user data necessary?" %}</a>
+    </p>
+    <!--<p>{% trans "To participate in the course, fill in the registration form below with your details (mandatory fields have been marked with an asterisk). The information provided should be complete and consistent with the facts. Then accept the participant's statement and agree to the processing of personal data in order to participate in the project. After submitting the form, you will be registered for the course. Participation in the course is free." %}</p>-->
 
-  <div class="modal fade" id="modal-video" tabindex="-1" role="dialog" aria-labelledby="modal-video-title" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title modal__title" id="modal-video-title">{% trans "Why is the collection of user data necessary?" %}</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <p class="pt-3 pb-4 modal__description">{% trans "The course is funded by the European Union and the Polish state budget. The conditions of funding oblige the university, the organizer of the course, to collect data about the participants. Personal data from the registration form, will be collected, processed and verified by the course organizer. Filling in the form is a prerequisite to join the course." %}</p>
-          <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/MqTwgAAHJhI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div class="modal fade" id="modal-video" tabindex="-1" role="dialog" aria-labelledby="modal-video-title"
+         aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title modal__title"
+                id="modal-video-title">{% trans "Why is the collection of user data necessary?" %}</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p class="pt-3 pb-4 modal__description">{% trans "The course is funded by the European Union and the Polish state budget. The conditions of funding oblige the university, the organizer of the course, to collect data about the participants. Personal data from the registration form, will be collected, processed and verified by the course organizer. Filling in the form is a prerequisite to join the course." %}</p>
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" width="560" height="315"
+                      src="https://www.youtube.com/embed/MqTwgAAHJhI" frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen></iframe>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <div class="alert-message-error js-show-register-alert d-none" role="alert"><strong>{% trans 'The form contains errors' %}.</strong> {% trans 'Correct or complete the missing information' %}.</div>
-  <div class="js-register-form">{% crispy form %}</div>
-</div>
+    <div class="alert-message-error js-show-register-alert d-none" role="alert">
+      <strong>{% trans 'The form contains errors' %}.</strong> {% trans 'Correct or complete the missing information' %}.
+    </div>
+    <div class="js-register-form">{% crispy form %}</div>
+  </div>
 {% endblock %}
 
 {% block javascript %}
   <script>
+    let statusOptions = {{ statuses_options_json|safe }};
+
     document.addEventListener("DOMContentLoaded", loadTranslationsJS);
+
     function loadTranslationsJS() {
       let countyInput = document.getElementById("id_county");
       let voivodeshipInput = document.getElementById("id_voivodeship");
@@ -48,12 +60,13 @@
 
       countyInput[0].textContent = "{% trans 'Choose county...'%}";
       voivodeshipInput[0].textContent = "{% trans 'Choose voivodeship...'%}";
-      statusJobInput.options[0] = new Option("{% trans 'Choose employed status...'%}","");
+      statusJobInput.options[0] = new Option("{% trans 'Choose employed status...'%}", "");
       statusJobInput.options[0].setAttribute("selected", "true");
-      jobProfessionInput.options[0] = new Option("{% trans 'Choose profession...'%}","");
+      jobProfessionInput.options[0] = new Option("{% trans 'Choose profession...'%}", "");
       jobProfessionInput.options[0].setAttribute("selected", "true");
 
-        window.validationTranslates = {
+
+      window.validationTranslates = {
         "error_message_required": "{% trans 'Field required' %}",
         "error_message_100_char_required": "{% trans 'The field can contain up to 100 characters' %}",
         "error_message_300_char_required": "{% trans 'Max. 300 characters' %}",
