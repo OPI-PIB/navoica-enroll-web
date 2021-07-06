@@ -214,20 +214,20 @@ function loadRegisterForm() {
       },
     },
     phone: {
-      pattern: /^(\(?\+?[0-9]*\)?)?[0-9\- \(\)]{1,30}$/,
-      isValid: false,
-      isRequired: true,
-      message: function (validationTranslates, el) {
-        if (!/^(\(?\+?[0-9]*\)?)?[0-9\- \(\)]{1,30}$/.test(el.value)) {
-          return (
-            validationTranslates && validationTranslates.error_message_phone
-          );
-        } else if (el.value && el.value.length > 30) {
-          return (
-            validationTranslates &&
-            validationTranslates.error_message_30_char_required
-          );
-        }
+        pattern: /^(\(?\+?[0-9]*\)?)?[0-9\- \(\)]{8,30}$/,
+        isValid: false,
+        isRequired: true,
+        message: function (validationTranslates, el) {
+            if (!/^(\(?\+?[0-9]*\)?)?[0-9\- \(\)]{8,30}$/.test(el.value)) {
+                return (
+                    validationTranslates && validationTranslates.error_message_phone
+                );
+            } else if (el.value && el.value.length > 30) {
+                return (
+                    validationTranslates &&
+                    validationTranslates.error_message_30_char_required
+                );
+            }
       },
     },
     email: {
