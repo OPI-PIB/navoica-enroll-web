@@ -1,11 +1,13 @@
 msgid ""
 msgstr ""
+"Project-Id-Version: enroll\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-06 08:06+0000\n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: POEditor.com\n"
-"Project-Id-Version: enroll\n"
-"Language: en\n"
 
 #: navoica_enroll/providers/edx/provider.py:14
 msgid "Log in to Navoica.pl"
@@ -36,8 +38,12 @@ msgid "Looks like something went wrong!"
 msgstr "Coś poszło nie tak!"
 
 #: navoica_enroll/templates/500.html:11
-msgid "We track these errors automatically, but if the problem persists feel free to contact us. In the meantime, try refreshing."
-msgstr "Śledzimy te błędy automatycznie, ale jeśli problem będzie się powtarzał, skontaktuj się z nami. W międzyczasie spróbuj odświeżyć stronę."
+msgid ""
+"We track these errors automatically, but if the problem persists feel free "
+"to contact us. In the meantime, try refreshing."
+msgstr ""
+"Śledzimy te błędy automatycznie, ale jeśli problem będzie się powtarzał, "
+"skontaktuj się z nami. W międzyczasie spróbuj odświeżyć stronę."
 
 #: navoica_enroll/templates/account/account_inactive.html:5
 #: navoica_enroll/templates/account/account_inactive.html:8
@@ -90,8 +96,12 @@ msgid "Warning:"
 msgstr "Uwaga:"
 
 #: navoica_enroll/templates/account/email.html:54
-msgid "You currently do not have any e-mail address set up. You should really add an e-mail address so you can receive notifications, reset your password, etc."
-msgstr "Aktualnie nie masz skonfigurowanego żadnego adresu e-mail. Powinieneś dodać adres e-mail, aby móc otrzymywać powiadomienia, resetować hasło itd."
+msgid ""
+"You currently do not have any e-mail address set up. You should really add "
+"an e-mail address so you can receive notifications, reset your password, etc."
+msgstr ""
+"Aktualnie nie masz skonfigurowanego żadnego adresu e-mail. Powinieneś dodać "
+"adres e-mail, aby móc otrzymywać powiadomienia, resetować hasło itd."
 
 #: navoica_enroll/templates/account/email.html:60
 msgid "Add E-mail Address"
@@ -111,11 +121,15 @@ msgid "Confirm E-mail Address"
 msgstr "Potwierdź adres e-mail"
 
 #: navoica_enroll/templates/account/email_confirm.html:16
-msgid "Please\n"
+#, python-format
+msgid ""
+"Please\n"
 "      confirm that <a href=\"mailto:%(email)s\">%(email)s</a> is an e-mail\n"
 "      address for user %(user_display)s."
-msgstr "Czy możesz\n"
-"      potwierdzić, że <a href=\"mailto:%(email)s\">%(email)s</a> to adres e-mail\n"
+msgstr ""
+"Czy możesz\n"
+"      potwierdzić, że <a href=\"mailto:%(email)s\">%(email)s</a> to adres e-"
+"mail\n"
 "      użytkownika %(user_display)s?"
 
 #: navoica_enroll/templates/account/email_confirm.html:24
@@ -123,13 +137,17 @@ msgid "Confirm"
 msgstr "Potwierdzam"
 
 #: navoica_enroll/templates/account/email_confirm.html:31
-msgid "This e-mail confirmation link expired or is invalid.\n"
+#, python-format
+msgid ""
+"This e-mail confirmation link expired or is invalid.\n"
 "      Please\n"
 "      <a href=\"%(email_url)s\">issue a new e-mail confirmation request</a>\n"
 "      ."
-msgstr "Ten link potwierdzający e-mail wygasł lub jest nieprawidłowy.\n"
+msgstr ""
+"Ten link potwierdzający e-mail wygasł lub jest nieprawidłowy.\n"
 "      Proszę\n"
-"      <a href=\"%(email_url)s\">wyślij ponowną prośbę o potwierdzenie adresu e-mail</a>\n"
+"      <a href=\"%(email_url)s\">wyślij ponowną prośbę o potwierdzenie adresu "
+"e-mail</a>\n"
 "      "
 
 #: navoica_enroll/templates/account/login.html:7
@@ -137,17 +155,35 @@ msgid "Sign In"
 msgstr "Zaloguj się"
 
 #: navoica_enroll/templates/account/login.html:17
-msgid "The course you wish to enroll in has been funded by the European Union and the Polish government. The university which created the course is therefore obliged to register its participants."
-msgstr "Kurs, na który chcesz się zarejestrować został sfinansowany ze środków Unii Europejskiej i środków budżetu państwa. Warunki dofinansowania obligują uczelnię - organizatora kursu - do ewidencjonowania jego uczestników."
+msgid ""
+"The course you wish to enroll in has been funded by the European Union and "
+"the Polish government. The university which created the course is therefore "
+"obliged to register its participants."
+msgstr ""
+"Kurs, na który chcesz się zarejestrować został sfinansowany ze środków Unii "
+"Europejskiej i środków budżetu państwa. Warunki dofinansowania obligują "
+"uczelnię - organizatora kursu - do ewidencjonowania jego uczestników."
 
 #: navoica_enroll/templates/account/login.html:19
-msgid "You will be redirected to the registration form in a moment, but in order to fill it in, you must have an account on Navoica.pl.All personal data included in the registration form will be gathered and processed by the course organiser - the university."
-msgstr "Za chwilę zostaniesz przekierowany do formularza rejestracyjnego. Aby możliwe było jego wypełnienie, należy posiadać aktywne konto na platformie Navoica.Dane osobowe, które zostaną przesłane za pośrednictwem formularza rejestracyjnego, będą gromadzone i przetwarzanie przez uczelnię - organizatora kursu."
+msgid ""
+"You will be redirected to the registration form in a moment, but in order to "
+"fill it in, you must have an account on Navoica.pl.All personal data "
+"included in the registration form will be gathered and processed by the "
+"course organiser - the university."
+msgstr ""
+"Za chwilę zostaniesz przekierowany do formularza rejestracyjnego. Aby "
+"możliwe było jego wypełnienie, należy posiadać aktywne konto na platformie "
+"Navoica.Dane osobowe, które zostaną przesłane za pośrednictwem formularza "
+"rejestracyjnego, będą gromadzone i przetwarzanie przez uczelnię - "
+"organizatora kursu."
 
 #: navoica_enroll/templates/account/login.html:40
-msgid "If you have not created an account yet, then please\n"
+#, python-format
+msgid ""
+"If you have not created an account yet, then please\n"
 "      <a href=\"%(signup_url)s\">sign up</a> first."
-msgstr "Nie masz jeszcze konta?\n"
+msgstr ""
+"Nie masz jeszcze konta?\n"
 "      <a href=\"%(signup_url)s\">zarejestruj się</a> najpierw."
 
 #: navoica_enroll/templates/account/logout.html:5
@@ -178,23 +214,31 @@ msgid "Password Reset"
 msgstr "Zresetuj hasło"
 
 #: navoica_enroll/templates/account/password_reset.html:16
-msgid "Forgotten your password? Enter your e-mail address below, and we'll send you an e-mail allowing you to reset it."
-msgstr "Zapomniałeś/aś swojego hasła? Wpisz poniżej swój adres e-mail, a my wyślemy Ci e-mail umożliwiający jego zresetowanie."
+msgid ""
+"Forgotten your password? Enter your e-mail address below, and we'll send you "
+"an e-mail allowing you to reset it."
+msgstr ""
+"Zapomniałeś/aś swojego hasła? Wpisz poniżej swój adres e-mail, a my wyślemy "
+"Ci e-mail umożliwiający jego zresetowanie."
 
 #: navoica_enroll/templates/account/password_reset.html:23
 msgid "Reset My Password"
 msgstr "Zresetuj moje hasło"
 
 #: navoica_enroll/templates/account/password_reset.html:26
-msgid "Please contact us if you have any trouble resetting your\n"
+msgid ""
+"Please contact us if you have any trouble resetting your\n"
 "    password."
-msgstr "Skontaktuj się z nami, jeśli masz jakikolwiek sposób z resetowaniem swojego\n"
+msgstr ""
+"Skontaktuj się z nami, jeśli masz jakikolwiek sposób z resetowaniem swojego\n"
 "    hasła."
 
 #: navoica_enroll/templates/account/password_reset_done.html:15
-msgid "We have sent you an e-mail. Please contact us if you do not\n"
+msgid ""
+"We have sent you an e-mail. Please contact us if you do not\n"
 "    receive it within a few minutes."
-msgstr "Wysłaliśmy Ci wiadomość e-mail. Skontaktuj się z nami jeśli nie\n"
+msgstr ""
+"Wysłaliśmy Ci wiadomość e-mail. Skontaktuj się z nami jeśli nie\n"
 "    otrzymasz jej w przeciągu kilku minut."
 
 #: navoica_enroll/templates/account/password_reset_from_key.html:8
@@ -202,11 +246,14 @@ msgid "Bad Token"
 msgstr "Bad Token"
 
 #: navoica_enroll/templates/account/password_reset_from_key.html:13
-msgid "The password reset link was invalid, possibly because it\n"
+#, python-format
+msgid ""
+"The password reset link was invalid, possibly because it\n"
 "      has already been used.  Please request a\n"
 "      <a href=\"%(passwd_reset_url)s\">new password reset</a>\n"
 "      ."
-msgstr "Link do resetowania hasła był nieprawidłowy, prawdopodobnie dlatego, że\n"
+msgstr ""
+"Link do resetowania hasła był nieprawidłowy, prawdopodobnie dlatego, że\n"
 "      został już użyty.  Wystąp z prośbą o\n"
 "      <a href=\"%(passwd_reset_url)s\">ponowny reset hasła</a>\n"
 "      ."
@@ -236,9 +283,12 @@ msgid "Sign Up"
 msgstr "Zarejestruj się"
 
 #: navoica_enroll/templates/account/signup.html:11
-msgid "Already have an account? Then please\n"
+#, python-format
+msgid ""
+"Already have an account? Then please\n"
 "    <a href=\"%(login_url)s\">sign in</a>."
-msgstr "Posiadasz już konto? Kliknij tutaj i\n"
+msgstr ""
+"Posiadasz już konto? Kliknij tutaj i\n"
 "    <a href=\"%(login_url)s\">zaloguj się</a>."
 
 #: navoica_enroll/templates/account/signup_closed.html:5
@@ -258,41 +308,54 @@ msgid "Verify Your E-mail Address"
 msgstr "Zweryfikuj swój adres e-mail"
 
 #: navoica_enroll/templates/account/verification_sent.html:10
-msgid "We have sent an e-mail to you for verification. Follow the\n"
-"    link provided to finalize the signup process. Please contact us if you do\n"
+msgid ""
+"We have sent an e-mail to you for verification. Follow the\n"
+"    link provided to finalize the signup process. Please contact us if you "
+"do\n"
 "    not receive it within a few minutes."
-msgstr "Wysłaliśmy Ci wiadomość e-mail w celach weryfikacjnych. Kliknij w\n"
-"    link, aby sfinalizować proces rejestracji . Skontaktuj się z nami, jeśli\n"
+msgstr ""
+"Wysłaliśmy Ci wiadomość e-mail w celach weryfikacjnych. Kliknij w\n"
+"    link, aby sfinalizować proces rejestracji . Skontaktuj się z nami, "
+"jeśli\n"
 "    nie otrzymasz jej w przeciągu kilku minut."
 
 #: navoica_enroll/templates/account/verified_email_required.html:12
-msgid "This part of the site requires us to verify that\n"
+msgid ""
+"This part of the site requires us to verify that\n"
 "    you are who you claim to be. For this purpose, we require that you\n"
 "    verify ownership of your e-mail address. "
-msgstr "Ta część strony wymaga od nas weryfikacji, czy\n"
+msgstr ""
+"Ta część strony wymaga od nas weryfikacji, czy\n"
 "    jesteś tym, za kogo się podajesz. W tym celu wymagamy od Ciebie\n"
 "    weryfikacji swojego adresu e-mail. "
 
 #: navoica_enroll/templates/account/verified_email_required.html:16
-msgid "We have sent an e-mail to you for\n"
+msgid ""
+"We have sent an e-mail to you for\n"
 "    verification. Please click on the link inside this e-mail. Please\n"
 "    contact us if you do not receive it within a few\n"
 "    minutes."
-msgstr "Wysłaliśmy Ci wiadomość e-mail w celach\n"
+msgstr ""
+"Wysłaliśmy Ci wiadomość e-mail w celach\n"
 "    weryfikacyjnych. Kliknij w link znajdujący się w tej wiadomości e-mail.\n"
 "    Skontaktuj się z nami, jeśli nie otrzymasz jej w przeciągu kilku\n"
 "    minut."
 
 #: navoica_enroll/templates/account/verified_email_required.html:21
-msgid "<strong>Note:</strong> you can still\n"
+#, python-format
+msgid ""
+"<strong>Note:</strong> you can still\n"
 "    <a href=\"%(email_url)s\">change your e-mail address</a>."
-msgstr "<strong>Uwaga:</strong> wciąż możesz\n"
+msgstr ""
+"<strong>Uwaga:</strong> wciąż możesz\n"
 "    <a href=\"%(email_url)s\">zmienić swój adres e-mail</a>."
 
 #: navoica_enroll/templates/base.html:6
-msgid "Navoica Remote Enrollment for a Course\n"
+msgid ""
+"Navoica Remote Enrollment for a Course\n"
 "  "
-msgstr "Zdalna rejestracja na kurs na stronie Navoica\n"
+msgstr ""
+"Zdalna rejestracja na kurs na stronie Navoica\n"
 "  "
 
 #: navoica_enroll/templates/base.html:51 navoica_enroll/users/admin.py:11
@@ -313,8 +376,12 @@ msgid "Logo of European Social Fund"
 msgstr "Logo Unia Europejska Europejski Fundusz Społeczny"
 
 #: navoica_enroll/templates/base.html:104 navoica_enroll/users/admin.py:14
-msgid "Registration form for users of courses implemented with co-financing from the ESF, NCBR funds"
-msgstr "Formularz rejestracyjny dla użytkowników kursów realizowanych z dofinasowania ze środków EFS środki NCBR"
+msgid ""
+"Registration form for users of courses implemented with co-financing from "
+"the ESF, NCBR funds"
+msgstr ""
+"Formularz rejestracyjny dla użytkowników kursów realizowanych z "
+"dofinasowania ze środków EFS środki NCBR"
 
 #: navoica_enroll/templates/users/form_registration.html:4
 #: navoica_enroll/templates/users/form_registration.html:9
@@ -322,8 +389,14 @@ msgid "Register for a course: "
 msgstr "Zarejestruj się na kurs: "
 
 #: navoica_enroll/templates/users/form_registration.html:12
-msgid "Filling in this form is a prerequisite for taking the course. <strong>The mandatory fields are marked with an asterisk.</strong> After submitting the form, you will be registered for the course."
-msgstr "Wypełnienie formularza jest warunkiem przystąpienia do kursu. <strong>Pola obowiązkowe zostały oznaczone gwiazdką.</strong> Po przesłaniu formularza zostaniesz zarejstrowany/a na kurs."
+msgid ""
+"Filling in this form is a prerequisite for taking the course. <strong>The "
+"mandatory fields are marked with an asterisk.</strong> After submitting the "
+"form, you will be registered for the course."
+msgstr ""
+"Wypełnienie formularza jest warunkiem przystąpienia do kursu. <strong>Pola "
+"obowiązkowe zostały oznaczone gwiazdką.</strong> Po przesłaniu formularza "
+"zostaniesz zarejstrowany/a na kurs."
 
 #: navoica_enroll/templates/users/form_registration.html:13
 msgid "More information"
@@ -335,12 +408,35 @@ msgid "Why is the collection of user data necessary?"
 msgstr "Dlaczego gromadzenie danych o użytkownikach jest niezbędne?"
 
 #: navoica_enroll/templates/users/form_registration.html:16
-msgid "To participate in the course, fill in the registration form below with your details (mandatory fields have been marked with an asterisk). The information provided should be complete and consistent with the facts. Then accept the participant's statement and agree to the processing of personal data in order to participate in the project. After submitting the form, you will be registered for the course. Participation in the course is free."
-msgstr "Aby wziąć udział w kursie, wypełnij poniższy formularz rejestracyjny swoimi danymi (pola obowiązkowe zostały oznaczone gwiazdką). Podane informacje powinny być kompletne i zgodne ze stanem faktycznym. Następnie zaakceptuj oświadczenie uczestnika projektu oraz wyraź zgodę na przetwarzanie danych osobowych w celu uczestnictwa w projekcie. Po przesłaniu formularza zostaniesz zarejestrowany/a na kurs. Uczestnictwo w kursie jest bezpłatne."
+msgid ""
+"To participate in the course, fill in the registration form below with your "
+"details (mandatory fields have been marked with an asterisk). The "
+"information provided should be complete and consistent with the facts. Then "
+"accept the participant's statement and agree to the processing of personal "
+"data in order to participate in the project. After submitting the form, you "
+"will be registered for the course. Participation in the course is free."
+msgstr ""
+"Aby wziąć udział w kursie, wypełnij poniższy formularz rejestracyjny swoimi "
+"danymi (pola obowiązkowe zostały oznaczone gwiazdką). Podane informacje "
+"powinny być kompletne i zgodne ze stanem faktycznym. Następnie zaakceptuj "
+"oświadczenie uczestnika projektu oraz wyraź zgodę na przetwarzanie danych "
+"osobowych w celu uczestnictwa w projekcie. Po przesłaniu formularza "
+"zostaniesz zarejestrowany/a na kurs. Uczestnictwo w kursie jest bezpłatne."
 
 #: navoica_enroll/templates/users/form_registration.html:30
-msgid "The course is funded by the European Union and the Polish state budget. The conditions of funding oblige the university, the organizer of the course, to collect data about the participants. Personal data from the registration form, will be collected, processed and verified by the course organizer. Filling in the form is a prerequisite to join the course."
-msgstr "Kurs został sfinansowany ze środków Unii Europejskiej i środków budżetu państwa. Warunki dofinansowania obligują uczelnię - organizatora kursu do zbierania danych o uczestnikach. Dane osobowe, które zostaną przesłane za pośrednictwem formularza rejestracyjnego, będą gromadzone, przetwarzane oraz weryfikowane przez organizatora kursu. Wypełnienie formularza jest warunkiem przystąpienia do kursu."
+msgid ""
+"The course is funded by the European Union and the Polish state budget. The "
+"conditions of funding oblige the university, the organizer of the course, to "
+"collect data about the participants. Personal data from the registration "
+"form, will be collected, processed and verified by the course organizer. "
+"Filling in the form is a prerequisite to join the course."
+msgstr ""
+"Kurs został sfinansowany ze środków Unii Europejskiej i środków budżetu "
+"państwa. Warunki dofinansowania obligują uczelnię - organizatora kursu do "
+"zbierania danych o uczestnikach. Dane osobowe, które zostaną przesłane za "
+"pośrednictwem formularza rejestracyjnego, będą gromadzone, przetwarzane oraz "
+"weryfikowane przez organizatora kursu. Wypełnienie formularza jest warunkiem "
+"przystąpienia do kursu."
 
 #: navoica_enroll/templates/users/form_registration.html:43
 msgid "The form contains errors"
@@ -446,782 +542,481 @@ msgstr "Aktualizuj"
 msgid "Export CSV"
 msgstr "Exportuj wyniki do pliku CSV"
 
-#: navoica_enroll/users/administrative_units.py:388
+#: navoica_enroll/users/administrative_units.py:389
 msgid "Polish"
-msgstr "Polskie"
+msgstr "polska"
 
-#: navoica_enroll/users/administrative_units.py:389
+#: navoica_enroll/users/administrative_units.py:390
 msgid "Afghan"
-msgstr "afgański"
+msgstr "afgańska"
 
-#: navoica_enroll/users/administrative_units.py:389
+#: navoica_enroll/users/administrative_units.py:390
 msgid "Albanian"
-msgstr "albański"
+msgstr "albańska"
 
-#: navoica_enroll/users/administrative_units.py:389
+#: navoica_enroll/users/administrative_units.py:390
 msgid "Algerian"
-msgstr "algierski"
+msgstr "algierska"
 
-#: navoica_enroll/users/administrative_units.py:389
+#: navoica_enroll/users/administrative_units.py:390
 msgid "American"
-msgstr "amerykański"
-
-#: navoica_enroll/users/administrative_units.py:390
-msgid "Andorran"
-msgstr "Andora"
-
-#: navoica_enroll/users/administrative_units.py:390
-msgid "Angolan"
-msgstr "Angoli"
-
-#: navoica_enroll/users/administrative_units.py:390
-msgid "Antiguans"
-msgstr "Antyguańczycy"
+msgstr "amerykańska"
 
 #: navoica_enroll/users/administrative_units.py:391
 msgid "Argentinean"
-msgstr "argentyński"
+msgstr "argentyńska"
 
 #: navoica_enroll/users/administrative_units.py:392
 msgid "Armenian"
-msgstr "ormiański"
+msgstr "ormiańska"
 
 #: navoica_enroll/users/administrative_units.py:392
 msgid "Australian"
-msgstr "australijski"
+msgstr "australijska"
 
 #: navoica_enroll/users/administrative_units.py:392
 msgid "Austrian"
-msgstr "austriacki"
+msgstr "austriacka"
 
 #: navoica_enroll/users/administrative_units.py:393
 msgid "Azerbaijani"
-msgstr "azerbejdżański"
+msgstr "azerbejdżańska"
 
 #: navoica_enroll/users/administrative_units.py:394
-msgid "Bahamian"
-msgstr "Bahamski"
-
-#: navoica_enroll/users/administrative_units.py:394
-msgid "Bahraini"
-msgstr "Bahrajn"
-
-#: navoica_enroll/users/administrative_units.py:394
-msgid "Bangladeshi"
-msgstr "Bangladesz"
+msgid "Belarusian"
+msgstr "białoruska"
 
 #: navoica_enroll/users/administrative_units.py:395
-msgid "Barbadian"
-msgstr "Barbados"
+msgid "Belgian"
+msgstr "belgijska"
 
 #: navoica_enroll/users/administrative_units.py:396
-msgid "Barbudans"
-msgstr "Barbudańczycy"
-
-#: navoica_enroll/users/administrative_units.py:396
-msgid "Batswana"
-msgstr "Batswana"
-
-#: navoica_enroll/users/administrative_units.py:396
-msgid "Belarusian"
-msgstr "białoruski"
+msgid "Bolivian"
+msgstr "boliwijska"
 
 #: navoica_enroll/users/administrative_units.py:397
-msgid "Belgian"
-msgstr "belgijski"
+msgid "Bosnian"
+msgstr "bośniacka"
+
+#: navoica_enroll/users/administrative_units.py:397
+msgid "Brazilian"
+msgstr "brazylijska"
+
+#: navoica_enroll/users/administrative_units.py:397
+msgid "British"
+msgstr "brytyjska"
 
 #: navoica_enroll/users/administrative_units.py:398
-msgid "Belizean"
-msgstr "Belizean"
-
-#: navoica_enroll/users/administrative_units.py:398
-msgid "Beninese"
-msgstr "beniński"
-
-#: navoica_enroll/users/administrative_units.py:398
-msgid "Bhutanese"
-msgstr "Bhutański"
+msgid "Bulgarian"
+msgstr "bułgarska"
 
 #: navoica_enroll/users/administrative_units.py:399
-msgid "Bolivian"
-msgstr "boliwijski"
-
-#: navoica_enroll/users/administrative_units.py:400
-msgid "Bosnian"
-msgstr "bośniacki"
-
-#: navoica_enroll/users/administrative_units.py:400
-msgid "Brazilian"
-msgstr "brazylijski"
-
-#: navoica_enroll/users/administrative_units.py:400
-msgid "British"
-msgstr "brytyjski"
-
-#: navoica_enroll/users/administrative_units.py:400
-msgid "Bruneian"
-msgstr "Brunei"
-
-#: navoica_enroll/users/administrative_units.py:401
-msgid "Bulgarian"
-msgstr "bułgarski"
-
-#: navoica_enroll/users/administrative_units.py:401
-msgid "Burkinabe"
-msgstr "Burkinabe"
-
-#: navoica_enroll/users/administrative_units.py:401
-msgid "Burmese"
-msgstr "Birmańczyk"
-
-#: navoica_enroll/users/administrative_units.py:402
-msgid "Burundian"
-msgstr "burundyjski"
-
-#: navoica_enroll/users/administrative_units.py:403
 msgid "Cambodian"
-msgstr "Kambodżańska"
+msgstr "kambodżańska"
 
-#: navoica_enroll/users/administrative_units.py:403
+#: navoica_enroll/users/administrative_units.py:399
 msgid "Cameroonian"
-msgstr "Kamerun"
+msgstr "kameruńska"
+
+#: navoica_enroll/users/administrative_units.py:399
+msgid "Canadian"
+msgstr "kanadyjska"
+
+#: navoica_enroll/users/administrative_units.py:399
+msgid "Chilean"
+msgstr "chilijska"
+
+#: navoica_enroll/users/administrative_units.py:400
+msgid "Chinese"
+msgstr "chińska"
+
+#: navoica_enroll/users/administrative_units.py:401
+msgid "Colombian"
+msgstr "kolumbijska"
 
 #: navoica_enroll/users/administrative_units.py:403
-msgid "Canadian"
-msgstr "kanadyjski"
+msgid "Croatian"
+msgstr "chorwacka"
+
+#: navoica_enroll/users/administrative_units.py:403
+msgid "Cuban"
+msgstr "kubańska"
+
+#: navoica_enroll/users/administrative_units.py:403
+msgid "Cypriot"
+msgstr "cypryjska"
+
+#: navoica_enroll/users/administrative_units.py:403
+msgid "Czech"
+msgstr "czeska"
 
 #: navoica_enroll/users/administrative_units.py:404
-msgid "Cape Verdean"
-msgstr "Republika Zielonego Przylądka"
+msgid "Danish"
+msgstr "duńska"
 
 #: navoica_enroll/users/administrative_units.py:405
-msgid "Central African"
-msgstr "Środkowoafrykańska"
+msgid "Dominican"
+msgstr "dominikańska"
 
 #: navoica_enroll/users/administrative_units.py:405
-msgid "Chadian"
-msgstr "Czadian"
+msgid "Dutch"
+msgstr "holenderska"
 
 #: navoica_enroll/users/administrative_units.py:405
-msgid "Chilean"
-msgstr "chilijski"
+msgid "Ecuadorean"
+msgstr "ekwadorska"
 
 #: navoica_enroll/users/administrative_units.py:406
-msgid "Chinese"
-msgstr "chiński"
+msgid "Egyptian"
+msgstr "egipska"
 
 #: navoica_enroll/users/administrative_units.py:407
-msgid "Colombian"
-msgstr "Kolumbijska"
-
-#: navoica_enroll/users/administrative_units.py:407
-msgid "Comoran"
-msgstr "Komorów"
-
-#: navoica_enroll/users/administrative_units.py:407
-msgid "Congolese"
-msgstr "kongijski"
+msgid "Estonian"
+msgstr "estońska"
 
 #: navoica_enroll/users/administrative_units.py:408
-msgid "Costa Rican"
-msgstr "Kostarykańska"
+msgid "Filipino"
+msgstr "filipińska"
+
+#: navoica_enroll/users/administrative_units.py:408
+msgid "Finnish"
+msgstr "fińska"
+
+#: navoica_enroll/users/administrative_units.py:408
+msgid "French"
+msgstr "francuska"
+
+#: navoica_enroll/users/administrative_units.py:408
+msgid "Gabonese"
+msgstr "gabońska"
 
 #: navoica_enroll/users/administrative_units.py:409
-msgid "Croatian"
-msgstr "chorwacki"
+msgid "Georgian"
+msgstr "gruzińska"
 
 #: navoica_enroll/users/administrative_units.py:409
-msgid "Cuban"
-msgstr "kubański"
-
-#: navoica_enroll/users/administrative_units.py:409
-msgid "Cypriot"
-msgstr "cypryjski"
-
-#: navoica_enroll/users/administrative_units.py:409
-msgid "Czech"
-msgstr "Czech"
+msgid "German"
+msgstr "niemiecka"
 
 #: navoica_enroll/users/administrative_units.py:410
-msgid "Danish"
-msgstr "duński"
+msgid "Greek"
+msgstr "grecka"
 
 #: navoica_enroll/users/administrative_units.py:411
-msgid "Djibouti"
-msgstr "Dżibuti"
-
-#: navoica_enroll/users/administrative_units.py:411
-msgid "Dominican"
-msgstr "dominikański"
-
-#: navoica_enroll/users/administrative_units.py:411
-msgid "Dutch"
-msgstr "holenderski"
-
-#: navoica_enroll/users/administrative_units.py:411
-msgid "Dutchman"
-msgstr "holender"
+msgid "Haitian"
+msgstr "haitańska"
 
 #: navoica_enroll/users/administrative_units.py:412
-msgid "Dutchwoman"
-msgstr "holenderka"
-
-#: navoica_enroll/users/administrative_units.py:412
-msgid "East Timorese"
-msgstr "Timor Wschodni"
-
-#: navoica_enroll/users/administrative_units.py:412
-msgid "Ecuadorean"
-msgstr "ekwadorski"
-
-#: navoica_enroll/users/administrative_units.py:413
-msgid "Egyptian"
-msgstr "Egipcjanin"
-
-#: navoica_enroll/users/administrative_units.py:413
-msgid "Emirian"
-msgstr "Emirian"
-
-#: navoica_enroll/users/administrative_units.py:413
-msgid "Equatorial Guinean"
-msgstr "Gwinea Równikowa"
+msgid "Hungarian"
+msgstr "węgierska"
 
 #: navoica_enroll/users/administrative_units.py:414
-msgid "Eritrean"
-msgstr "Erytrejski"
+msgid "Indian"
+msgstr "indyjska"
 
 #: navoica_enroll/users/administrative_units.py:414
-msgid "Estonian"
-msgstr "estoński"
+msgid "Indonesian"
+msgstr "indonezyjska"
 
 #: navoica_enroll/users/administrative_units.py:414
-msgid "Ethiopian"
-msgstr "etiopczyk"
+msgid "Iranian"
+msgstr "irańska"
 
 #: navoica_enroll/users/administrative_units.py:414
-msgid "Fijian"
-msgstr "Fidżi"
+msgid "Iraqi"
+msgstr "iracka"
 
 #: navoica_enroll/users/administrative_units.py:415
-msgid "Filipino"
-msgstr "Filipiński"
-
-#: navoica_enroll/users/administrative_units.py:415
-msgid "Finnish"
-msgstr "fiński"
-
-#: navoica_enroll/users/administrative_units.py:415
-msgid "French"
-msgstr "Francuski"
-
-#: navoica_enroll/users/administrative_units.py:415
-msgid "Gabonese"
-msgstr "Gaboński"
+msgid "Irish"
+msgstr "irlandzka"
 
 #: navoica_enroll/users/administrative_units.py:416
-msgid "Gambian"
-msgstr "gambijski"
+msgid "Israeli"
+msgstr "izraelska"
 
 #: navoica_enroll/users/administrative_units.py:416
-msgid "Georgian"
-msgstr "gruziński"
+msgid "Italian"
+msgstr "włoska"
 
 #: navoica_enroll/users/administrative_units.py:416
-msgid "German"
-msgstr "Niemiecki"
-
-#: navoica_enroll/users/administrative_units.py:416
-msgid "Ghanaian"
-msgstr "Ghany"
+msgid "Jamaican"
+msgstr "jamajska"
 
 #: navoica_enroll/users/administrative_units.py:417
-msgid "Greek"
-msgstr "grecki"
+msgid "Japanese"
+msgstr "japońska"
+
+#: navoica_enroll/users/administrative_units.py:417
+msgid "Jordanian"
+msgstr "jordańczyka"
+
+#: navoica_enroll/users/administrative_units.py:417
+msgid "Kazakhstani"
+msgstr "kazachstańska"
 
 #: navoica_enroll/users/administrative_units.py:418
-msgid "Grenadian"
-msgstr "Grenadyjczyk"
-
-#: navoica_enroll/users/administrative_units.py:418
-msgid "Guatemalan"
-msgstr "gwatemalski"
+msgid "Kenyan"
+msgstr "kenijska"
 
 #: navoica_enroll/users/administrative_units.py:419
-msgid "Guinean"
-msgstr "Gwinea"
-
-#: navoica_enroll/users/administrative_units.py:419
-msgid "Guyanese"
-msgstr "Gujański"
-
-#: navoica_enroll/users/administrative_units.py:419
-msgid "Haitian"
-msgstr "haitański"
+msgid "Kuwaiti"
+msgstr "kuwejcka"
 
 #: navoica_enroll/users/administrative_units.py:420
-msgid "Herzegovinian"
-msgstr "Hercegowina"
+msgid "Laotian"
+msgstr "laotańska"
 
 #: navoica_enroll/users/administrative_units.py:421
-msgid "Honduran"
-msgstr "Honduras"
+msgid "Latvian"
+msgstr "łotewska"
 
 #: navoica_enroll/users/administrative_units.py:421
-msgid "Hungarian"
-msgstr "język węgierski"
+msgid "Lebanese"
+msgstr "libańska"
+
+#: navoica_enroll/users/administrative_units.py:421
+msgid "Liberian"
+msgstr "liberyjska"
+
+#: navoica_enroll/users/administrative_units.py:421
+msgid "Libyan"
+msgstr "libijska"
 
 #: navoica_enroll/users/administrative_units.py:422
-#, fuzzy
-msgid "Icelander"
-msgstr "Płeć"
+msgid "Lithuanian"
+msgstr "litewska"
+
+#: navoica_enroll/users/administrative_units.py:422
+msgid "Luxembourger"
+msgstr "luksemburdzka"
 
 #: navoica_enroll/users/administrative_units.py:423
-msgid "Indian"
-msgstr "indyjski"
+msgid "Macedonian"
+msgstr "macedońska"
 
 #: navoica_enroll/users/administrative_units.py:423
-msgid "Indonesian"
-msgstr "indonezyjski"
+msgid "Malagasy"
+msgstr "malgaska"
 
 #: navoica_enroll/users/administrative_units.py:423
-msgid "Iranian"
-msgstr "irański"
-
-#: navoica_enroll/users/administrative_units.py:423
-msgid "Iraqi"
-msgstr "iracki"
+msgid "Malawian"
+msgstr "malawijska"
 
 #: navoica_enroll/users/administrative_units.py:424
-msgid "Irish"
-msgstr "irlandzki"
+msgid "Malaysian"
+msgstr "malezyjska"
 
 #: navoica_enroll/users/administrative_units.py:425
-msgid "Israeli"
-msgstr "izraelski"
-
-#: navoica_enroll/users/administrative_units.py:425
-msgid "Italian"
-msgstr "Włoski"
-
-#: navoica_enroll/users/administrative_units.py:425
-msgid "Ivorian"
-msgstr "Wybrzeża Kości Słoniowej"
-
-#: navoica_enroll/users/administrative_units.py:425
-msgid "Jamaican"
-msgstr "jamajski"
+msgid "Maltese"
+msgstr "maltańska"
 
 #: navoica_enroll/users/administrative_units.py:426
-msgid "Japanese"
-msgstr "język japoński"
+msgid "Mauritanian"
+msgstr "mauretańska"
 
 #: navoica_enroll/users/administrative_units.py:426
-msgid "Jordanian"
-msgstr "Jordańczyk"
+msgid "Mauritian"
+msgstr "mauritiuska"
 
 #: navoica_enroll/users/administrative_units.py:426
-msgid "Kazakhstani"
-msgstr "Kazachstanu"
-
-#: navoica_enroll/users/administrative_units.py:427
-msgid "Kenyan"
-msgstr "Kenia"
+msgid "Mexican"
+msgstr "meksykańska"
 
 #: navoica_enroll/users/administrative_units.py:428
-msgid "Kittian and Nevisian"
-msgstr "Kittian i Nevisian"
+msgid "Moldovan"
+msgstr "mołdawska"
 
 #: navoica_enroll/users/administrative_units.py:428
-msgid "Kuwaiti"
-msgstr "Kuwejt"
+msgid "Mongolian"
+msgstr "mongolska"
 
 #: navoica_enroll/users/administrative_units.py:428
-msgid "Kyrgyz"
-msgstr "Kirgiski"
+msgid "Moroccan"
+msgstr "marokańska"
 
 #: navoica_enroll/users/administrative_units.py:429
-msgid "Laotian"
-msgstr "laotański"
+msgid "Nepalese"
+msgstr "nepalska"
+
+#: navoica_enroll/users/administrative_units.py:429
+msgid "Netherlander"
+msgstr "holenderska"
 
 #: navoica_enroll/users/administrative_units.py:430
-msgid "Latvian"
-msgstr "łotewski"
-
-#: navoica_enroll/users/administrative_units.py:430
-msgid "Lebanese"
-msgstr "libański"
-
-#: navoica_enroll/users/administrative_units.py:430
-msgid "Liberian"
-msgstr "liberyjski"
-
-#: navoica_enroll/users/administrative_units.py:430
-msgid "Libyan"
-msgstr "Libijska"
+msgid "New Zealander"
+msgstr "nowozelandzka"
 
 #: navoica_enroll/users/administrative_units.py:431
-msgid "Liechtensteiner"
-msgstr "Liechtensteiner"
-
-#: navoica_enroll/users/administrative_units.py:431
-msgid "Lithuanian"
-msgstr "litewski"
-
-#: navoica_enroll/users/administrative_units.py:431
-msgid "Luxembourger"
-msgstr "Luksemburczyk"
+msgid "Nigerian"
+msgstr "nigeryjczyka"
 
 #: navoica_enroll/users/administrative_units.py:432
-msgid "Macedonian"
-msgstr "macedoński"
-
-#: navoica_enroll/users/administrative_units.py:432
-msgid "Malagasy"
-msgstr "malgaski"
-
-#: navoica_enroll/users/administrative_units.py:432
-msgid "Malawian"
-msgstr "malawijski"
+msgid "Nigerien"
+msgstr "nigeryjska"
 
 #: navoica_enroll/users/administrative_units.py:433
-msgid "Malaysian"
-msgstr "Malezyjski"
+msgid "North Korean"
+msgstr "północnokoreańska"
 
-#: navoica_enroll/users/administrative_units.py:434
-msgid "Maldivan"
-msgstr "Malediwan"
-
-#: navoica_enroll/users/administrative_units.py:434
-msgid "Malian"
-msgstr "maliański"
-
-#: navoica_enroll/users/administrative_units.py:434
-msgid "Maltese"
-msgstr "maltański"
-
-#: navoica_enroll/users/administrative_units.py:434
-msgid "Marshallese"
-msgstr "marshallese"
+#: navoica_enroll/users/administrative_units.py:433
+msgid "Norwegian"
+msgstr "norweska"
 
 #: navoica_enroll/users/administrative_units.py:435
-msgid "Mauritanian"
-msgstr "Mauretański"
+msgid "Pakistani"
+msgstr "pakistańska"
 
 #: navoica_enroll/users/administrative_units.py:435
-msgid "Mauritian"
-msgstr "Mauritiusa"
-
-#: navoica_enroll/users/administrative_units.py:435
-msgid "Mexican"
-msgstr "Meksykańska"
+msgid "Panamanian"
+msgstr "panamska"
 
 #: navoica_enroll/users/administrative_units.py:436
-msgid "Micronesian"
-msgstr "Mikronezyjski"
+msgid "Peruvian"
+msgstr "peruwiańska"
 
 #: navoica_enroll/users/administrative_units.py:437
-msgid "Moldovan"
-msgstr "mołdawski"
+msgid "Portuguese"
+msgstr "portugalska"
 
 #: navoica_enroll/users/administrative_units.py:437
-msgid "Monacan"
-msgstr "Monacan"
+msgid "Qatari"
+msgstr "katarska"
 
 #: navoica_enroll/users/administrative_units.py:437
-msgid "Mongolian"
-msgstr "mongolski"
-
-#: navoica_enroll/users/administrative_units.py:437
-msgid "Moroccan"
-msgstr "marokański"
+msgid "Romanian"
+msgstr "rumuńska"
 
 #: navoica_enroll/users/administrative_units.py:438
-msgid "Mosotho"
-msgstr "Mosotho"
+msgid "Russian"
+msgstr "rosyjska"
 
 #: navoica_enroll/users/administrative_units.py:438
-msgid "Motswana"
-msgstr "Motswana"
-
-#: navoica_enroll/users/administrative_units.py:438
-msgid "Mozambican"
-msgstr "Mozambik"
+msgid "Rwandan"
+msgstr "rwandyjska"
 
 #: navoica_enroll/users/administrative_units.py:439
-msgid "Namibian"
-msgstr "Namibii"
+msgid "Salvadoran"
+msgstr "salwadorańska"
 
 #: navoica_enroll/users/administrative_units.py:440
-msgid "Nauruan"
-msgstr "Nauruan"
-
-#: navoica_enroll/users/administrative_units.py:440
-msgid "Nepalese"
-msgstr "nepalski"
-
-#: navoica_enroll/users/administrative_units.py:440
-msgid "Netherlander"
-msgstr "Holandia"
+msgid "Samoan"
+msgstr "samoańska"
 
 #: navoica_enroll/users/administrative_units.py:441
-msgid "New Zealander"
-msgstr "Nowozelandczyk"
+msgid "Saudi"
+msgstr "saudyjska"
 
 #: navoica_enroll/users/administrative_units.py:442
-msgid "Nicaraguan"
-msgstr "Nikaragua"
+msgid "Scottish"
+msgstr "szkocka"
 
 #: navoica_enroll/users/administrative_units.py:442
-msgid "Nigerian"
-msgstr "Nigeryjczyk"
+msgid "Senegalese"
+msgstr "senegalska"
 
-#: navoica_enroll/users/administrative_units.py:443
-msgid "Nigerien"
-msgstr "Nigerii"
-
-#: navoica_enroll/users/administrative_units.py:444
-msgid "North Korean"
-msgstr "północnokoreański"
+#: navoica_enroll/users/administrative_units.py:442
+msgid "Serbian"
+msgstr "serbska"
 
 #: navoica_enroll/users/administrative_units.py:444
-msgid "Northern Irish"
-msgstr "Północnoirlandzki"
+msgid "Singaporean"
+msgstr "singapurska"
 
 #: navoica_enroll/users/administrative_units.py:444
-msgid "Norwegian"
-msgstr "norweski"
+msgid "Slovakian"
+msgstr "słowacka"
 
 #: navoica_enroll/users/administrative_units.py:445
-msgid "Omani"
-msgstr "Omanu"
+msgid "Slovenian"
+msgstr "słoweńska"
+
+#: navoica_enroll/users/administrative_units.py:445
+msgid "Somali"
+msgstr "somalijska"
 
 #: navoica_enroll/users/administrative_units.py:446
-msgid "Pakistani"
-msgstr "Pakistański"
+msgid "South African"
+msgstr "afrykańska"
 
 #: navoica_enroll/users/administrative_units.py:446
-msgid "Palauan"
-msgstr "Palauan"
+msgid "South Korean"
+msgstr "koreańska"
 
 #: navoica_enroll/users/administrative_units.py:446
-msgid "Panamanian"
-msgstr "panamski"
+msgid "Spanish"
+msgstr "hiszpańska"
 
 #: navoica_enroll/users/administrative_units.py:447
-msgid "Papua New Guinean"
-msgstr "Papua Nowa Gwinea"
-
-#: navoica_enroll/users/administrative_units.py:447
-msgid "Paraguayan"
-msgstr "Paragwaj"
-
-#: navoica_enroll/users/administrative_units.py:447
-msgid "Peruvian"
-msgstr "peruwiański"
+msgid "Sudanese"
+msgstr "sudańska"
 
 #: navoica_enroll/users/administrative_units.py:448
-msgid "Portuguese"
-msgstr "portugalski"
+msgid "Swedish"
+msgstr "szwedzka"
 
 #: navoica_enroll/users/administrative_units.py:448
-msgid "Qatari"
-msgstr "Katar"
+msgid "Swiss"
+msgstr "szwajcarska"
 
 #: navoica_enroll/users/administrative_units.py:448
-msgid "Romanian"
-msgstr "rumuński"
+msgid "Syrian"
+msgstr "syryjska"
+
+#: navoica_enroll/users/administrative_units.py:448
+msgid "Taiwanese"
+msgstr "tajwańska"
 
 #: navoica_enroll/users/administrative_units.py:449
-msgid "Russian"
-msgstr "Rosyjski"
-
-#: navoica_enroll/users/administrative_units.py:449
-msgid "Rwandan"
-msgstr "Rwandyjski"
-
-#: navoica_enroll/users/administrative_units.py:449
-msgid "Saint Lucian"
-msgstr "Święty Lucjan"
+msgid "Tajik"
+msgstr "tadżycka"
 
 #: navoica_enroll/users/administrative_units.py:450
-msgid "Salvadoran"
-msgstr "Salwadorański"
+msgid "Tanzanian"
+msgstr "tanzańska"
+
+#: navoica_enroll/users/administrative_units.py:450
+msgid "Thai"
+msgstr "tajska"
+
+#: navoica_enroll/users/administrative_units.py:450
+msgid "Tunisian"
+msgstr "tunezyjska"
 
 #: navoica_enroll/users/administrative_units.py:451
-msgid "Samoan"
-msgstr "samoański"
-
-#: navoica_enroll/users/administrative_units.py:451
-msgid "San Marinese"
-msgstr "San Marinese"
-
-#: navoica_enroll/users/administrative_units.py:451
-msgid "Sao Tomean"
-msgstr "Wyspy Świętego Tomasza"
+msgid "Turkish"
+msgstr "turecka"
 
 #: navoica_enroll/users/administrative_units.py:452
-msgid "Saudi"
-msgstr "Arabia Saudyjska"
-
-#: navoica_enroll/users/administrative_units.py:453
-msgid "Scottish"
-msgstr "szkocki"
-
-#: navoica_enroll/users/administrative_units.py:453
-msgid "Senegalese"
-msgstr "senegalski"
-
-#: navoica_enroll/users/administrative_units.py:453
-msgid "Serbian"
-msgstr "serbski"
-
-#: navoica_enroll/users/administrative_units.py:454
-msgid "Seychellois"
-msgstr "Seszele"
-
-#: navoica_enroll/users/administrative_units.py:455
-msgid "Sierra Leonean"
-msgstr "Sierra Leone"
-
-#: navoica_enroll/users/administrative_units.py:455
-msgid "Singaporean"
-msgstr "singapurski"
-
-#: navoica_enroll/users/administrative_units.py:455
-msgid "Slovakian"
-msgstr "słowacki"
-
-#: navoica_enroll/users/administrative_units.py:456
-msgid "Slovenian"
-msgstr "słoweński"
-
-#: navoica_enroll/users/administrative_units.py:456
-msgid "Solomon Islander"
-msgstr "Wysp Salomona"
-
-#: navoica_enroll/users/administrative_units.py:456
-msgid "Somali"
-msgstr "somalijski"
-
-#: navoica_enroll/users/administrative_units.py:457
-msgid "South African"
-msgstr "Południowa Afryka"
-
-#: navoica_enroll/users/administrative_units.py:457
-msgid "South Korean"
-msgstr "Korea Południowa"
-
-#: navoica_enroll/users/administrative_units.py:457
-msgid "Spanish"
-msgstr "hiszpański"
-
-#: navoica_enroll/users/administrative_units.py:458
-msgid "Sri Lankan"
-msgstr "Sri Lanki"
-
-#: navoica_enroll/users/administrative_units.py:458
-msgid "Sudanese"
-msgstr "sudański"
-
-#: navoica_enroll/users/administrative_units.py:458
-msgid "Surinamer"
-msgstr "Surinamer"
-
-#: navoica_enroll/users/administrative_units.py:458
-msgid "Swazi"
-msgstr "Suazi"
-
-#: navoica_enroll/users/administrative_units.py:459
-msgid "Swedish"
-msgstr "szwedzki"
-
-#: navoica_enroll/users/administrative_units.py:459
-msgid "Swiss"
-msgstr "szwajcarski"
-
-#: navoica_enroll/users/administrative_units.py:459
-msgid "Syrian"
-msgstr "syryjski"
-
-#: navoica_enroll/users/administrative_units.py:459
-msgid "Taiwanese"
-msgstr "Tajwański"
-
-#: navoica_enroll/users/administrative_units.py:460
-msgid "Tajik"
-msgstr "tadżycki"
-
-#: navoica_enroll/users/administrative_units.py:461
-msgid "Tanzanian"
-msgstr "Tanzański"
-
-#: navoica_enroll/users/administrative_units.py:461
-msgid "Thai"
-msgstr "tajski"
-
-#: navoica_enroll/users/administrative_units.py:461
-msgid "Togolese"
-msgstr "togolski"
-
-#: navoica_enroll/users/administrative_units.py:461
-msgid "Tongan"
-msgstr "Tonga"
-
-#: navoica_enroll/users/administrative_units.py:462
-msgid "Trinidadian or Tobagonian"
-msgstr "Trynidadyjski lub Tobagoński"
-
-#: navoica_enroll/users/administrative_units.py:462
-msgid "Tunisian"
-msgstr "tunezyjski"
-
-#: navoica_enroll/users/administrative_units.py:463
-msgid "Turkish"
-msgstr "turecki"
-
-#: navoica_enroll/users/administrative_units.py:464
-msgid "Tuvaluan"
-msgstr "Tuvaluan"
-
-#: navoica_enroll/users/administrative_units.py:464
 msgid "Ugandan"
 msgstr "ugandyjski"
 
-#: navoica_enroll/users/administrative_units.py:464
+#: navoica_enroll/users/administrative_units.py:452
 msgid "Ukrainian"
-msgstr "ukraiński"
+msgstr "ukraińska"
 
-#: navoica_enroll/users/administrative_units.py:465
+#: navoica_enroll/users/administrative_units.py:453
 msgid "Uruguayan"
-msgstr "urugwajski"
+msgstr "urugwajska"
 
-#: navoica_enroll/users/administrative_units.py:466
+#: navoica_enroll/users/administrative_units.py:454
 msgid "Uzbekistani"
-msgstr "Uzbekistan"
+msgstr "uzbekistańska"
 
-#: navoica_enroll/users/administrative_units.py:466
+#: navoica_enroll/users/administrative_units.py:454
 msgid "Venezuelan"
-msgstr "wenezuelski"
+msgstr "wenezuelska"
 
-#: navoica_enroll/users/administrative_units.py:466
+#: navoica_enroll/users/administrative_units.py:454
 msgid "Vietnamese"
-msgstr "wietnamski"
+msgstr "wietnamska"
 
-#: navoica_enroll/users/administrative_units.py:467
+#: navoica_enroll/users/administrative_units.py:455
 msgid "Welsh"
-msgstr "walijski"
+msgstr "walijska"
 
-#: navoica_enroll/users/administrative_units.py:468
+#: navoica_enroll/users/administrative_units.py:456
 msgid "Yemenite"
-msgstr "jemeński"
-
-#: navoica_enroll/users/administrative_units.py:468
-msgid "Zambian"
-msgstr "Zambii"
-
-#: navoica_enroll/users/administrative_units.py:468
-msgid "Zimbabwean"
-msgstr "Zimbabwe"
+msgstr "jemeńska"
 
 #: navoica_enroll/users/apps.py:7
 msgid "Users"
@@ -1248,21 +1043,30 @@ msgid "Country"
 msgstr "Kraj"
 
 #: navoica_enroll/users/forms.py:48 navoica_enroll/users/models.py:82
-#, fuzzy
 msgid "Status additional information"
-msgstr "DODATKOWE INFORMACJE"
+msgstr "Dodatkowe informacje"
 
 #: navoica_enroll/users/forms.py:58
 msgid "Don't have a PESEL number"
 msgstr "Nie posiadam nr PESEL"
 
 #: navoica_enroll/users/forms.py:61 navoica_enroll/users/forms.py:290
-msgid "I agree with <a href='{url}' target='_blank'>the project participant's declaration.</a>"
-msgstr "Akceptuję <a href='{url}' target='_blank'>oświdczenie uczestnika projektu.</a>"
+#, python-brace-format
+msgid ""
+"I agree with <a href='{url}' target='_blank'>the project participant's "
+"declaration.</a>"
+msgstr ""
+"Akceptuję <a href='{url}' target='_blank'>oświdczenie uczestnika projektu.</"
+"a>"
 
 #: navoica_enroll/users/forms.py:66 navoica_enroll/users/forms.py:295
-msgid "I consent to <a href='{url}' target='_blank'>the processing of my personal data to participate in the project.</a>"
-msgstr "Wyrażam <a href='{url}' target='_blank'>zgodę na przetwarzanie danych osobowych</a> w celu uczestnictwa w projekcie."
+#, python-brace-format
+msgid ""
+"I consent to <a href='{url}' target='_blank'>the processing of my personal "
+"data to participate in the project.</a>"
+msgstr ""
+"Wyrażam <a href='{url}' target='_blank'>zgodę na przetwarzanie danych "
+"osobowych</a> w celu uczestnictwa w projekcie."
 
 #: navoica_enroll/users/forms.py:77
 msgid "Participant details"
@@ -1401,7 +1205,6 @@ msgid "Start support date"
 msgstr "Data rozpoczęcia otrzymania wsparcia"
 
 #: navoica_enroll/users/models.py:70
-#, fuzzy
 msgid "Choose status..."
 msgstr "Wybierz status..."
 
@@ -1493,7 +1296,9 @@ msgstr "Nazwa zakładu pracy"
 
 #: navoica_enroll/users/models.py:107
 msgid "Migrant / ethnic minority"
-msgstr "Czy należysz do mniejszości narodowej lub etnicznej, jesteś migrantem, osobą obcego pochodzenia?"
+msgstr ""
+"Czy należysz do mniejszości narodowej lub etnicznej, jesteś migrantem, osobą "
+"obcego pochodzenia?"
 
 #: navoica_enroll/users/models.py:108 navoica_enroll/users/models.py:114
 #: navoica_enroll/users/models.py:121 navoica_enroll/users/models.py:128
@@ -1512,7 +1317,8 @@ msgstr "Nie chcę ujawniać"
 
 #: navoica_enroll/users/models.py:113
 msgid "Homeless"
-msgstr "Czy jesteś osobą bezdomną lub dotkniętą wykluczeniem z dostępu do mieszkań?"
+msgstr ""
+"Czy jesteś osobą bezdomną lub dotkniętą wykluczeniem z dostępu do mieszkań?"
 
 #: navoica_enroll/users/models.py:119
 msgid "Disabled person"
@@ -1522,7 +1328,7 @@ msgstr "Czy jesteś osobą z niepełnosprawnościami?"
 msgid "Socially disadvantaged"
 msgstr "Czy jesteś osobą w niekorzystnej sytuacji społecznej?"
 
-#: navoica_enroll/users/models.py:133
+#: navoica_enroll/users/models.py:133Status additional information
 msgid "Course ID"
 msgstr "ID kursu"
 
@@ -1575,16 +1381,239 @@ msgid "A person working in a large enterprise"
 msgstr "Osoba pracująca w dużym przedsiębiorstwie"
 
 #: navoica_enroll/variables.py:14 navoica_enroll/variables.py:18
-#, fuzzy
 msgid "Long-term unemployed person"
 msgstr "Osoba bezrobotna niezarejestrowana w ewidencji urzędów pracy"
 
 #: navoica_enroll/variables.py:22
-#, fuzzy
 msgid "Learning"
-msgstr "Uwaga:"
+msgstr "Uczący się"
 
 #: navoica_enroll/variables.py:23
 msgid "A person not participating in education or training"
 msgstr "Osoba nieuczestnicząca w kształceniu lub szkoleniu"
 
+#~ msgid "Comoran"
+#~ msgstr "komorów"
+
+#~ msgid "Dutchman"
+#~ msgstr "holender"
+
+#~ msgid "Dutchwoman"
+#~ msgstr "holenderka"
+
+#~ msgid "Emirian"
+#~ msgstr "Emirian"
+
+#~ msgid "Ethiopian"
+#~ msgstr "etiopczyk"
+
+#~ msgid "Fijian"
+#~ msgstr "Fidżi"
+
+#~ msgid "Honduran"
+#~ msgstr "Honduras"
+
+#, fuzzy
+#~ msgid "Icelander"
+#~ msgstr "Płeć"
+
+#~ msgid "Liechtensteiner"
+#~ msgstr "Liechtensteiner"
+
+#~ msgid "Maldivan"
+#~ msgstr "Malediwan"
+
+#~ msgid "Malian"
+#~ msgstr "maliańska"
+
+#~ msgid "Monacan"
+#~ msgstr "Monacan"
+
+#~ msgid "Nicaraguan"
+#~ msgstr "Nikaragua"
+
+#~ msgid "Omani"
+#~ msgstr "Omanu"
+
+#~ msgid "Saint Lucian"
+#~ msgstr "Święty Lucjan"
+
+#~ msgid "San Marinese"
+#~ msgstr "San Marinese"
+
+#~ msgid "Sao Tomean"
+#~ msgstr "Wyspy Świętego Tomasza"
+
+#~ msgid "Sierra Leonean"
+#~ msgstr "Sierra Leone"
+
+#~ msgid "Sri Lankan"
+#~ msgstr "Sri Lanki"
+
+#~ msgid "Surinamer"
+#~ msgstr "Surinamer"
+
+#~ msgid "Swazi"
+#~ msgstr "Suazi"
+
+#~ msgid "Zambian"
+#~ msgstr "Zambii"
+
+#~ msgid "Zimbabwean"
+#~ msgstr "Zimbabwe"
+
+#~ msgid "Andorran"
+#~ msgstr "Andora"
+
+#~ msgid "Angolan"
+#~ msgstr "Angoli"
+
+#~ msgid "Antiguans"
+#~ msgstr "Antyguańczycy"
+
+#~ msgid "Bahamian"
+#~ msgstr "Bahamski"
+
+#~ msgid "Bahraini"
+#~ msgstr "Bahrajn"
+
+#~ msgid "Bangladeshi"
+#~ msgstr "Bangladesz"
+
+#~ msgid "Barbadian"
+#~ msgstr "Barbados"
+
+#~ msgid "Barbudans"
+#~ msgstr "Barbudańczycy"
+
+#~ msgid "Batswana"
+#~ msgstr "Batswana"
+
+#~ msgid "Belizean"
+#~ msgstr "Belizean"
+
+#~ msgid "Beninese"
+#~ msgstr "beniński"
+
+#~ msgid "Bhutanese"
+#~ msgstr "Bhutański"
+
+#~ msgid "Bruneian"
+#~ msgstr "Brunei"
+
+#~ msgid "Burkinabe"
+#~ msgstr "Burkinabe"
+
+#~ msgid "Burmese"
+#~ msgstr "Birmańczyk"
+
+#~ msgid "Burundian"
+#~ msgstr "burundyjski"
+
+#~ msgid "Cape Verdean"
+#~ msgstr "Republika Zielonego Przylądka"
+
+#~ msgid "Central African"
+#~ msgstr "Środkowoafrykańska"
+
+#~ msgid "Chadian"
+#~ msgstr "Czadian"
+
+#~ msgid "Congolese"
+#~ msgstr "kongijski"
+
+#~ msgid "Costa Rican"
+#~ msgstr "Kostarykańska"
+
+#~ msgid "Djibouti"
+#~ msgstr "Dżibuti"
+
+#~ msgid "East Timorese"
+#~ msgstr "Timor Wschodni"
+
+#~ msgid "Equatorial Guinean"
+#~ msgstr "Gwinea Równikowa"
+
+#~ msgid "Eritrean"
+#~ msgstr "Erytrejski"
+
+#~ msgid "Gambian"
+#~ msgstr "gambijski"
+
+#~ msgid "Ghanaian"
+#~ msgstr "Ghany"
+
+#~ msgid "Grenadian"
+#~ msgstr "Grenadyjczyk"
+
+#~ msgid "Guatemalan"
+#~ msgstr "gwatemalski"
+
+#~ msgid "Guinean"
+#~ msgstr "Gwinea"
+
+#~ msgid "Guyanese"
+#~ msgstr "Gujański"
+
+#~ msgid "Herzegovinian"
+#~ msgstr "Hercegowina"
+
+#~ msgid "Ivorian"
+#~ msgstr "Wybrzeża Kości Słoniowej"
+
+#~ msgid "Kittian and Nevisian"
+#~ msgstr "Kittian i Nevisian"
+
+#~ msgid "Kyrgyz"
+#~ msgstr "Kirgiski"
+
+#~ msgid "Marshallese"
+#~ msgstr "marshallese"
+
+#~ msgid "Micronesian"
+#~ msgstr "Mikronezyjski"
+
+#~ msgid "Mosotho"
+#~ msgstr "Mosotho"
+
+#~ msgid "Motswana"
+#~ msgstr "Motswana"
+
+#~ msgid "Mozambican"
+#~ msgstr "Mozambik"
+
+#~ msgid "Namibian"
+#~ msgstr "Namibii"
+
+#~ msgid "Nauruan"
+#~ msgstr "Nauruan"
+
+#~ msgid "Northern Irish"
+#~ msgstr "Północnoirlandzki"
+
+#~ msgid "Palauan"
+#~ msgstr "Palauan"
+
+#~ msgid "Papua New Guinean"
+#~ msgstr "Papua Nowa Gwinea"
+
+#~ msgid "Paraguayan"
+#~ msgstr "Paragwaj"
+
+#~ msgid "Seychellois"
+#~ msgstr "Seszele"
+
+#~ msgid "Solomon Islander"
+#~ msgstr "Wysp Salomona"
+
+#~ msgid "Togolese"
+#~ msgstr "togolski"
+
+#~ msgid "Tongan"
+#~ msgstr "Tonga"
+
+#~ msgid "Trinidadian or Tobagonian"
+#~ msgstr "Trynidadyjski lub Tobagoński"
+
+#~ msgid "Tuvaluan"
+#~ msgstr "Tuvaluan"

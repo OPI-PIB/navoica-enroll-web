@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-21 12:24+0000\n"
+"POT-Creation-Date: 2021-07-06 08:06+0000\n"
 "PO-Revision-Date: 2020-09-30 07:34+0000\n"
 "Last-Translator: Paula Wasylów <Paula.Wasylow@opi.org.pl>, 2020\n"
 "Language-Team: English (United States) (https://www.transifex.com/navoica/"
@@ -488,36 +488,24 @@ msgstr ""
 msgid "Export CSV"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:388
+#: navoica_enroll/users/administrative_units.py:389
 msgid "Polish"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:389
+#: navoica_enroll/users/administrative_units.py:390
 msgid "Afghan"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:389
+#: navoica_enroll/users/administrative_units.py:390
 msgid "Albanian"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:389
+#: navoica_enroll/users/administrative_units.py:390
 msgid "Algerian"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:389
+#: navoica_enroll/users/administrative_units.py:390
 msgid "American"
-msgstr ""
-
-#: navoica_enroll/users/administrative_units.py:390
-msgid "Andorran"
-msgstr ""
-
-#: navoica_enroll/users/administrative_units.py:390
-msgid "Angolan"
-msgstr ""
-
-#: navoica_enroll/users/administrative_units.py:390
-msgid "Antiguans"
 msgstr ""
 
 #: navoica_enroll/users/administrative_units.py:391
@@ -541,727 +529,439 @@ msgid "Azerbaijani"
 msgstr ""
 
 #: navoica_enroll/users/administrative_units.py:394
-msgid "Bahamian"
-msgstr ""
-
-#: navoica_enroll/users/administrative_units.py:394
-msgid "Bahraini"
-msgstr ""
-
-#: navoica_enroll/users/administrative_units.py:394
-msgid "Bangladeshi"
-msgstr ""
-
-#: navoica_enroll/users/administrative_units.py:395
-msgid "Barbadian"
-msgstr ""
-
-#: navoica_enroll/users/administrative_units.py:396
-msgid "Barbudans"
-msgstr ""
-
-#: navoica_enroll/users/administrative_units.py:396
-msgid "Batswana"
-msgstr ""
-
-#: navoica_enroll/users/administrative_units.py:396
 msgid "Belarusian"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:397
+#: navoica_enroll/users/administrative_units.py:395
 msgid "Belgian"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:398
-msgid "Belizean"
-msgstr ""
-
-#: navoica_enroll/users/administrative_units.py:398
-msgid "Beninese"
-msgstr ""
-
-#: navoica_enroll/users/administrative_units.py:398
-msgid "Bhutanese"
-msgstr ""
-
-#: navoica_enroll/users/administrative_units.py:399
+#: navoica_enroll/users/administrative_units.py:396
 msgid "Bolivian"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:400
+#: navoica_enroll/users/administrative_units.py:397
 msgid "Bosnian"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:400
+#: navoica_enroll/users/administrative_units.py:397
 msgid "Brazilian"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:400
+#: navoica_enroll/users/administrative_units.py:397
 msgid "British"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:400
-msgid "Bruneian"
-msgstr ""
-
-#: navoica_enroll/users/administrative_units.py:401
+#: navoica_enroll/users/administrative_units.py:398
 msgid "Bulgarian"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:401
-msgid "Burkinabe"
-msgstr ""
-
-#: navoica_enroll/users/administrative_units.py:401
-msgid "Burmese"
-msgstr ""
-
-#: navoica_enroll/users/administrative_units.py:402
-msgid "Burundian"
-msgstr ""
-
-#: navoica_enroll/users/administrative_units.py:403
+#: navoica_enroll/users/administrative_units.py:399
 msgid "Cambodian"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:403
+#: navoica_enroll/users/administrative_units.py:399
 msgid "Cameroonian"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:403
+#: navoica_enroll/users/administrative_units.py:399
 msgid "Canadian"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:404
-msgid "Cape Verdean"
-msgstr ""
-
-#: navoica_enroll/users/administrative_units.py:405
-msgid "Central African"
-msgstr ""
-
-#: navoica_enroll/users/administrative_units.py:405
-msgid "Chadian"
-msgstr ""
-
-#: navoica_enroll/users/administrative_units.py:405
+#: navoica_enroll/users/administrative_units.py:399
 msgid "Chilean"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:406
+#: navoica_enroll/users/administrative_units.py:400
 msgid "Chinese"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:407
+#: navoica_enroll/users/administrative_units.py:401
 msgid "Colombian"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:407
-msgid "Comoran"
-msgstr ""
-
-#: navoica_enroll/users/administrative_units.py:407
-msgid "Congolese"
-msgstr ""
-
-#: navoica_enroll/users/administrative_units.py:408
-msgid "Costa Rican"
-msgstr ""
-
-#: navoica_enroll/users/administrative_units.py:409
+#: navoica_enroll/users/administrative_units.py:403
 msgid "Croatian"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:409
+#: navoica_enroll/users/administrative_units.py:403
 msgid "Cuban"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:409
+#: navoica_enroll/users/administrative_units.py:403
 msgid "Cypriot"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:409
+#: navoica_enroll/users/administrative_units.py:403
 msgid "Czech"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:410
+#: navoica_enroll/users/administrative_units.py:404
 msgid "Danish"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:411
-msgid "Djibouti"
-msgstr ""
-
-#: navoica_enroll/users/administrative_units.py:411
+#: navoica_enroll/users/administrative_units.py:405
 msgid "Dominican"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:411
+#: navoica_enroll/users/administrative_units.py:405
 msgid "Dutch"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:411
-msgid "Dutchman"
-msgstr ""
-
-#: navoica_enroll/users/administrative_units.py:412
-msgid "Dutchwoman"
-msgstr ""
-
-#: navoica_enroll/users/administrative_units.py:412
-msgid "East Timorese"
-msgstr ""
-
-#: navoica_enroll/users/administrative_units.py:412
+#: navoica_enroll/users/administrative_units.py:405
 msgid "Ecuadorean"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:413
+#: navoica_enroll/users/administrative_units.py:406
 msgid "Egyptian"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:413
-msgid "Emirian"
-msgstr ""
-
-#: navoica_enroll/users/administrative_units.py:413
-msgid "Equatorial Guinean"
-msgstr ""
-
-#: navoica_enroll/users/administrative_units.py:414
-msgid "Eritrean"
-msgstr ""
-
-#: navoica_enroll/users/administrative_units.py:414
+#: navoica_enroll/users/administrative_units.py:407
 msgid "Estonian"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:414
-msgid "Ethiopian"
-msgstr ""
-
-#: navoica_enroll/users/administrative_units.py:414
-msgid "Fijian"
-msgstr ""
-
-#: navoica_enroll/users/administrative_units.py:415
+#: navoica_enroll/users/administrative_units.py:408
 msgid "Filipino"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:415
+#: navoica_enroll/users/administrative_units.py:408
 msgid "Finnish"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:415
+#: navoica_enroll/users/administrative_units.py:408
 msgid "French"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:415
+#: navoica_enroll/users/administrative_units.py:408
 msgid "Gabonese"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:416
-msgid "Gambian"
-msgstr ""
-
-#: navoica_enroll/users/administrative_units.py:416
+#: navoica_enroll/users/administrative_units.py:409
 msgid "Georgian"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:416
+#: navoica_enroll/users/administrative_units.py:409
 msgid "German"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:416
-msgid "Ghanaian"
-msgstr ""
-
-#: navoica_enroll/users/administrative_units.py:417
+#: navoica_enroll/users/administrative_units.py:410
 msgid "Greek"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:418
-msgid "Grenadian"
-msgstr ""
-
-#: navoica_enroll/users/administrative_units.py:418
-msgid "Guatemalan"
-msgstr ""
-
-#: navoica_enroll/users/administrative_units.py:419
-msgid "Guinean"
-msgstr ""
-
-#: navoica_enroll/users/administrative_units.py:419
-msgid "Guyanese"
-msgstr ""
-
-#: navoica_enroll/users/administrative_units.py:419
+#: navoica_enroll/users/administrative_units.py:411
 msgid "Haitian"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:420
-msgid "Herzegovinian"
-msgstr ""
-
-#: navoica_enroll/users/administrative_units.py:421
-msgid "Honduran"
-msgstr ""
-
-#: navoica_enroll/users/administrative_units.py:421
+#: navoica_enroll/users/administrative_units.py:412
 msgid "Hungarian"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:422
-msgid "Icelander"
-msgstr ""
-
-#: navoica_enroll/users/administrative_units.py:423
+#: navoica_enroll/users/administrative_units.py:414
 msgid "Indian"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:423
+#: navoica_enroll/users/administrative_units.py:414
 msgid "Indonesian"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:423
+#: navoica_enroll/users/administrative_units.py:414
 msgid "Iranian"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:423
+#: navoica_enroll/users/administrative_units.py:414
 msgid "Iraqi"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:424
+#: navoica_enroll/users/administrative_units.py:415
 msgid "Irish"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:425
+#: navoica_enroll/users/administrative_units.py:416
 msgid "Israeli"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:425
+#: navoica_enroll/users/administrative_units.py:416
 msgid "Italian"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:425
-msgid "Ivorian"
-msgstr ""
-
-#: navoica_enroll/users/administrative_units.py:425
+#: navoica_enroll/users/administrative_units.py:416
 msgid "Jamaican"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:426
+#: navoica_enroll/users/administrative_units.py:417
 msgid "Japanese"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:426
+#: navoica_enroll/users/administrative_units.py:417
 msgid "Jordanian"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:426
+#: navoica_enroll/users/administrative_units.py:417
 msgid "Kazakhstani"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:427
+#: navoica_enroll/users/administrative_units.py:418
 msgid "Kenyan"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:428
-msgid "Kittian and Nevisian"
-msgstr ""
-
-#: navoica_enroll/users/administrative_units.py:428
+#: navoica_enroll/users/administrative_units.py:419
 msgid "Kuwaiti"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:428
-msgid "Kyrgyz"
-msgstr ""
-
-#: navoica_enroll/users/administrative_units.py:429
+#: navoica_enroll/users/administrative_units.py:420
 msgid "Laotian"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:430
+#: navoica_enroll/users/administrative_units.py:421
 msgid "Latvian"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:430
+#: navoica_enroll/users/administrative_units.py:421
 msgid "Lebanese"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:430
+#: navoica_enroll/users/administrative_units.py:421
 msgid "Liberian"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:430
+#: navoica_enroll/users/administrative_units.py:421
 msgid "Libyan"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:431
-msgid "Liechtensteiner"
-msgstr ""
-
-#: navoica_enroll/users/administrative_units.py:431
+#: navoica_enroll/users/administrative_units.py:422
 msgid "Lithuanian"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:431
+#: navoica_enroll/users/administrative_units.py:422
 msgid "Luxembourger"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:432
+#: navoica_enroll/users/administrative_units.py:423
 msgid "Macedonian"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:432
+#: navoica_enroll/users/administrative_units.py:423
 msgid "Malagasy"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:432
+#: navoica_enroll/users/administrative_units.py:423
 msgid "Malawian"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:433
+#: navoica_enroll/users/administrative_units.py:424
 msgid "Malaysian"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:434
-msgid "Maldivan"
-msgstr ""
-
-#: navoica_enroll/users/administrative_units.py:434
-msgid "Malian"
-msgstr ""
-
-#: navoica_enroll/users/administrative_units.py:434
+#: navoica_enroll/users/administrative_units.py:425
 msgid "Maltese"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:434
-msgid "Marshallese"
-msgstr ""
-
-#: navoica_enroll/users/administrative_units.py:435
+#: navoica_enroll/users/administrative_units.py:426
 msgid "Mauritanian"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:435
+#: navoica_enroll/users/administrative_units.py:426
 msgid "Mauritian"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:435
+#: navoica_enroll/users/administrative_units.py:426
 msgid "Mexican"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:436
-msgid "Micronesian"
-msgstr ""
-
-#: navoica_enroll/users/administrative_units.py:437
+#: navoica_enroll/users/administrative_units.py:428
 msgid "Moldovan"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:437
-msgid "Monacan"
-msgstr ""
-
-#: navoica_enroll/users/administrative_units.py:437
+#: navoica_enroll/users/administrative_units.py:428
 msgid "Mongolian"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:437
+#: navoica_enroll/users/administrative_units.py:428
 msgid "Moroccan"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:438
-msgid "Mosotho"
-msgstr ""
-
-#: navoica_enroll/users/administrative_units.py:438
-msgid "Motswana"
-msgstr ""
-
-#: navoica_enroll/users/administrative_units.py:438
-msgid "Mozambican"
-msgstr ""
-
-#: navoica_enroll/users/administrative_units.py:439
-msgid "Namibian"
-msgstr ""
-
-#: navoica_enroll/users/administrative_units.py:440
-msgid "Nauruan"
-msgstr ""
-
-#: navoica_enroll/users/administrative_units.py:440
+#: navoica_enroll/users/administrative_units.py:429
 msgid "Nepalese"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:440
+#: navoica_enroll/users/administrative_units.py:429
 msgid "Netherlander"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:441
+#: navoica_enroll/users/administrative_units.py:430
 msgid "New Zealander"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:442
-msgid "Nicaraguan"
-msgstr ""
-
-#: navoica_enroll/users/administrative_units.py:442
+#: navoica_enroll/users/administrative_units.py:431
 msgid "Nigerian"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:443
+#: navoica_enroll/users/administrative_units.py:432
 msgid "Nigerien"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:444
+#: navoica_enroll/users/administrative_units.py:433
 msgid "North Korean"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:444
-msgid "Northern Irish"
-msgstr ""
-
-#: navoica_enroll/users/administrative_units.py:444
+#: navoica_enroll/users/administrative_units.py:433
 msgid "Norwegian"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:445
-msgid "Omani"
-msgstr ""
-
-#: navoica_enroll/users/administrative_units.py:446
+#: navoica_enroll/users/administrative_units.py:435
 msgid "Pakistani"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:446
-msgid "Palauan"
-msgstr ""
-
-#: navoica_enroll/users/administrative_units.py:446
+#: navoica_enroll/users/administrative_units.py:435
 msgid "Panamanian"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:447
-msgid "Papua New Guinean"
-msgstr ""
-
-#: navoica_enroll/users/administrative_units.py:447
-msgid "Paraguayan"
-msgstr ""
-
-#: navoica_enroll/users/administrative_units.py:447
+#: navoica_enroll/users/administrative_units.py:436
 msgid "Peruvian"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:448
+#: navoica_enroll/users/administrative_units.py:437
 msgid "Portuguese"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:448
+#: navoica_enroll/users/administrative_units.py:437
 msgid "Qatari"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:448
+#: navoica_enroll/users/administrative_units.py:437
 msgid "Romanian"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:449
+#: navoica_enroll/users/administrative_units.py:438
 msgid "Russian"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:449
+#: navoica_enroll/users/administrative_units.py:438
 msgid "Rwandan"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:449
-msgid "Saint Lucian"
-msgstr ""
-
-#: navoica_enroll/users/administrative_units.py:450
+#: navoica_enroll/users/administrative_units.py:439
 msgid "Salvadoran"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:451
+#: navoica_enroll/users/administrative_units.py:440
 msgid "Samoan"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:451
-msgid "San Marinese"
-msgstr ""
-
-#: navoica_enroll/users/administrative_units.py:451
-msgid "Sao Tomean"
-msgstr ""
-
-#: navoica_enroll/users/administrative_units.py:452
+#: navoica_enroll/users/administrative_units.py:441
 msgid "Saudi"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:453
+#: navoica_enroll/users/administrative_units.py:442
 msgid "Scottish"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:453
+#: navoica_enroll/users/administrative_units.py:442
 msgid "Senegalese"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:453
+#: navoica_enroll/users/administrative_units.py:442
 msgid "Serbian"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:454
-msgid "Seychellois"
-msgstr ""
-
-#: navoica_enroll/users/administrative_units.py:455
-msgid "Sierra Leonean"
-msgstr ""
-
-#: navoica_enroll/users/administrative_units.py:455
+#: navoica_enroll/users/administrative_units.py:444
 msgid "Singaporean"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:455
+#: navoica_enroll/users/administrative_units.py:444
 msgid "Slovakian"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:456
+#: navoica_enroll/users/administrative_units.py:445
 msgid "Slovenian"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:456
-msgid "Solomon Islander"
-msgstr ""
-
-#: navoica_enroll/users/administrative_units.py:456
+#: navoica_enroll/users/administrative_units.py:445
 msgid "Somali"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:457
+#: navoica_enroll/users/administrative_units.py:446
 msgid "South African"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:457
+#: navoica_enroll/users/administrative_units.py:446
 msgid "South Korean"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:457
+#: navoica_enroll/users/administrative_units.py:446
 msgid "Spanish"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:458
-msgid "Sri Lankan"
-msgstr ""
-
-#: navoica_enroll/users/administrative_units.py:458
+#: navoica_enroll/users/administrative_units.py:447
 msgid "Sudanese"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:458
-msgid "Surinamer"
-msgstr ""
-
-#: navoica_enroll/users/administrative_units.py:458
-msgid "Swazi"
-msgstr ""
-
-#: navoica_enroll/users/administrative_units.py:459
+#: navoica_enroll/users/administrative_units.py:448
 msgid "Swedish"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:459
+#: navoica_enroll/users/administrative_units.py:448
 msgid "Swiss"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:459
+#: navoica_enroll/users/administrative_units.py:448
 msgid "Syrian"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:459
+#: navoica_enroll/users/administrative_units.py:448
 msgid "Taiwanese"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:460
+#: navoica_enroll/users/administrative_units.py:449
 msgid "Tajik"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:461
+#: navoica_enroll/users/administrative_units.py:450
 msgid "Tanzanian"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:461
+#: navoica_enroll/users/administrative_units.py:450
 msgid "Thai"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:461
-msgid "Togolese"
-msgstr ""
-
-#: navoica_enroll/users/administrative_units.py:461
-msgid "Tongan"
-msgstr ""
-
-#: navoica_enroll/users/administrative_units.py:462
-msgid "Trinidadian or Tobagonian"
-msgstr ""
-
-#: navoica_enroll/users/administrative_units.py:462
+#: navoica_enroll/users/administrative_units.py:450
 msgid "Tunisian"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:463
+#: navoica_enroll/users/administrative_units.py:451
 msgid "Turkish"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:464
-msgid "Tuvaluan"
-msgstr ""
-
-#: navoica_enroll/users/administrative_units.py:464
+#: navoica_enroll/users/administrative_units.py:452
 msgid "Ugandan"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:464
+#: navoica_enroll/users/administrative_units.py:452
 msgid "Ukrainian"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:465
+#: navoica_enroll/users/administrative_units.py:453
 msgid "Uruguayan"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:466
+#: navoica_enroll/users/administrative_units.py:454
 msgid "Uzbekistani"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:466
+#: navoica_enroll/users/administrative_units.py:454
 msgid "Venezuelan"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:466
+#: navoica_enroll/users/administrative_units.py:454
 msgid "Vietnamese"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:467
+#: navoica_enroll/users/administrative_units.py:455
 msgid "Welsh"
 msgstr ""
 
-#: navoica_enroll/users/administrative_units.py:468
+#: navoica_enroll/users/administrative_units.py:456
 msgid "Yemenite"
-msgstr ""
-
-#: navoica_enroll/users/administrative_units.py:468
-msgid "Zambian"
-msgstr ""
-
-#: navoica_enroll/users/administrative_units.py:468
-msgid "Zimbabwean"
 msgstr ""
 
 #: navoica_enroll/users/apps.py:7

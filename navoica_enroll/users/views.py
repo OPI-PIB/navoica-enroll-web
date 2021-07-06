@@ -14,6 +14,7 @@ from django.contrib.auth import logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core.exceptions import FieldDoesNotExist
+from django.core.serializers.json import DjangoJSONEncoder
 from django.http import Http404, HttpResponse
 from django.shortcuts import redirect
 from django.urls import reverse
@@ -117,7 +118,7 @@ class UserRegistrationCourseViewBase(FormView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['statuses_options_json'] = json.dumps(STATUSES_OPTIONS)
+        context['statuses_options_json'] = json.dumps(STATUSES_OPTIONS, cls=DjangoJSONEncoder)
         context['course_info'] = self.course_info
         return context
 
