@@ -139,20 +139,20 @@ function loadRegisterForm() {
 
   const validation = {
     first_name: {
-      pattern: /^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŚŽ∂ð ,.'-]{1,100}$/,
-      isValid: false,
-      isRequired: true,
-      message: function (validationTranslates) {
-        return validationTranslates.error_message_100_char_required;
-      },
+        pattern: /^(.*){1,100}$/i,
+        isValid: false,
+        isRequired: true,
+        message: function (validationTranslates) {
+            return validationTranslates.error_message_100_char_required;
+        },
     },
     last_name: {
-      pattern: /^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŚŽ∂ð ,.'-]{1,100}$/,
-      isValid: false,
-      isRequired: true,
-      message: function (validationTranslates) {
-        return validationTranslates.error_message_100_char_required;
-      },
+        pattern: /^(.*){1,100}$/i,
+        isValid: false,
+        isRequired: true,
+        message: function (validationTranslates) {
+            return validationTranslates.error_message_100_char_required;
+        },
     },
     pesel: {
       pattern: /^[0-9]{11}$/,
@@ -239,12 +239,12 @@ function loadRegisterForm() {
       },
     },
     street: {
-      pattern: /^([a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŚŽ∂ð0-9 ,.'-]{1,300})*(\S+[\w ]+)$/,
-      isValid: false,
-      isRequired: true,
-      message: function (validationTranslates) {
-        return validationTranslates.error_message_300_char_required;
-      },
+        pattern: /^(.*){1,30}$/i,
+        isValid: false,
+        isRequired: true,
+        message: function (validationTranslates) {
+            return validationTranslates.error_message_300_char_required;
+        },
     },
     street_no: {
       pattern: /^([a-zA-Z0-9]{1,10})*(\S+)$/,
@@ -271,20 +271,20 @@ function loadRegisterForm() {
       },
     },
     city: {
-      pattern: /^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŚŽ∂ð ,.'-]{1,30}\S+[\w ]+$/,
-      isValid: false,
-      isRequired: true,
-      message: function (validationTranslates) {
-        return validationTranslates.error_message_30_char_required;
-      },
+        pattern: /^(.*){1,30}$/i,
+        isValid: false,
+        isRequired: true,
+        message: function (validationTranslates) {
+            return validationTranslates.error_message_30_char_required;
+        },
     },
     country: {
-      pattern: /^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŚŽ∂ð ,.'-]{1,30}\S+[\w ]+$/,
-      isValid: false,
-      isRequired: true,
-      message: function (validationTranslates) {
-        return validationTranslates.error_message_30_char_required;
-      },
+        pattern: /^(.*){1,30}$/i,
+        isValid: false,
+        isRequired: true,
+        message: function (validationTranslates) {
+            return validationTranslates.error_message_30_char_required;
+        },
     },
     voivodeship: {
       isValid: false,
@@ -317,8 +317,8 @@ function loadRegisterForm() {
         if (!el.value || isFieldWithSpacesOnly(el)) {
           setErrorMessage(validationTranslates.error_message_required, el);
         } else if (
-          !/^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŚŽ∂ð ,.'-]{1,30}\S+[\w ]+$/.test(
-            el.value
+          !/^(.*){1,30}$/.test(
+              el.value
           )
         ) {
           setErrorField(el);
@@ -363,9 +363,9 @@ function loadRegisterForm() {
         if (!el.value || isFieldWithSpacesOnly(el)) {
           setErrorMessage(validationTranslates.error_message_required, el);
         } else if (
-          !/^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŚŽ∂ð ,.'-]{1,30}\S+[\w ]+$/.test(
-            el.value
-          )
+            !/^(.*){1,30}$/.test(
+                el.value
+            )
         ) {
           setErrorField(el);
           setErrorMessage(
