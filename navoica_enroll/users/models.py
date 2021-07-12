@@ -27,7 +27,7 @@ class UserRegistrationCourse(models.Model):
         ('F', _('Female')),
     ], max_length=1)
     pesel = models.CharField(_("PESEL"), null=True, blank=True, max_length=11)
-    age = models.SmallIntegerField(_("Age"), default=0)
+    age = models.SmallIntegerField(_("Age"))
     education = models.CharField(_("Education"), max_length=1,
                                  choices=[
                                      ('', _('Choose grade...')),
