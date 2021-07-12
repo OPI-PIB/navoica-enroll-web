@@ -55,7 +55,7 @@ class TestUserRegisterForm(TestCase):
             'last_name': self.user.last_name,
             'gender': 'M',
             'pesel': '53022858449',
-            'nationality': 'Polish',
+            'citizenship': 'Polish',
             'age': 30,
             'education': 3,
             'street': "Test",

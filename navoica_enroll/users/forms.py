@@ -89,7 +89,7 @@ class UserRegistrationCourseFormBase(ModelForm):
                             css_class="row"
                         ),
                         Div(
-                            Div('nationality',
+                            Div('citizenship',
                                 css_class="col-md-12 register-course__input-container"
                                 ),
                             css_class="row"

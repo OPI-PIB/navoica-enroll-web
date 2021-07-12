@@ -20,7 +20,7 @@ class User(AbstractUser):
 class UserRegistrationCourse(models.Model):
     first_name = models.CharField(_("First Name"), max_length=100)
     last_name = models.CharField(_("Last name"), max_length=100)
-    nationality = models.CharField(_("Nationality"), max_length=100, choices=NATIONALITIES_CHOICES)
+    citizenship = models.CharField(_("Citizenship"), max_length=100, choices=NATIONALITIES_CHOICES)
     gender = models.CharField(_("Gender"), choices=[
         ('', _('Choose gender...')),
         ('M', _('Male')),
