@@ -371,15 +371,6 @@ msgid ""
 "will be registered for the course. Participation in the course is free."
 msgstr ""
 
-#: navoica_enroll/templates/users/form_registration.html:30
-msgid ""
-"The course is funded by the European Union and the Polish state budget. The "
-"conditions of funding oblige the university, the organizer of the course, to "
-"collect data about the participants. Personal data from the registration "
-"form, will be collected, processed and verified by the course organizer. "
-"Filling in the form is a prerequisite to join the course."
-msgstr ""
-
 #: navoica_enroll/templates/users/form_registration.html:43
 msgid "The form contains errors"
 msgstr ""
