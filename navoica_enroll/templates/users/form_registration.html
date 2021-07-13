@@ -10,9 +10,16 @@
     <h2 class="register-course__subtitle mb-3">{{ course_info.name }}</h2>
 
     <p>{% trans "Filling in this form is a prerequisite for taking the course. <strong>The mandatory fields are marked with an asterisk.</strong> After submitting the form, you will be registered for the course." %}</p>
-    <p class="pb-5 mb-0">{% trans "More information" %}: <a href="#" data-toggle="modal" data-target="#modal-video"
-                                                            class="text-semi-bold">{% trans "Why is the collection of user data necessary?" %}</a>
+
+    <p class="mb-5 mb-0 left_colored_border">{% blocktrans %}The course is funded by the European Union and the Polish
+      state budget.
+      <strong>The conditions of funding oblige the university, the organizer of the course, to collect data about the
+        participants. Personal data from the registration form, will be collected, processed and verified by the course
+        organizer.</strong> Filling in the form is a prerequisite to join the course.{% endblocktrans %}<br/>
+      {% trans "More information" %}: <a href="#" data-toggle="modal" data-target="#modal-video"
+                                         class="text-semi-bold">{% trans "Why is the collection of user data necessary?" %}</a>
     </p>
+
     <!--<p>{% trans "To participate in the course, fill in the registration form below with your details (mandatory fields have been marked with an asterisk). The information provided should be complete and consistent with the facts. Then accept the participant's statement and agree to the processing of personal data in order to participate in the project. After submitting the form, you will be registered for the course. Participation in the course is free." %}</p>-->
 
     <div class="modal fade" id="modal-video" tabindex="-1" role="dialog" aria-labelledby="modal-video-title"

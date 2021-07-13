@@ -541,3 +541,8 @@ hr.pb-30 {
 .custom-control-label::before, .custom-file-label, .custom-select {
   transition: none;
 }
+
+.left_colored_border {
+  border-left: 5px solid #008B8B;
+  padding-left: 30px;
+}
