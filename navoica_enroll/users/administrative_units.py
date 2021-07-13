@@ -384,8 +384,8 @@ Zielona Góra
 
 ADMINISTRATIVE_UNIT_CHOICES_PL = ((slugify(unit.strip()), unit.strip()) for unit in units_raw.split("\n"))
 
-
 NATIONALITIES_CHOICES = (
+    ('', _('Choose citizenship...')),
     ('Polish', _('Polish')),
     ('Afghan', _('Afghan')), ('Albanian', _('Albanian')), ('Algerian', _('Algerian')), ('American', _('American')),
     ('Argentinean', _('Argentinean')),

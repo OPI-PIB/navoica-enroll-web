@@ -49,6 +49,7 @@
 {% block javascript %}
   <script>
     let statusOptions = {{ statuses_options_json|safe }};
+    let statusOptionsDefault = "{% trans 'Choose additional information...'%}";
 
     document.addEventListener("DOMContentLoaded", loadTranslationsJS);
 

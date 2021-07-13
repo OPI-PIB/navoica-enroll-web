@@ -8,6 +8,7 @@ from django.utils.translation import ugettext_lazy as _
 from localflavor.pl.pl_voivodeships import VOIVODESHIP_CHOICES
 
 from navoica_enroll.users.administrative_units import ADMINISTRATIVE_UNIT_CHOICES_PL, NATIONALITIES_CHOICES
+from navoica_enroll.variables import COUNTRIES
 
 
 class User(AbstractUser):
@@ -39,7 +40,7 @@ class UserRegistrationCourse(models.Model):
                                  ]
                                  )
     street = models.CharField(_("Street"), max_length=300,
-                              help_text=_("Enter the address correspondence."))
+                              help_text=_("Enter the address postal address."))
     street_no = models.CharField(_("Street no"), max_length=10)
     street_building_no = models.CharField(_("Building no"), max_length=10, null=True, blank=True)
     postal_code = models.CharField(_("Postal code"), max_length=6)
@@ -54,8 +55,7 @@ class UserRegistrationCourse(models.Model):
     commune = models.CharField(_("Commune"), max_length=30, null=True,
                                blank=True)
 
-    country = models.CharField(_("Country"), max_length=30, null=True,
-                               blank=True)
+    country = models.CharField(_("Country"), max_length=30, choices=COUNTRIES, default="ZZ")
 
     phone = models.CharField(_("Phone"), max_length=30)
     email = models.CharField(_("E-mail"), max_length=254)
@@ -72,10 +72,9 @@ class UserRegistrationCourse(models.Model):
         ('registered', _('Registered unemployed')),
         ('unregistered', _('Unregistered unemployed')),
         ('looking', _('Unemployed, not looking for work')),
-        ('student', _('Student')),
     )
 
-    status = models.CharField(_("Status"), max_length=1000,
+    status = models.CharField(_("What is your current status on the labor market?"), max_length=1000,
                               choices=STATUSES
                               )
 
@@ -102,7 +101,7 @@ class UserRegistrationCourse(models.Model):
                                   choices=[(t, t) for t in
                                            PROFESSIONS])
 
-    work_name = models.CharField(_("Job title"), max_length=1000, null=True, blank=True, )
+    work_name = models.CharField(_("Company's name"), max_length=1000, null=True, blank=True, )
 
     origin = models.CharField(_("Migrant / ethnic minority"), max_length=1, default="", choices=[
         ('y', _("Yes")),
