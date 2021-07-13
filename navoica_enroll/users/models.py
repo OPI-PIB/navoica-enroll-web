@@ -8,7 +8,7 @@ from django.utils.translation import ugettext_lazy as _
 from localflavor.pl.pl_voivodeships import VOIVODESHIP_CHOICES
 
 from navoica_enroll.users.administrative_units import ADMINISTRATIVE_UNIT_CHOICES_PL, NATIONALITIES_CHOICES
-from navoica_enroll.variables import COUNTRIES
+from navoica_enroll.variables import COUNTRIES_ENROLL
 
 
 class User(AbstractUser):
@@ -55,7 +55,7 @@ class UserRegistrationCourse(models.Model):
     commune = models.CharField(_("Commune"), max_length=30, null=True,
                                blank=True)
 
-    country = models.CharField(_("Country"), max_length=30, choices=COUNTRIES, default="ZZ")
+    country = models.CharField(_("Country"), max_length=30, choices=COUNTRIES_ENROLL, default="ZZ")
 
     phone = models.CharField(_("Phone"), max_length=30)
     email = models.CharField(_("E-mail"), max_length=254)
@@ -94,7 +94,7 @@ class UserRegistrationCourse(models.Model):
         _("Employee in social economy support center"),
         _("Employee in psychological and pedagogical counseling center"),
         _("Practical vocational instructor"),
-        _("Other"),
+        _("other"),
     ]
 
     profession = models.CharField(_("Profession"), max_length=1000, null=True, blank=True,
@@ -103,26 +103,28 @@ class UserRegistrationCourse(models.Model):
 
     work_name = models.CharField(_("Company's name"), max_length=1000, null=True, blank=True, )
 
-    origin = models.CharField(_("Migrant / ethnic minority"), max_length=1, default="", choices=[
+    origin = models.CharField(
+        _("Do you belong to a national or ethnic minority, are you a migrant, a person of foreign origin?"),
+        max_length=1, default="", choices=[
+            ('y', _("Yes")),
+            ('n', _("No")),
+            ('r', _("Prefer not to tell"))
+
+        ])
+    homeless = models.CharField(_("Are you homeless or excluded from housing?"), max_length=1, default="", choices=[
         ('y', _("Yes")),
         ('n', _("No")),
         ('r', _("Prefer not to tell"))
 
     ])
-    homeless = models.CharField(_("Homeless"), max_length=1, default="", choices=[
-        ('y', _("Yes")),
-        ('n', _("No")),
-        ('r', _("Prefer not to tell"))
-
-    ])
-    disabled_person = models.CharField(_("Disabled person"), max_length=1, default="",
+    disabled_person = models.CharField(_("Are you a person with a disability?"), max_length=1, default="",
                                        choices=[
                                            ('y', _("Yes")),
                                            ('n', _("No")),
                                            ('r', _("Prefer not to tell"))
 
                                        ])
-    social_disadvantage = models.CharField(_("Socially disadvantaged"),
+    social_disadvantage = models.CharField(_("Are you a socially disadvantaged person?"),
                                            max_length=1, default="", choices=[
             ('y', _("Yes")),
             ('n', _("No")),

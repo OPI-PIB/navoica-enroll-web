@@ -73,7 +73,7 @@ class TestUserRegisterForm(TestCase):
             'phone': 432423,
             'email': 'longemaillongemaillongemaillongemail@longemaillongemaillongemaillongemail.pl',
             'status': 'employed',
-            'status_info': 'Other',
+            'status_info': 'other',
             'profession': 'Farmer',
             'work_name': "Test",
             'origin': "y",

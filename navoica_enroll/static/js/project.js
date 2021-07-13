@@ -31,6 +31,9 @@ function loadRegisterForm() {
         sel.find('option[value=PL]').prependTo(sel);
         sel.find('option[value=Polish]').prependTo(sel);
         sel.find('option[value=""]').prependTo(sel);
+        sel.find('option[value="other"]').appendTo(sel);
+        sel.find('option[value="inny/a"]').appendTo(sel);
+        sel.find('option[value="ZZ"]').appendTo(sel);
         $(selector).val($(selector + " option:first").val());
     }
 
@@ -118,6 +121,8 @@ function loadRegisterForm() {
             .querySelector("[for='id_profession']")
             .classList.remove("disabled");
         document.querySelector("[for='id_work_name']").classList.remove("disabled");
+
+        sorting("#id_profession")
     }
 
     function changeVisibilityJob(value) {
@@ -363,6 +368,18 @@ function loadRegisterForm() {
             },
         },
         status: {
+            isValid: false,
+            isRequired: true,
+            validateFn: function (el) {
+                if (!el.value) {
+                    setErrorMessage(validationTranslates.error_message_required, el);
+                } else {
+                    removeErrorField(el);
+                    clearErrorMessage(el);
+                }
+            },
+        },
+        status_info: {
             isValid: false,
             isRequired: true,
             validateFn: function (el) {
@@ -655,6 +672,8 @@ function loadRegisterForm() {
                     statusJobInfoInput.appendChild(option);
                 }
             )
+
+            sorting("#id_status_info")
 
 
         } else {
