@@ -87,13 +87,33 @@ function loadRegisterForm() {
     function disableInputsStatusJob() {
         jobProfessionInput.setAttribute("disabled", "true");
         workNameInput.setAttribute("disabled", "true");
+        statusJobInfoInput.setAttribute("disabled", "true");
         document.querySelector("[for='id_profession']").classList.add("disabled");
         document.querySelector("[for='id_work_name']").classList.add("disabled");
+        document.querySelector("[for='id_status_info']").classList.add("disabled");
+
+        if (document.querySelector("label[for='id_profession'] .asteriskField"))
+            document.querySelector("label[for='id_profession'] .asteriskField").remove();
+
+        if (document.querySelector("label[for='id_work_name'] .asteriskField"))
+            document.querySelector("label[for='id_work_name'] .asteriskField").remove();
+
+        if (document.querySelector("label[for='id_status_info'] .asteriskField"))
+            document.querySelector("label[for='id_status_info'] .asteriskField").remove();
     }
 
     function enableInputsStatusJob() {
         jobProfessionInput.removeAttribute("disabled");
         workNameInput.removeAttribute("disabled");
+
+        if (document.querySelector("label[for='id_status_info'] .asteriskField"))
+            document.querySelector("label[for='id_status_info'] .asteriskField").remove();
+
+        document.querySelector("[for='id_profession']").insertAdjacentHTML('beforeend', '<span class="asteriskField">*</span>');
+        document.querySelector("[for='id_work_name']").insertAdjacentHTML('beforeend', '<span class="asteriskField">*</span>');
+        document.querySelector("[for='id_status_info']").insertAdjacentHTML('beforeend', '<span class="asteriskField">*</span>');
+
+
         document
             .querySelector("[for='id_profession']")
             .classList.remove("disabled");
@@ -101,8 +121,7 @@ function loadRegisterForm() {
     }
 
     function changeVisibilityJob(value) {
-        const hasJob = statusJobInput[1].value;
-        if (value.toLowerCase() === hasJob.toLowerCase()) {
+        if (value.toLowerCase() === 'employed') {
             enableInputsStatusJob();
         } else {
             disableInputsStatusJob();
@@ -618,6 +637,11 @@ function loadRegisterForm() {
             statusJobInfoInput.removeAttribute("disabled",);
             document.querySelector("[for='id_status_info']").classList.remove("disabled");
 
+            if (document.querySelector("label[for='id_status_info'] .asteriskField"))
+                document.querySelector("label[for='id_status_info'] .asteriskField").remove();
+            document.querySelector("[for='id_status_info']").insertAdjacentHTML('beforeend', '<span class="asteriskField">*</span>');
+
+
             var option = document.createElement("option");
             option.text = statusOptionsDefault;
             option.value = "";
@@ -636,6 +660,8 @@ function loadRegisterForm() {
         } else {
             statusJobInfoInput.setAttribute("disabled", "true");
             document.querySelector("[for='id_status_info']").classList.add("disabled");
+            if (document.querySelector("label[for='id_status_info'] .asteriskField"))
+                document.querySelector("label[for='id_status_info'] .asteriskField").remove();
 
         }
         validateAllFields(this);
