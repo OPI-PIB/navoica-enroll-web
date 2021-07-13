@@ -212,33 +212,6 @@ input[type='number'] {
   opacity: .4;
 }
 
-.custom-checkbox#div_id_no_pesel {
-  align-self: center;
-  height: 38px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  padding-top: 28px;
-
-  @media screen and (max-width: 767px) {
-    padding-top: 0;
-  }
-
-  & .custom-control-label {
-    margin-top: 10px;
-  }
-
-  & .error-message {
-    padding-top: 8px;
-    margin-right: auto;
-
-    @media screen and (max-width: 767px) {
-      padding-top: 0;
-    }
-  }
-}
-
 .custom-checkbox .custom-control-label {
   padding-left: .25rem;
 }
