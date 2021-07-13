@@ -226,7 +226,7 @@ class UserRegistrationTestView(UserRegistrationCourseViewBase):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['course_info'] = "Some Test Course Info"
+        context['course_info']['name'] = "Some Test Course Info"
         return context
 
     def form_valid(self, form):
