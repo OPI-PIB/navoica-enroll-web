@@ -688,3 +688,20 @@ hr.pb-30 {
     }
   }
 }
+
+#div_id_statement1 {
+  margin-bottom: 10px;
+}
+
+.custom-control-label::before, .custom-file-label, .custom-select {
+  transition: none;
+}
+
+.left_colored_border {
+  border-left: 5px solid #008B8B;
+  padding-left: 30px;
+}
+
+.custom-control-label {
+  cursor: pointer;
+}
