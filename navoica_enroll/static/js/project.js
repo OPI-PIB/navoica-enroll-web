@@ -745,3 +745,8 @@ function loadRegisterForm() {
 }
 
 document.addEventListener("DOMContentLoaded", loadRegisterForm);
+
+$('#modal-video').on('hidden.bs.modal', function (event) {
+    var youtube = $(".embed-responsive-item");
+    youtube.attr("src", youtube.attr("src"));
+});
