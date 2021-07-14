@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: enroll\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-13 11:37+0000\n"
+"POT-Creation-Date: 2021-07-14 16:34+0000\n"
 "Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -75,7 +75,7 @@ msgid "Unverified"
 msgstr "Niezweryfikowane"
 
 #: navoica_enroll/templates/account/email.html:35
-#: navoica_enroll/users/models.py:37
+#: navoica_enroll/users/models.py:36
 msgid "Primary"
 msgstr "Podstawowe"
 
@@ -396,18 +396,34 @@ msgid ""
 msgstr ""
 "Wypełnienie formularza jest warunkiem przystąpienia do kursu. <strong>Pola "
 "obowiązkowe zostały oznaczone gwiazdką.</strong> Po przesłaniu formularza "
-"zostaniesz zarejstrowany/a na kurs."
+"zostaniesz zarejestrowany/a na kurs."
 
-#: navoica_enroll/templates/users/form_registration.html:13
+#: navoica_enroll/templates/users/form_registration.html:14
+#: navoica_enroll/templates/users/form_registration.html:33
+msgid ""
+"The course is funded by the European Union and the Polish state budget. The "
+"conditions of funding oblige the university, the organizer of the course, to "
+"collect data about the participants. Personal data from the registration "
+"form, will be collected, processed and verified by the course organizer. "
+"Filling in the form is a prerequisite to join the course."
+msgstr ""
+"Kurs został sfinansowany ze środków Unii Europejskiej i środków budżetu "
+"państwa. Warunki dofinansowania obligują uczelnię - organizatora kursu do "
+"zbierania danych o uczestnikach. Dane osobowe, które zostaną przesłane za "
+"pośrednictwem formularza rejestracyjnego, będą gromadzone, przetwarzane oraz "
+"weryfikowane przez organizatora kursu. Wypełnienie formularza jest warunkiem "
+"przystąpienia do kursu."
+
+#: navoica_enroll/templates/users/form_registration.html:15
 msgid "More information"
 msgstr "Więcej informacji"
 
-#: navoica_enroll/templates/users/form_registration.html:14
-#: navoica_enroll/templates/users/form_registration.html:24
+#: navoica_enroll/templates/users/form_registration.html:16
+#: navoica_enroll/templates/users/form_registration.html:27
 msgid "Why is the collection of user data necessary?"
 msgstr "Dlaczego gromadzenie danych o użytkownikach jest niezbędne?"
 
-#: navoica_enroll/templates/users/form_registration.html:16
+#: navoica_enroll/templates/users/form_registration.html:19
 msgid ""
 "To participate in the course, fill in the registration form below with your "
 "details (mandatory fields have been marked with an asterisk). The "
@@ -423,110 +439,86 @@ msgstr ""
 "osobowych w celu uczestnictwa w projekcie. Po przesłaniu formularza "
 "zostaniesz zarejestrowany/a na kurs. Uczestnictwo w kursie jest bezpłatne."
 
-#: navoica_enroll/templates/users/form_registration.html:30
-msgid ""
-"The course is funded by the European Union and the Polish state budget. The "
-"conditions of funding oblige the university, the organizer of the course, to "
-"collect data about the participants. Personal data from the registration "
-"form, will be collected, processed and verified by the course organizer. "
-"Filling in the form is a prerequisite to join the course."
-msgstr ""
-"Kurs został sfinansowany ze środków Unii Europejskiej i środków budżetu "
-"państwa. Warunki dofinansowania obligują uczelnię - organizatora kursu do "
-"zbierania danych o uczestnikach. Dane osobowe, które zostaną przesłane za "
-"pośrednictwem formularza rejestracyjnego, będą gromadzone, przetwarzane oraz "
-"weryfikowane przez organizatora kursu. Wypełnienie formularza jest warunkiem "
-"przystąpienia do kursu."
-
-#: navoica_enroll/templates/users/form_registration.html:43
+#: navoica_enroll/templates/users/form_registration.html:46
 msgid "The form contains errors"
 msgstr "Formularz zawiera błędy"
 
-#: navoica_enroll/templates/users/form_registration.html:43
+#: navoica_enroll/templates/users/form_registration.html:46
 msgid "Correct or complete the missing information"
 msgstr "Popraw lub uzupełnij brakujące informacje"
 
-#: navoica_enroll/templates/users/form_registration.html:52
-msgid "Choose additional information..."
-msgstr "Wybierz dodatkowe informacje..."
-
-#: navoica_enroll/templates/users/form_registration.html:62
-msgid "Choose county..."
-msgstr "Wybierz powiat..."
-
-#: navoica_enroll/templates/users/form_registration.html:63
-msgid "Choose voivodeship..."
-msgstr "Wybierz województwo..."
-
-#: navoica_enroll/templates/users/form_registration.html:64
-msgid "Choose employed status..."
-msgstr "Wybierz status..."
-
+#: navoica_enroll/templates/users/form_registration.html:55
+#: navoica_enroll/templates/users/form_registration.html:65
 #: navoica_enroll/templates/users/form_registration.html:66
-msgid "Choose profession..."
-msgstr "Wybierz zawód..."
+#: navoica_enroll/templates/users/form_registration.html:67
+#: navoica_enroll/templates/users/form_registration.html:69
+#: navoica_enroll/users/administrative_units.py:388
+#: navoica_enroll/users/models.py:26 navoica_enroll/users/models.py:34
+#: navoica_enroll/users/models.py:70 navoica_enroll/variables.py:30
+msgid "Select..."
+msgstr "Wybierz..."
 
-#: navoica_enroll/templates/users/form_registration.html:71
+#: navoica_enroll/templates/users/form_registration.html:74
 msgid "Field required"
 msgstr "Pole wymagane"
 
-#: navoica_enroll/templates/users/form_registration.html:72
+#: navoica_enroll/templates/users/form_registration.html:75
 msgid "The field can contain up to 100 characters"
 msgstr "Pole może zawierać maksymalnie 100 znaków"
 
-#: navoica_enroll/templates/users/form_registration.html:73
+#: navoica_enroll/templates/users/form_registration.html:76
 msgid "Max. 300 characters"
 msgstr "Max. 300 znaków"
 
-#: navoica_enroll/templates/users/form_registration.html:74
+#: navoica_enroll/templates/users/form_registration.html:77
 msgid "Max. 1000 characters"
 msgstr "Max. 1000 znaków"
 
-#: navoica_enroll/templates/users/form_registration.html:75
+#: navoica_enroll/templates/users/form_registration.html:78
 msgid "Max. 30 characters"
 msgstr "Max. 30 znaków"
 
-#: navoica_enroll/templates/users/form_registration.html:76
+#: navoica_enroll/templates/users/form_registration.html:79
 msgid "Max. 10 characters"
 msgstr "Max. 10 znaków"
 
-#: navoica_enroll/templates/users/form_registration.html:77
+#: navoica_enroll/templates/users/form_registration.html:80
 msgid "Max. 12 characters"
 msgstr "Max. 12 znaków"
 
-#: navoica_enroll/templates/users/form_registration.html:78
+#: navoica_enroll/templates/users/form_registration.html:81
 msgid "Max. 6 characters"
 msgstr "Max. 6 znaków"
 
-#: navoica_enroll/templates/users/form_registration.html:79
+#: navoica_enroll/templates/users/form_registration.html:82
 msgid "Min. 8 characters"
 msgstr "Min. 8 znaków"
 
-#: navoica_enroll/templates/users/form_registration.html:80
+#: navoica_enroll/templates/users/form_registration.html:83
 msgid "Incorrect age"
 msgstr "Nieprawidłowy wiek"
 
-#: navoica_enroll/templates/users/form_registration.html:81
+#: navoica_enroll/templates/users/form_registration.html:84
 msgid "Incorrect PESEL number"
 msgstr "Nieprawidłowy nr PESEL"
 
-#: navoica_enroll/templates/users/form_registration.html:82
+#: navoica_enroll/templates/users/form_registration.html:85
 msgid "Incorrect e-mail address"
 msgstr "Nieprawidłowy adres e-mail"
 
-#: navoica_enroll/templates/users/form_registration.html:83
+#: navoica_enroll/templates/users/form_registration.html:86
 msgid "The answer is obligatory"
 msgstr "Odpowiedź jest obowiązkowa"
 
-#: navoica_enroll/templates/users/form_registration.html:84
+#: navoica_enroll/templates/users/form_registration.html:87
 msgid "The acceptance of the declaration is obligatory"
 msgstr "Zaakceptowanie oświadczenia jest obowiązkowe"
 
-#: navoica_enroll/templates/users/form_registration.html:85
+#: navoica_enroll/templates/users/form_registration.html:88
 msgid "The consent is mandatory"
 msgstr "Wyrażenie zgody jest obowiązkowe"
 
-#: navoica_enroll/templates/users/form_registration.html:86
+#: navoica_enroll/templates/users/form_registration.html:89
 msgid "Provide the contact telephone number"
 msgstr "Podaj numer telefonu kontaktowego"
 
@@ -546,485 +538,481 @@ msgstr "Aktualizuj"
 msgid "Export CSV"
 msgstr "Exportuj wyniki do pliku CSV"
 
-#: navoica_enroll/users/administrative_units.py:388
-msgid "Choose citizenship..."
-msgstr "Wybierz województwo..."
-
 #: navoica_enroll/users/administrative_units.py:389
 msgid "Polish"
-msgstr "polska"
+msgstr "polskie"
 
 #: navoica_enroll/users/administrative_units.py:390
 msgid "Afghan"
-msgstr "afgańska"
+msgstr "afgańskie"
 
 #: navoica_enroll/users/administrative_units.py:390
 msgid "Albanian"
-msgstr "albańska"
+msgstr "albańskie"
 
 #: navoica_enroll/users/administrative_units.py:390
 msgid "Algerian"
-msgstr "algierska"
+msgstr "algierskie"
 
 #: navoica_enroll/users/administrative_units.py:390
 msgid "American"
-msgstr "amerykańska"
+msgstr "amerykańskie"
 
 #: navoica_enroll/users/administrative_units.py:391
 msgid "Argentinean"
-msgstr "argentyńska"
+msgstr "argentyńskie"
 
 #: navoica_enroll/users/administrative_units.py:392
 msgid "Armenian"
-msgstr "ormiańska"
+msgstr "ormiańskie"
 
 #: navoica_enroll/users/administrative_units.py:392
 msgid "Australian"
-msgstr "australijska"
+msgstr "australijskie"
 
 #: navoica_enroll/users/administrative_units.py:392
 msgid "Austrian"
-msgstr "austriacka"
+msgstr "austriackie"
 
 #: navoica_enroll/users/administrative_units.py:393
 msgid "Azerbaijani"
-msgstr "azerbejdżańska"
+msgstr "azerbejdżańskie"
 
 #: navoica_enroll/users/administrative_units.py:394
 msgid "Belarusian"
-msgstr "białoruska"
+msgstr "białoruskie"
 
 #: navoica_enroll/users/administrative_units.py:395
 msgid "Belgian"
-msgstr "belgijska"
+msgstr "belgijskie"
 
 #: navoica_enroll/users/administrative_units.py:396
 msgid "Bolivian"
-msgstr "boliwijska"
+msgstr "boliwijskie"
 
 #: navoica_enroll/users/administrative_units.py:397
 msgid "Bosnian"
-msgstr "bośniacka"
+msgstr "bośniackie"
 
 #: navoica_enroll/users/administrative_units.py:397
 msgid "Brazilian"
-msgstr "brazylijska"
+msgstr "brazylijskie"
 
 #: navoica_enroll/users/administrative_units.py:397
 msgid "British"
-msgstr "brytyjska"
+msgstr "brytyjskie"
 
 #: navoica_enroll/users/administrative_units.py:398
 msgid "Bulgarian"
-msgstr "bułgarska"
+msgstr "bułgarskie"
 
 #: navoica_enroll/users/administrative_units.py:399
 msgid "Cambodian"
-msgstr "kambodżańska"
+msgstr "kambodżańskie"
 
 #: navoica_enroll/users/administrative_units.py:399
 msgid "Cameroonian"
-msgstr "kameruńska"
+msgstr "kameruńskie"
 
 #: navoica_enroll/users/administrative_units.py:399
 msgid "Canadian"
-msgstr "kanadyjska"
+msgstr "kanadyjskie"
 
 #: navoica_enroll/users/administrative_units.py:400
 msgid "Chilean"
-msgstr "chilijska"
+msgstr "chilijskie"
 
 #: navoica_enroll/users/administrative_units.py:401
 msgid "Chinese"
-msgstr "chińska"
+msgstr "chińskie"
 
 #: navoica_enroll/users/administrative_units.py:402
 msgid "Colombian"
-msgstr "kolumbijska"
+msgstr "kolumbijskie"
 
 #: navoica_enroll/users/administrative_units.py:404
 msgid "Croatian"
-msgstr "chorwacka"
+msgstr "chorwackie"
 
 #: navoica_enroll/users/administrative_units.py:404
 msgid "Cuban"
-msgstr "kubańska"
+msgstr "kubańskie"
 
 #: navoica_enroll/users/administrative_units.py:404
 msgid "Cypriot"
-msgstr "cypryjska"
+msgstr "cypryjskie"
 
 #: navoica_enroll/users/administrative_units.py:404
 msgid "Czech"
-msgstr "czeska"
+msgstr "czeskie"
 
 #: navoica_enroll/users/administrative_units.py:405
 msgid "Danish"
-msgstr "duńska"
+msgstr "duńskie"
 
 #: navoica_enroll/users/administrative_units.py:406
 msgid "Dominican"
-msgstr "dominikańska"
+msgstr "dominikańskie"
 
 #: navoica_enroll/users/administrative_units.py:406
 msgid "Dutch"
-msgstr "holenderska"
+msgstr "holenderskie"
 
 #: navoica_enroll/users/administrative_units.py:406
 msgid "Ecuadorean"
-msgstr "ekwadorska"
+msgstr "ekwadorskie"
 
 #: navoica_enroll/users/administrative_units.py:407
 msgid "Egyptian"
-msgstr "egipska"
+msgstr "egipskie"
 
 #: navoica_enroll/users/administrative_units.py:408
 msgid "Estonian"
-msgstr "estońska"
+msgstr "estońskie"
 
 #: navoica_enroll/users/administrative_units.py:409
 msgid "Filipino"
-msgstr "filipińska"
+msgstr "filipińskie"
 
 #: navoica_enroll/users/administrative_units.py:409
 msgid "Finnish"
-msgstr "fińska"
+msgstr "fińskie"
 
 #: navoica_enroll/users/administrative_units.py:409
 msgid "French"
-msgstr "francuska"
+msgstr "francuskie"
 
 #: navoica_enroll/users/administrative_units.py:409
 msgid "Gabonese"
-msgstr "gabońska"
+msgstr "gabońskie"
 
 #: navoica_enroll/users/administrative_units.py:410
 msgid "Georgian"
-msgstr "gruzińska"
+msgstr "gruzińskie"
 
 #: navoica_enroll/users/administrative_units.py:410
 msgid "German"
-msgstr "niemiecka"
+msgstr "niemieckie"
 
 #: navoica_enroll/users/administrative_units.py:411
 msgid "Greek"
-msgstr "grecka"
+msgstr "greckie"
 
 #: navoica_enroll/users/administrative_units.py:412
 msgid "Haitian"
-msgstr "haitańska"
+msgstr "haitańskie"
 
 #: navoica_enroll/users/administrative_units.py:413
 msgid "Hungarian"
-msgstr "węgierska"
+msgstr "węgierskie"
 
 #: navoica_enroll/users/administrative_units.py:415
 msgid "Indian"
-msgstr "indyjska"
+msgstr "indyjskie"
 
 #: navoica_enroll/users/administrative_units.py:415
 msgid "Indonesian"
-msgstr "indonezyjska"
+msgstr "indonezyjskie"
 
 #: navoica_enroll/users/administrative_units.py:415
 msgid "Iranian"
-msgstr "irańska"
+msgstr "irańskie"
 
 #: navoica_enroll/users/administrative_units.py:415
 msgid "Iraqi"
-msgstr "iracka"
+msgstr "irackie"
 
 #: navoica_enroll/users/administrative_units.py:416
 msgid "Irish"
-msgstr "irlandzka"
+msgstr "irlandzkie"
 
 #: navoica_enroll/users/administrative_units.py:417
 msgid "Israeli"
-msgstr "izraelska"
+msgstr "izraelskie"
 
 #: navoica_enroll/users/administrative_units.py:417
 msgid "Italian"
-msgstr "włoska"
+msgstr "włoskie"
 
 #: navoica_enroll/users/administrative_units.py:417
 msgid "Jamaican"
-msgstr "jamajska"
+msgstr "jamajskie"
 
 #: navoica_enroll/users/administrative_units.py:418
 msgid "Japanese"
-msgstr "japońska"
+msgstr "japońskie"
 
 #: navoica_enroll/users/administrative_units.py:418
 msgid "Jordanian"
-msgstr "jordańczyka"
+msgstr "jordańczykie"
 
 #: navoica_enroll/users/administrative_units.py:418
 msgid "Kazakhstani"
-msgstr "kazachstańska"
+msgstr "kazachstańskie"
 
 #: navoica_enroll/users/administrative_units.py:419
 msgid "Kenyan"
-msgstr "kenijska"
+msgstr "kenijskie"
 
 #: navoica_enroll/users/administrative_units.py:420
 msgid "Kuwaiti"
-msgstr "kuwejcka"
+msgstr "kuwejckie"
 
 #: navoica_enroll/users/administrative_units.py:421
 msgid "Laotian"
-msgstr "laotańska"
+msgstr "laotańskie"
 
 #: navoica_enroll/users/administrative_units.py:422
 msgid "Latvian"
-msgstr "łotewska"
+msgstr "łotewskie"
 
 #: navoica_enroll/users/administrative_units.py:422
 msgid "Lebanese"
-msgstr "libańska"
+msgstr "libańskie"
 
 #: navoica_enroll/users/administrative_units.py:422
 msgid "Liberian"
-msgstr "liberyjska"
+msgstr "liberyjskie"
 
 #: navoica_enroll/users/administrative_units.py:422
 msgid "Libyan"
-msgstr "libijska"
+msgstr "libijskie"
 
 #: navoica_enroll/users/administrative_units.py:423
 msgid "Lithuanian"
-msgstr "litewska"
+msgstr "litewskie"
 
 #: navoica_enroll/users/administrative_units.py:423
 msgid "Luxembourger"
-msgstr "luksemburdzka"
+msgstr "luksemburdzkie"
 
 #: navoica_enroll/users/administrative_units.py:424
 msgid "Macedonian"
-msgstr "macedońska"
+msgstr "macedońskie"
 
 #: navoica_enroll/users/administrative_units.py:424
 msgid "Malagasy"
-msgstr "malgaska"
+msgstr "malgaskie"
 
 #: navoica_enroll/users/administrative_units.py:424
 msgid "Malawian"
-msgstr "malawijska"
+msgstr "malawijskie"
 
 #: navoica_enroll/users/administrative_units.py:425
 msgid "Malaysian"
-msgstr "malezyjska"
+msgstr "malezyjskie"
 
 #: navoica_enroll/users/administrative_units.py:426
 msgid "Maltese"
-msgstr "maltańska"
+msgstr "maltańskie"
 
 #: navoica_enroll/users/administrative_units.py:427
 msgid "Mauritanian"
-msgstr "mauretańska"
+msgstr "mauretańskie"
 
 #: navoica_enroll/users/administrative_units.py:427
 msgid "Mauritian"
-msgstr "mauritiuska"
+msgstr "mauritiuskie"
 
 #: navoica_enroll/users/administrative_units.py:427
 msgid "Mexican"
-msgstr "meksykańska"
+msgstr "meksykańskie"
 
 #: navoica_enroll/users/administrative_units.py:429
 msgid "Moldovan"
-msgstr "mołdawska"
+msgstr "mołdawskie"
 
 #: navoica_enroll/users/administrative_units.py:429
 msgid "Mongolian"
-msgstr "mongolska"
+msgstr "mongolskie"
 
 #: navoica_enroll/users/administrative_units.py:429
 msgid "Moroccan"
-msgstr "marokańska"
+msgstr "marokańskie"
 
 #: navoica_enroll/users/administrative_units.py:430
 msgid "Nepalese"
-msgstr "nepalska"
+msgstr "nepalskie"
 
 #: navoica_enroll/users/administrative_units.py:430
 msgid "Netherlander"
-msgstr "holenderska"
+msgstr "holenderskie"
 
 #: navoica_enroll/users/administrative_units.py:431
 msgid "New Zealander"
-msgstr "nowozelandzka"
+msgstr "nowozelandzkie"
 
 #: navoica_enroll/users/administrative_units.py:432
 msgid "Nigerian"
-msgstr "nigeryjczyka"
+msgstr "nigeryjczykie"
 
 #: navoica_enroll/users/administrative_units.py:433
 msgid "Nigerien"
-msgstr "nigeryjska"
+msgstr "nigeryjskie"
 
 #: navoica_enroll/users/administrative_units.py:434
 msgid "North Korean"
-msgstr "północnokoreańska"
+msgstr "północnokoreańskie"
 
 #: navoica_enroll/users/administrative_units.py:434
 msgid "Norwegian"
-msgstr "norweska"
+msgstr "norweskie"
 
 #: navoica_enroll/users/administrative_units.py:436
 msgid "Pakistani"
-msgstr "pakistańska"
+msgstr "pakistańskie"
 
 #: navoica_enroll/users/administrative_units.py:436
 msgid "Panamanian"
-msgstr "panamska"
+msgstr "panamskie"
 
 #: navoica_enroll/users/administrative_units.py:437
 msgid "Peruvian"
-msgstr "peruwiańska"
+msgstr "peruwiańskie"
 
 #: navoica_enroll/users/administrative_units.py:438
 msgid "Portuguese"
-msgstr "portugalska"
+msgstr "portugalskie"
 
 #: navoica_enroll/users/administrative_units.py:438
 msgid "Qatari"
-msgstr "katarska"
+msgstr "katarskie"
 
 #: navoica_enroll/users/administrative_units.py:438
 msgid "Romanian"
-msgstr "rumuńska"
+msgstr "rumuńskie"
 
 #: navoica_enroll/users/administrative_units.py:439
 msgid "Russian"
-msgstr "rosyjska"
+msgstr "rosyjskie"
 
 #: navoica_enroll/users/administrative_units.py:439
 msgid "Rwandan"
-msgstr "rwandyjska"
+msgstr "rwandyjskie"
 
 #: navoica_enroll/users/administrative_units.py:440
 msgid "Salvadoran"
-msgstr "salwadorańska"
+msgstr "salwadorańskie"
 
 #: navoica_enroll/users/administrative_units.py:441
 msgid "Samoan"
-msgstr "samoańska"
+msgstr "samoańskie"
 
 #: navoica_enroll/users/administrative_units.py:442
 msgid "Saudi"
-msgstr "saudyjska"
+msgstr "saudyjskie"
 
 #: navoica_enroll/users/administrative_units.py:443
 msgid "Scottish"
-msgstr "szkocka"
+msgstr "szkockie"
 
 #: navoica_enroll/users/administrative_units.py:443
 msgid "Senegalese"
-msgstr "senegalska"
+msgstr "senegalskie"
 
 #: navoica_enroll/users/administrative_units.py:443
 msgid "Serbian"
-msgstr "serbska"
+msgstr "serbskie"
 
 #: navoica_enroll/users/administrative_units.py:445
 msgid "Singaporean"
-msgstr "singapurska"
+msgstr "singapurskie"
 
 #: navoica_enroll/users/administrative_units.py:445
 msgid "Slovakian"
-msgstr "słowacka"
+msgstr "słowackie"
 
 #: navoica_enroll/users/administrative_units.py:446
 msgid "Slovenian"
-msgstr "słoweńska"
+msgstr "słoweńskie"
 
 #: navoica_enroll/users/administrative_units.py:446
 msgid "Somali"
-msgstr "somalijska"
+msgstr "somalijskie"
 
 #: navoica_enroll/users/administrative_units.py:447
 msgid "South African"
-msgstr "afrykańska"
+msgstr "afrykańskie"
 
 #: navoica_enroll/users/administrative_units.py:447
 msgid "South Korean"
-msgstr "koreańska"
+msgstr "koreańskie"
 
 #: navoica_enroll/users/administrative_units.py:447
 msgid "Spanish"
-msgstr "hiszpańska"
+msgstr "hiszpańskie"
 
 #: navoica_enroll/users/administrative_units.py:448
 msgid "Sudanese"
-msgstr "sudańska"
+msgstr "sudańskie"
 
 #: navoica_enroll/users/administrative_units.py:449
 msgid "Swedish"
-msgstr "szwedzka"
+msgstr "szwedzkie"
 
 #: navoica_enroll/users/administrative_units.py:449
 msgid "Swiss"
-msgstr "szwajcarska"
+msgstr "szwajcarskie"
 
 #: navoica_enroll/users/administrative_units.py:449
 msgid "Syrian"
-msgstr "syryjska"
+msgstr "syryjskie"
 
 #: navoica_enroll/users/administrative_units.py:449
 msgid "Taiwanese"
-msgstr "tajwańska"
+msgstr "tajwańskie"
 
 #: navoica_enroll/users/administrative_units.py:450
 msgid "Tajik"
-msgstr "tadżycka"
+msgstr "tadżyckie"
 
 #: navoica_enroll/users/administrative_units.py:451
 msgid "Tanzanian"
-msgstr "tanzańska"
+msgstr "tanzańskie"
 
 #: navoica_enroll/users/administrative_units.py:451
 msgid "Thai"
-msgstr "tajska"
+msgstr "tajskie"
 
 #: navoica_enroll/users/administrative_units.py:451
 msgid "Tunisian"
-msgstr "tunezyjska"
+msgstr "tunezyjskie"
 
 #: navoica_enroll/users/administrative_units.py:452
 msgid "Turkish"
-msgstr "turecka"
+msgstr "tureckie"
 
 #: navoica_enroll/users/administrative_units.py:453
 msgid "Ugandan"
-msgstr "ugandyjski"
+msgstr "ugandyjskie"
 
 #: navoica_enroll/users/administrative_units.py:453
 msgid "Ukrainian"
-msgstr "ukraińska"
+msgstr "ukraińskie"
 
 #: navoica_enroll/users/administrative_units.py:454
 msgid "Uruguayan"
-msgstr "urugwajska"
+msgstr "urugwajskie"
 
 #: navoica_enroll/users/administrative_units.py:455
 msgid "Uzbekistani"
-msgstr "uzbekistańska"
+msgstr "uzbekistańskie"
 
 #: navoica_enroll/users/administrative_units.py:455
 msgid "Venezuelan"
-msgstr "wenezuelska"
+msgstr "wenezuelskie"
 
 #: navoica_enroll/users/administrative_units.py:455
 msgid "Vietnamese"
-msgstr "wietnamska"
+msgstr "wietnamskie"
 
 #: navoica_enroll/users/administrative_units.py:456
 msgid "Welsh"
-msgstr "walijska"
+msgstr "walijskie"
 
 #: navoica_enroll/users/administrative_units.py:457
 msgid "Yemenite"
-msgstr "jemeńska"
+msgstr "jemeńskie"
 
 #: navoica_enroll/users/apps.py:7
 msgid "Users"
@@ -1034,11 +1022,11 @@ msgstr "Użytkownicy"
 msgid "This username has already been taken."
 msgstr "Ta nazwa jest już zajęta"
 
-#: navoica_enroll/users/forms.py:43 navoica_enroll/users/models.py:31
+#: navoica_enroll/users/forms.py:43 navoica_enroll/users/models.py:30
 msgid "PESEL"
 msgstr "PESEL"
 
-#: navoica_enroll/users/forms.py:44 navoica_enroll/users/models.py:47
+#: navoica_enroll/users/forms.py:44 navoica_enroll/users/models.py:46
 msgid "Postal code"
 msgstr "Kod pocztowy"
 
@@ -1046,11 +1034,11 @@ msgstr "Kod pocztowy"
 msgid "E-mail address"
 msgstr "Adres poczty elektronicznej"
 
-#: navoica_enroll/users/forms.py:47 navoica_enroll/users/models.py:61
+#: navoica_enroll/users/forms.py:47 navoica_enroll/users/models.py:60
 msgid "Phone"
 msgstr "Telefon kontaktowy"
 
-#: navoica_enroll/users/forms.py:49 navoica_enroll/users/models.py:82
+#: navoica_enroll/users/forms.py:49 navoica_enroll/users/models.py:81
 msgid "Status additional information"
 msgstr "Dodatkowe informacje"
 
@@ -1096,201 +1084,189 @@ msgstr "Anuluj"
 msgid "Register me for the course"
 msgstr "Zarejestruj mnie na kurs"
 
-#: navoica_enroll/users/models.py:16
+#: navoica_enroll/users/models.py:15
 msgid "Name of User"
 msgstr "Nazwa użytkownika"
 
-#: navoica_enroll/users/models.py:23
+#: navoica_enroll/users/models.py:22
 msgid "First Name"
 msgstr "Imię"
 
-#: navoica_enroll/users/models.py:24
+#: navoica_enroll/users/models.py:23
 msgid "Last name"
 msgstr "Nazwisko"
 
-#: navoica_enroll/users/models.py:25
+#: navoica_enroll/users/models.py:24
 msgid "Citizenship"
 msgstr "Obywatelstwo"
 
-#: navoica_enroll/users/models.py:26
+#: navoica_enroll/users/models.py:25
 msgid "Gender"
 msgstr "Płeć"
 
 #: navoica_enroll/users/models.py:27
-msgid "Choose gender..."
-msgstr "Wybierz płeć..."
-
-#: navoica_enroll/users/models.py:28
 msgid "Male"
 msgstr "Mężczyzna"
 
-#: navoica_enroll/users/models.py:29
+#: navoica_enroll/users/models.py:28
 msgid "Female"
 msgstr "Kobieta"
 
-#: navoica_enroll/users/models.py:32
+#: navoica_enroll/users/models.py:31
 msgid "Age"
 msgstr "Wiek"
 
-#: navoica_enroll/users/models.py:33
+#: navoica_enroll/users/models.py:32
 msgid "Education"
 msgstr "Wykształcenie"
 
 #: navoica_enroll/users/models.py:35
-msgid "Choose grade..."
-msgstr "Wybierz poziom wykształcenia..."
-
-#: navoica_enroll/users/models.py:36
 msgid "Pre-primary"
 msgstr "Niższe niż podstawowe"
 
-#: navoica_enroll/users/models.py:38
+#: navoica_enroll/users/models.py:37
 msgid "Secondary"
 msgstr "Średnie"
 
-#: navoica_enroll/users/models.py:39
+#: navoica_enroll/users/models.py:38
 msgid "High school"
 msgstr "Policealne"
 
-#: navoica_enroll/users/models.py:40
+#: navoica_enroll/users/models.py:39
 msgid "Higher"
 msgstr "Wyższe"
 
-#: navoica_enroll/users/models.py:43
+#: navoica_enroll/users/models.py:42
 msgid "Street"
 msgstr "Ulica"
 
-#: navoica_enroll/users/models.py:44
+#: navoica_enroll/users/models.py:43
 msgid "Enter the address postal address."
 msgstr "Należy podać adres korespondencyjny."
 
-#: navoica_enroll/users/models.py:45
+#: navoica_enroll/users/models.py:44
 msgid "Street no"
 msgstr "Nr budynku"
 
-#: navoica_enroll/users/models.py:46
+#: navoica_enroll/users/models.py:45
 msgid "Building no"
 msgstr "Nr lokalu"
 
-#: navoica_enroll/users/models.py:48
+#: navoica_enroll/users/models.py:47
 msgid "City"
 msgstr "Miejscowość"
 
-#: navoica_enroll/users/models.py:49
+#: navoica_enroll/users/models.py:48
 msgid "Voivodeship"
 msgstr "Województwo"
 
-#: navoica_enroll/users/models.py:53
+#: navoica_enroll/users/models.py:52
 msgid "County"
 msgstr "Powiat"
 
-#: navoica_enroll/users/models.py:56
+#: navoica_enroll/users/models.py:55
 msgid "Commune"
 msgstr "Gmina"
 
-#: navoica_enroll/users/models.py:59
+#: navoica_enroll/users/models.py:58
 msgid "Country"
 msgstr "Kraj"
 
-#: navoica_enroll/users/models.py:62
+#: navoica_enroll/users/models.py:61
 msgid "E-mail"
 msgstr "Adres poczty elektronicznej"
 
-#: navoica_enroll/users/models.py:63
+#: navoica_enroll/users/models.py:62
 msgid "Start project date"
 msgstr "Data rozpoczęcia udziału w projekcie"
 
-#: navoica_enroll/users/models.py:65
+#: navoica_enroll/users/models.py:64
 msgid "End project date"
 msgstr "Data zakończenia udziału w projekcie"
 
-#: navoica_enroll/users/models.py:67
+#: navoica_enroll/users/models.py:66
 msgid "Start support date"
 msgstr "Data rozpoczęcia otrzymania wsparcia"
 
 #: navoica_enroll/users/models.py:71
-msgid "Choose status..."
-msgstr "Wybierz status..."
-
-#: navoica_enroll/users/models.py:72
 msgid "Employed"
 msgstr "Osoba pracująca"
 
-#: navoica_enroll/users/models.py:73
+#: navoica_enroll/users/models.py:72
 msgid "Registered unemployed"
 msgstr "Osoba bezrobotna zarejestrowana w ewidencji urzędów pracy"
 
-#: navoica_enroll/users/models.py:74
+#: navoica_enroll/users/models.py:73
 msgid "Unregistered unemployed"
-msgstr "Osoba bezrobotna niezarejestrowana w ewidencji urzędów pracy"
+msgstr "Osoba długotrwale bezrobotna"
 
-#: navoica_enroll/users/models.py:75
+#: navoica_enroll/users/models.py:74
 msgid "Unemployed, not looking for work"
 msgstr "Osoba bierna zawodowo"
 
-#: navoica_enroll/users/models.py:78
+#: navoica_enroll/users/models.py:77
 msgid "What is your current status on the labor market?"
 msgstr "Jaki jest obecnie Twój status na rynku pracy?"
 
-#: navoica_enroll/users/models.py:86
+#: navoica_enroll/users/models.py:85
 msgid "Vocational teacher"
 msgstr "Nauczyciel kształcenia zawodowego"
 
-#: navoica_enroll/users/models.py:87
+#: navoica_enroll/users/models.py:86
 msgid "General education teacher"
 msgstr "Nauczyciel kształcenia ogólnego"
 
-#: navoica_enroll/users/models.py:88
+#: navoica_enroll/users/models.py:87
 msgid "Kindergarten teacher"
 msgstr "Nauczyciel wychowania przedszkolnego"
 
-#: navoica_enroll/users/models.py:89
+#: navoica_enroll/users/models.py:88
 msgid "Employee in higher education institution"
 msgstr "Pracownik instytucji szkolnictwa wyższego"
 
-#: navoica_enroll/users/models.py:90
+#: navoica_enroll/users/models.py:89
 msgid "Labor market institution employee"
 msgstr "Pracownik instytucji rynku pracy"
 
-#: navoica_enroll/users/models.py:91
+#: navoica_enroll/users/models.py:90
 msgid "Health care worker"
 msgstr "Pracownik instytucji systemu ochrony zdrowia"
 
-#: navoica_enroll/users/models.py:92
+#: navoica_enroll/users/models.py:91
 msgid "Farmer"
 msgstr "Rolnik"
 
-#: navoica_enroll/users/models.py:93
+#: navoica_enroll/users/models.py:92
 msgid "Key employee in social assistance and integration institution"
 msgstr "Kluczowy pracownik instytucji pomocy i integracji społecznej"
 
-#: navoica_enroll/users/models.py:94
+#: navoica_enroll/users/models.py:93
 msgid "Employee in family and foster care support institution"
 msgstr "Pracownik instytucji systemu wspierania rodziny i pieczy zastępczej"
 
-#: navoica_enroll/users/models.py:95
+#: navoica_enroll/users/models.py:94
 msgid "Employee in social economy support center"
 msgstr "Pracownik ośrodka wsparcia ekonomii społecznej"
 
-#: navoica_enroll/users/models.py:96
+#: navoica_enroll/users/models.py:95
 msgid "Employee in psychological and pedagogical counseling center"
 msgstr "Pracownik poradni psychologiczno-pedagogicznej"
 
-#: navoica_enroll/users/models.py:97
+#: navoica_enroll/users/models.py:96
 msgid "Practical vocational instructor"
 msgstr "Instruktor praktycznej nauki zawodu"
 
-#: navoica_enroll/users/models.py:98 navoica_enroll/variables.py:8
+#: navoica_enroll/users/models.py:97 navoica_enroll/variables.py:8
 #: navoica_enroll/variables.py:16 navoica_enroll/variables.py:20
 #: navoica_enroll/variables.py:25
 msgid "other"
-msgstr "inny/a"
+msgstr "inne"
 
-#: navoica_enroll/users/models.py:101
+#: navoica_enroll/users/models.py:100
 msgid "Profession"
 msgstr "Wykonywany zawód"
 
-#: navoica_enroll/users/models.py:105
+#: navoica_enroll/users/models.py:104
 msgid "Company's name"
 msgstr "Nazwa zakładu pracy"
 
@@ -1302,47 +1278,47 @@ msgstr ""
 "Czy należysz do mniejszości narodowej lub etnicznej, jesteś migrantem, osobą "
 "obcego pochodzenia?"
 
-#: navoica_enroll/users/models.py:108 navoica_enroll/users/models.py:114
-#: navoica_enroll/users/models.py:121 navoica_enroll/users/models.py:128
+#: navoica_enroll/users/models.py:109 navoica_enroll/users/models.py:115
+#: navoica_enroll/users/models.py:122 navoica_enroll/users/models.py:129
 msgid "Yes"
 msgstr "Tak"
 
-#: navoica_enroll/users/models.py:109 navoica_enroll/users/models.py:115
-#: navoica_enroll/users/models.py:122 navoica_enroll/users/models.py:129
+#: navoica_enroll/users/models.py:110 navoica_enroll/users/models.py:116
+#: navoica_enroll/users/models.py:123 navoica_enroll/users/models.py:130
 msgid "No"
 msgstr "Nie"
 
-#: navoica_enroll/users/models.py:110 navoica_enroll/users/models.py:116
-#: navoica_enroll/users/models.py:123 navoica_enroll/users/models.py:130
+#: navoica_enroll/users/models.py:111 navoica_enroll/users/models.py:117
+#: navoica_enroll/users/models.py:124 navoica_enroll/users/models.py:131
 msgid "Prefer not to tell"
 msgstr "Nie chcę ujawniać"
 
-#: navoica_enroll/users/models.py:113
+#: navoica_enroll/users/models.py:114
 msgid "Are you homeless or excluded from housing?"
 msgstr ""
 "Czy jesteś osobą bezdomną lub dotkniętą wykluczeniem z dostępu do mieszkań?"
 
-#: navoica_enroll/users/models.py:119
+#: navoica_enroll/users/models.py:120
 msgid "Are you a person with a disability?"
 msgstr "Czy jesteś osobą z niepełnosprawnościami?"
 
-#: navoica_enroll/users/models.py:126
+#: navoica_enroll/users/models.py:127
 msgid "Are you a socially disadvantaged person?"
 msgstr "Czy jesteś osobą w niekorzystnej sytuacji społecznej?"
 
-#: navoica_enroll/users/models.py:133
+#: navoica_enroll/users/models.py:134
 msgid "Course ID"
 msgstr "ID kursu"
 
-#: navoica_enroll/users/models.py:134
+#: navoica_enroll/users/models.py:135
 msgid "Form language"
 msgstr "Język formularza"
 
-#: navoica_enroll/users/models.py:149
+#: navoica_enroll/users/models.py:150
 msgid "Registration for course"
 msgstr "Rejestracje na kurs"
 
-#: navoica_enroll/users/models.py:150
+#: navoica_enroll/users/models.py:151
 msgid "Registrations for course"
 msgstr "Rejestracje na kurs "
 
@@ -1368,7 +1344,7 @@ msgstr "Osoba pracująca w administracji samorządowej"
 
 #: navoica_enroll/variables.py:9
 msgid "A person works in MSME"
-msgstr "Osoba pracuje w MMŚP"
+msgstr "Osoba pracująca w mikro, małych i średnich przedsiębiorstwach"
 
 #: navoica_enroll/variables.py:10
 msgid "A person working in a non-governmental administration"
@@ -1376,7 +1352,7 @@ msgstr "Osoba pracująca w administracji pozarządowej"
 
 #: navoica_enroll/variables.py:11
 msgid "A self-employed person"
-msgstr "Osoba samozatrudniona"
+msgstr "Osoba prowadząca działalność na własny rachunek"
 
 #: navoica_enroll/variables.py:12
 msgid "A person working in a large enterprise"
@@ -1384,23 +1360,49 @@ msgstr "Osoba pracująca w dużym przedsiębiorstwie"
 
 #: navoica_enroll/variables.py:15 navoica_enroll/variables.py:19
 msgid "Long-term unemployed person"
-msgstr "Osoba bezrobotna niezarejestrowana w ewidencji urzędów pracy"
+msgstr "Osoba długotrwale bezrobotna"
 
 #: navoica_enroll/variables.py:23
 msgid "Learning"
-msgstr "Uczący się"
+msgstr "Ucząca się"
 
 #: navoica_enroll/variables.py:24
 msgid "A person not participating in education or training"
 msgstr "Osoba nieuczestnicząca w kształceniu lub szkoleniu"
 
-#: navoica_enroll/variables.py:30
-msgid "Choose country..."
-msgstr "Wybierz kraj..."
-
 #: navoica_enroll/variables.py:33
 msgid "Unknown or unspecified country"
 msgstr "Nieznany lub nieokreślony kraj"
+
+#~ msgid "Choose additional information..."
+#~ msgstr "Wybierz dodatkowe informacje..."
+
+#~ msgid "Choose county..."
+#~ msgstr "Wybierz powiat..."
+
+#~ msgid "Choose voivodeship..."
+#~ msgstr "Wybierz województwo..."
+
+#~ msgid "Choose employed status..."
+#~ msgstr "Wybierz status..."
+
+#~ msgid "Choose profession..."
+#~ msgstr "Wybierz zawód..."
+
+#~ msgid "Choose citizenship..."
+#~ msgstr "Wybierz województwo..."
+
+#~ msgid "Choose gender..."
+#~ msgstr "Wybierz płeć..."
+
+#~ msgid "Choose grade..."
+#~ msgstr "Wybierz poziom wykształcenia..."
+
+#~ msgid "Choose status..."
+#~ msgstr "Wybierz status..."
+
+#~ msgid "Choose country..."
+#~ msgstr "Wybierz kraj..."
 
 #~ msgid "Andorra"
 #~ msgstr "Andora"
