@@ -32,7 +32,7 @@ function loadRegisterForm() {
         sel.find('option[value=Polish]').prependTo(sel);
         sel.find('option[value=""]').prependTo(sel);
         sel.find('option[value="other"]').appendTo(sel);
-        sel.find('option[value="inny/a"]').appendTo(sel);
+        sel.find('option[value="inne"]').appendTo(sel);
         sel.find('option[value="ZZ"]').appendTo(sel);
         $(selector).val($(selector + " option:first").val());
     }
