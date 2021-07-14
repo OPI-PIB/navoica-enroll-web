@@ -44,7 +44,7 @@ class UserRegistrationCourseFormBase(ModelForm):
     postal_code = RegexField(label=_("Postal code"), regex=r"(?i)^[a-z0-9][a-z0-9\- ]{0,10}[a-z0-9]$")
     email = EmailField(label=_("E-mail address"))
 
-    phone = CharField(label=_("Phone"), max_length=30, widget=TextInput(attrs={'type': 'number'}))
+    phone = CharField(label=_("Phone"), max_length=30)
 
     status_info = CharField(required=False, label=_("Status additional information"), widget=Select())
 
