@@ -65,7 +65,7 @@ class TestUserRegisterForm(TestCase):
             'city': 'Szczecin',
             'voivodeship': 'west_pomerania',
             'county': 'szczecin',
-            'country': 'Polska',
+            'country': 'PL',
             'commune': 'Test',
             'start_project_date': datetime.now(),
             'end_project_date': datetime.now(),
