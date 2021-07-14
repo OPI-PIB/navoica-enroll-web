@@ -52,7 +52,7 @@
 {% block javascript %}
   <script>
     let statusOptions = {{ statuses_options_json|safe }};
-    let statusOptionsDefault = "{% trans 'Choose additional information...'%}";
+    let statusOptionsDefault = "{% trans 'Select...'%}";
 
     document.addEventListener("DOMContentLoaded", loadTranslationsJS);
 
@@ -62,11 +62,11 @@
       let statusJobInput = document.getElementById("id_status");
       let jobProfessionInput = document.getElementById("id_profession");
 
-      countyInput[0].textContent = "{% trans 'Choose county...'%}";
-      voivodeshipInput[0].textContent = "{% trans 'Choose voivodeship...'%}";
-      statusJobInput.options[0] = new Option("{% trans 'Choose employed status...'%}", "");
+      countyInput[0].textContent = "{% trans 'Select...'%}";
+      voivodeshipInput[0].textContent = "{% trans 'Select...'%}";
+      statusJobInput.options[0] = new Option("{% trans 'Select...'%}", "");
       statusJobInput.options[0].setAttribute("selected", "true");
-      jobProfessionInput.options[0] = new Option("{% trans 'Choose profession...'%}", "");
+      jobProfessionInput.options[0] = new Option("{% trans 'Select...'%}", "");
       jobProfessionInput.options[0].setAttribute("selected", "true");
 
 
