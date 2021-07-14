@@ -27,7 +27,7 @@ STATUSES_OPTIONS = {
 
 }
 COUNTRIES_ENROLL = [
-                       ('', _('Choose country...')),
+                       ('', _('Select...')),
                    ] + list(COUNTRIES.items())
 
 COUNTRIES_ENROLL.append(('ZZ', _('Unknown or unspecified country')))

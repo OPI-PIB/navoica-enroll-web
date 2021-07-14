@@ -23,7 +23,7 @@ class UserRegistrationCourse(models.Model):
     last_name = models.CharField(_("Last name"), max_length=100)
     citizenship = models.CharField(_("Citizenship"), max_length=100, choices=NATIONALITIES_CHOICES)
     gender = models.CharField(_("Gender"), choices=[
-        ('', _('Choose gender...')),
+        ('', _('Select...')),
         ('M', _('Male')),
         ('F', _('Female')),
     ], max_length=1)
@@ -31,7 +31,7 @@ class UserRegistrationCourse(models.Model):
     age = models.SmallIntegerField(_("Age"))
     education = models.CharField(_("Education"), max_length=1,
                                  choices=[
-                                     ('', _('Choose grade...')),
+                                     ('', _('Select...')),
                                      ('1', _('Pre-primary')),
                                      ('2', _('Primary')),
                                      ('3', _('Secondary')),
@@ -67,7 +67,7 @@ class UserRegistrationCourse(models.Model):
                                           default=timezone.now)
 
     STATUSES = (
-        ('', _('Choose status...')),
+        ('', _('Select...')),
         ('employed', _('Employed')),
         ('registered', _('Registered unemployed')),
         ('unregistered', _('Unregistered unemployed')),
