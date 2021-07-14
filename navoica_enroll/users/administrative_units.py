@@ -98,7 +98,7 @@ Jelenia Góra
 Kalisz
  kamiennogórski
  kamieński
- karkonoski[d]
+ karkonoski
  kartuski
 Katowice
  kazimierski
