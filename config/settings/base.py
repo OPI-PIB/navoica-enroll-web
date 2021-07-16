@@ -96,6 +96,7 @@ THIRD_PARTY_APPS = [
     'navoica_enroll.providers.edx',
     "rest_framework",
     'localflavor',
+    'django_countries'
 ]
 
 NAVOICA_URL = env.str("NAVOICA_URL")

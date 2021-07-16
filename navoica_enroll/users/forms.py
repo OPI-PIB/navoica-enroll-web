@@ -43,19 +43,16 @@ class UserRegistrationCourseFormBase(ModelForm):
     pesel = PLPESELField(max_length=11, label=_("PESEL"), widget=TextInput(attrs={'type': 'number'}), required=False)
     postal_code = RegexField(label=_("Postal code"), regex=r"(?i)^[a-z0-9][a-z0-9\- ]{0,10}[a-z0-9]$")
     email = EmailField(label=_("E-mail address"))
-    country = CharField(required=True, label=_("Country"))
+
+    phone = CharField(label=_("Phone"), max_length=30)
 
     status_info = CharField(required=False, label=_("Status additional information"), widget=Select())
 
-    no_pesel = BooleanField(required=False)
     statement1 = BooleanField(required=True)
     statement2 = BooleanField(required=True)
 
     def __init__(self, *args, **kwargs):
         super(UserRegistrationCourseFormBase, self).__init__(*args, **kwargs)
-
-        self.fields['no_pesel'].label = _(
-            "Don't have a PESEL number")
 
         self.fields['statement1'].label = _(
             "I agree with <a href='{url}' target='_blank'>the project participant's declaration.</a>").format(
@@ -87,22 +84,16 @@ class UserRegistrationCourseFormBase(ModelForm):
                             css_class="row"
                         ),
                         Div(
-                            Div('nationality',
-                                css_class="col-md-12 register-course__input-container"
+                            Div('citizenship',
+                                css_class="col-md-6 register-course__input-container"
                                 ),
-                            css_class="row"
-                        ),
-                        Div(
                             Div(
                                 'pesel',
                                 css_class="col-md-6 register-course__input-container"
                             ),
-                            Div(
-                                'no_pesel',
-                                css_class="col-md-6 register-course__input-container"
-                            ),
                             css_class="row"
                         ),
+
                         Div(
                             Div('gender',
                                 css_class="col-md-3 register-course__input-container"
@@ -121,7 +112,7 @@ class UserRegistrationCourseFormBase(ModelForm):
                 Div(
                     HTML('<hr class="w-100 pb-40" />'),
                     HTML('<div class="col-lg-4 pl-lg-0 px-0"><h3 class="h4 mx-0 w-67">{}</h3></div>'.format(
-                        _("Contact details / Correspondence address"))),
+                        _("Contact details / Postal address"))),
                     Div(
                         Div(
                             Div('phone',

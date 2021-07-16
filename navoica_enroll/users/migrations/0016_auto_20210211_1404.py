@@ -21,16 +21,16 @@ class Migration(migrations.Migration):
                                                         'Labor market institution employee'),
                                                         ('Health care worker', 'Health care worker'),
                                                         ('Farmer', 'Farmer'), (
-                                                        'Key employee in social assistance and integration institution',
-                                                        'Key employee in social assistance and integration institution'),
+                                                            'Key employee in social assistance and integration institution',
+                                                            'Key employee in social assistance and integration institution'),
                                                         ('Employee in family and foster care support institution',
                                                          'Employee in family and foster care support institution'), (
-                                                        'Employee in social economy support center',
-                                                        'Employee in social economy support center'), (
-                                                        'Employee in psychological and pedagogical counseling center',
-                                                        'Employee in psychological and pedagogical counseling center'),
+                                                            'Employee in social economy support center',
+                                                            'Employee in social economy support center'), (
+                                                            'Employee in psychological and pedagogical counseling center',
+                                                            'Employee in psychological and pedagogical counseling center'),
                                                         ('Practical vocational instructor',
-                                                         'Practical vocational instructor'), ('Other', 'Other')],
+                                                         'Practical vocational instructor'), ('other', 'other')],
                                    max_length=1000, null=True, verbose_name='Profession'),
         ),
         migrations.AlterField(

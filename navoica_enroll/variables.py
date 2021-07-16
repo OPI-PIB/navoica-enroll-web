@@ -1,10 +1,11 @@
-from django.utils.translation import ugettext as _
+from django.utils.translation import ugettext_lazy as _
+from django_countries.data import COUNTRIES
 
 STATUSES_OPTIONS = {
     'employed': [
         _("A person working in the government administration"),
         _("A person working in local government administration"),
-        _("Other"),
+        _("other"),
         _("A person works in MSME"),
         _("A person working in a non-governmental administration"),
         _("A self-employed person"),
@@ -12,16 +13,21 @@ STATUSES_OPTIONS = {
     ],
     'registered': [
         _("Long-term unemployed person"),
-        _("Other")
+        _("other")
     ],
     'unregistered': [
         _("Long-term unemployed person"),
-        _("Other")
+        _("other")
     ],
     'looking': [
         _("Learning"),
         _("A person not participating in education or training"),
-        _("Other")
+        _("other")
     ]
 
 }
+COUNTRIES_ENROLL = [
+                       ('', _('Select...')),
+                   ] + list(COUNTRIES.items())
+
+COUNTRIES_ENROLL.append(('ZZ', _('Unknown or unspecified country')))

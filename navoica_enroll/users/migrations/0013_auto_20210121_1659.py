@@ -48,7 +48,23 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='userregistrationcourse',
             name='profession',
-            field=models.CharField(choices=[('', ''), ('Vocational teacher', 'Vocational teacher'), ('General education teacher', 'General education teacher'), ('Kindergarten teacher', 'Kindergarten teacher'), ('Employee in higher education institution', 'Employee in higher education institution'), ('Labor market institution employee', 'Labor market institution employee'), ('Health care worker', 'Health care worker'), ('Farmer', 'Farmer'), ('Key employee in social assistance and integration institution', 'Key employee in social assistance and integration institution'), ('Employee in family and foster care support institution', 'Employee in family and foster care support institution'), ('Employee in social economy support center', 'Employee in social economy support center'), ('Employee in psychological and pedagogical counseling center', 'Employee in psychological and pedagogical counseling center'), ('Practical vocational instructor', 'Practical vocational instructor'), ('Other', 'Other')], max_length=1000, verbose_name='Profession'),
+            field=models.CharField(choices=[('', ''), ('Vocational teacher', 'Vocational teacher'),
+                                            ('General education teacher', 'General education teacher'),
+                                            ('Kindergarten teacher', 'Kindergarten teacher'), (
+                                            'Employee in higher education institution',
+                                            'Employee in higher education institution'),
+                                            ('Labor market institution employee', 'Labor market institution employee'),
+                                            ('Health care worker', 'Health care worker'), ('Farmer', 'Farmer'), (
+                                            'Key employee in social assistance and integration institution',
+                                            'Key employee in social assistance and integration institution'), (
+                                            'Employee in family and foster care support institution',
+                                            'Employee in family and foster care support institution'), (
+                                            'Employee in social economy support center',
+                                            'Employee in social economy support center'), (
+                                            'Employee in psychological and pedagogical counseling center',
+                                            'Employee in psychological and pedagogical counseling center'),
+                                            ('Practical vocational instructor', 'Practical vocational instructor'),
+                                            ('other', 'other')], max_length=1000, verbose_name='Profession'),
         ),
         migrations.AlterField(
             model_name='userregistrationcourse',

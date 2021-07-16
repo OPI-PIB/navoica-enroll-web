@@ -8,6 +8,7 @@ from django.utils.translation import ugettext_lazy as _
 from localflavor.pl.pl_voivodeships import VOIVODESHIP_CHOICES
 
 from navoica_enroll.users.administrative_units import ADMINISTRATIVE_UNIT_CHOICES_PL, NATIONALITIES_CHOICES
+from navoica_enroll.variables import COUNTRIES_ENROLL
 
 
 class User(AbstractUser):
@@ -20,17 +21,17 @@ class User(AbstractUser):
 class UserRegistrationCourse(models.Model):
     first_name = models.CharField(_("First Name"), max_length=100)
     last_name = models.CharField(_("Last name"), max_length=100)
-    nationality = models.CharField(_("Nationality"), max_length=100, choices=NATIONALITIES_CHOICES)
+    citizenship = models.CharField(_("Citizenship"), max_length=100, choices=NATIONALITIES_CHOICES)
     gender = models.CharField(_("Gender"), choices=[
-        ('', _('Choose gender...')),
+        ('', _('Select...')),
         ('M', _('Male')),
         ('F', _('Female')),
     ], max_length=1)
     pesel = models.CharField(_("PESEL"), null=True, blank=True, max_length=11)
-    age = models.SmallIntegerField(_("Age"), default=0)
+    age = models.SmallIntegerField(_("Age"))
     education = models.CharField(_("Education"), max_length=1,
                                  choices=[
-                                     ('', _('Choose grade...')),
+                                     ('', _('Select...')),
                                      ('1', _('Pre-primary')),
                                      ('2', _('Primary')),
                                      ('3', _('Secondary')),
@@ -39,7 +40,7 @@ class UserRegistrationCourse(models.Model):
                                  ]
                                  )
     street = models.CharField(_("Street"), max_length=300,
-                              help_text=_("Enter the address correspondence."))
+                              help_text=_("Enter the address postal address."))
     street_no = models.CharField(_("Street no"), max_length=10)
     street_building_no = models.CharField(_("Building no"), max_length=10, null=True, blank=True)
     postal_code = models.CharField(_("Postal code"), max_length=6)
@@ -54,8 +55,7 @@ class UserRegistrationCourse(models.Model):
     commune = models.CharField(_("Commune"), max_length=30, null=True,
                                blank=True)
 
-    country = models.CharField(_("Country"), max_length=30, null=True,
-                               blank=True)
+    country = models.CharField(_("Country"), max_length=30, choices=COUNTRIES_ENROLL, default="ZZ")
 
     phone = models.CharField(_("Phone"), max_length=30)
     email = models.CharField(_("E-mail"), max_length=254)
@@ -67,15 +67,14 @@ class UserRegistrationCourse(models.Model):
                                           default=timezone.now)
 
     STATUSES = (
-        ('', _('Choose status...')),
+        ('', _('Select...')),
         ('employed', _('Employed')),
         ('registered', _('Registered unemployed')),
         ('unregistered', _('Unregistered unemployed')),
         ('looking', _('Unemployed, not looking for work')),
-        ('student', _('Student')),
     )
 
-    status = models.CharField(_("Status"), max_length=1000,
+    status = models.CharField(_("What is your current status on the labor market?"), max_length=1000,
                               choices=STATUSES
                               )
 
@@ -95,35 +94,37 @@ class UserRegistrationCourse(models.Model):
         _("Employee in social economy support center"),
         _("Employee in psychological and pedagogical counseling center"),
         _("Practical vocational instructor"),
-        _("Other"),
+        _("other"),
     ]
 
     profession = models.CharField(_("Profession"), max_length=1000, null=True, blank=True,
                                   choices=[(t, t) for t in
                                            PROFESSIONS])
 
-    work_name = models.CharField(_("Job title"), max_length=1000, null=True, blank=True, )
+    work_name = models.CharField(_("Company's name"), max_length=1000, null=True, blank=True, )
 
-    origin = models.CharField(_("Migrant / ethnic minority"), max_length=1, default="", choices=[
+    origin = models.CharField(
+        _("Do you belong to a national or ethnic minority, are you a migrant, a person of foreign origin?"),
+        max_length=1, default="", choices=[
+            ('y', _("Yes")),
+            ('n', _("No")),
+            ('r', _("Prefer not to tell"))
+
+        ])
+    homeless = models.CharField(_("Are you homeless or excluded from housing?"), max_length=1, default="", choices=[
         ('y', _("Yes")),
         ('n', _("No")),
         ('r', _("Prefer not to tell"))
 
     ])
-    homeless = models.CharField(_("Homeless"), max_length=1, default="", choices=[
-        ('y', _("Yes")),
-        ('n', _("No")),
-        ('r', _("Prefer not to tell"))
-
-    ])
-    disabled_person = models.CharField(_("Disabled person"), max_length=1, default="",
+    disabled_person = models.CharField(_("Are you a person with a disability?"), max_length=1, default="",
                                        choices=[
                                            ('y', _("Yes")),
                                            ('n', _("No")),
                                            ('r', _("Prefer not to tell"))
 
                                        ])
-    social_disadvantage = models.CharField(_("Socially disadvantaged"),
+    social_disadvantage = models.CharField(_("Are you a socially disadvantaged person?"),
                                            max_length=1, default="", choices=[
             ('y', _("Yes")),
             ('n', _("No")),
