@@ -750,8 +750,3 @@ $('#modal-video').on('hidden.bs.modal', function (event) {
     var youtube = $(".embed-responsive-item");
     youtube.attr("src", youtube.attr("src"));
 });
-
-window.onbeforeunload = function (e) {
-    console.log(e);
-    return false;
-};
