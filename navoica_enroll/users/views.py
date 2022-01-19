@@ -269,6 +269,6 @@ class CSVExportViewCustom(CSVExportView):
     def get_fields(self, queryset):
         opts = queryset.model._meta
         field_names = [field.name for field in opts.fields]
-        field_names += ['navoica_id']
+        field_names += ['navoica_id' ,'navoica_email', 'navoica_username']
 
         return field_names

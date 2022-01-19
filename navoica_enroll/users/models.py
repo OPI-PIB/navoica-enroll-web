@@ -146,6 +146,20 @@ class UserRegistrationCourse(models.Model):
         except:
             return ""
 
+    @property
+    def navoica_email(self):
+        try:
+            return self.user.socialaccount_set.filter(provider='edx')[0].extra_data['email']
+        except:
+            return ""
+
+    @property
+    def navoica_username(self):
+        try:
+            return self.user.socialaccount_set.filter(provider='edx')[0].extra_data['username']
+        except:
+            return ""
+
     class Meta:
         verbose_name = _("Registration for course")
         verbose_name_plural = _("Registrations for course")
