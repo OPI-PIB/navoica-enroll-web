@@ -53,6 +53,7 @@ class UserRegistrationCourseFormBase(ModelForm):
 
     def __init__(self, *args, **kwargs):
         super(UserRegistrationCourseFormBase, self).__init__(*args, **kwargs)
+        print("OKOOKO")
 
         self.fields['statement1'].label = _(
             "I agree with <a href='{url}' target='_blank'>the project participant's declaration.</a>").format(
@@ -63,6 +64,8 @@ class UserRegistrationCourseFormBase(ModelForm):
             "I consent to <a href='{url}' target='_blank'>the processing of my personal data to participate in the project.</a>").format(
             url=
             static(settings.STATEMENT2_PDF))
+
+        self.fields['homeless'].choices = list(filter(lambda x: x[0] != 'r', self.fields['homeless'].choices))
 
         self.helper = FormHelper(self)
 
