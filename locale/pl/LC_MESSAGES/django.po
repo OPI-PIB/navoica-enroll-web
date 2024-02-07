@@ -1,13 +1,28 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Małgorzata Kaczmarczyk-Koza <Malgorzata.Kaczmarczyk@opi.org.pl>, 2020
+# Emilia Dolega <emilia.dolega@opi.org.pl>, 2021
+# Paula Wasylów <Paula.Wasylow@opi.org.pl>, 2021
+# Krzysztof Hoffmann <Krzysztof.Hoffmann@opi.org.pl>, 2024
+# 
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: enroll\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-14 16:34+0000\n"
-"Language: en\n"
+"PO-Revision-Date: 2020-09-30 07:34+0000\n"
+"Last-Translator: Krzysztof Hoffmann <Krzysztof.Hoffmann@opi.org.pl>, 2024\n"
+"Language-Team: Polish (https://app.transifex.com/navoica/teams/104253/pl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: POEditor.com\n"
+"Language: pl\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
 
 #: navoica_enroll/providers/edx/provider.py:14
 msgid "Log in to Navoica.pl"
@@ -98,7 +113,8 @@ msgstr "Uwaga:"
 #: navoica_enroll/templates/account/email.html:54
 msgid ""
 "You currently do not have any e-mail address set up. You should really add "
-"an e-mail address so you can receive notifications, reset your password, etc."
+"an e-mail address so you can receive notifications, reset your password, "
+"etc."
 msgstr ""
 "Aktualnie nie masz skonfigurowanego żadnego adresu e-mail. Powinieneś dodać "
 "adres e-mail, aby móc otrzymywać powiadomienia, resetować hasło itd."
@@ -128,8 +144,7 @@ msgid ""
 "      address for user %(user_display)s."
 msgstr ""
 "Czy możesz\n"
-"      potwierdzić, że <a href=\"mailto:%(email)s\">%(email)s</a> to adres e-"
-"mail\n"
+"      potwierdzić, że <a href=\"mailto:%(email)s\">%(email)s</a> to adres e-mail\n"
 "      użytkownika %(user_display)s?"
 
 #: navoica_enroll/templates/account/email_confirm.html:24
@@ -146,8 +161,7 @@ msgid ""
 msgstr ""
 "Ten link potwierdzający e-mail wygasł lub jest nieprawidłowy.\n"
 "      Proszę\n"
-"      <a href=\"%(email_url)s\">wyślij ponowną prośbę o potwierdzenie adresu "
-"e-mail</a>\n"
+"      <a href=\"%(email_url)s\">wyślij ponowną prośbę o potwierdzenie adresu e-mail</a>\n"
 "      "
 
 #: navoica_enroll/templates/account/login.html:7
@@ -166,8 +180,8 @@ msgstr ""
 
 #: navoica_enroll/templates/account/login.html:19
 msgid ""
-"You will be redirected to the registration form in a moment, but in order to "
-"fill it in, you must have an account on Navoica.pl.All personal data "
+"You will be redirected to the registration form in a moment, but in order to"
+" fill it in, you must have an account on Navoica.pl.All personal data "
 "included in the registration form will be gathered and processed by the "
 "course organiser - the university."
 msgstr ""
@@ -215,8 +229,8 @@ msgstr "Zresetuj hasło"
 
 #: navoica_enroll/templates/account/password_reset.html:16
 msgid ""
-"Forgotten your password? Enter your e-mail address below, and we'll send you "
-"an e-mail allowing you to reset it."
+"Forgotten your password? Enter your e-mail address below, and we'll send you"
+" an e-mail allowing you to reset it."
 msgstr ""
 "Zapomniałeś/aś swojego hasła? Wpisz poniżej swój adres e-mail, a my wyślemy "
 "Ci e-mail umożliwiający jego zresetowanie."
@@ -310,13 +324,11 @@ msgstr "Zweryfikuj swój adres e-mail"
 #: navoica_enroll/templates/account/verification_sent.html:10
 msgid ""
 "We have sent an e-mail to you for verification. Follow the\n"
-"    link provided to finalize the signup process. Please contact us if you "
-"do\n"
+"    link provided to finalize the signup process. Please contact us if you do\n"
 "    not receive it within a few minutes."
 msgstr ""
 "Wysłaliśmy Ci wiadomość e-mail w celach weryfikacjnych. Kliknij w\n"
-"    link, aby sfinalizować proces rejestracji . Skontaktuj się z nami, "
-"jeśli\n"
+"    link, aby sfinalizować proces rejestracji . Skontaktuj się z nami, jeśli\n"
 "    nie otrzymasz jej w przeciągu kilku minut."
 
 #: navoica_enroll/templates/account/verified_email_required.html:12
@@ -363,15 +375,18 @@ msgstr ""
 msgid "Registration form"
 msgstr "Formularz rejestracyjny"
 
-#: navoica_enroll/templates/base.html:95 navoica_enroll/templates/base.html:114
+#: navoica_enroll/templates/base.html:95
+#: navoica_enroll/templates/base.html:114
 msgid "Logo of Knowledge Education Development"
 msgstr "Logo Fundusze Europejskie Wiedza Edukacja Rozwój"
 
-#: navoica_enroll/templates/base.html:96 navoica_enroll/templates/base.html:115
+#: navoica_enroll/templates/base.html:96
+#: navoica_enroll/templates/base.html:115
 msgid "Logo of The Republic of Poland"
 msgstr "Logo Rzeczpospolita Polska"
 
-#: navoica_enroll/templates/base.html:97 navoica_enroll/templates/base.html:116
+#: navoica_enroll/templates/base.html:97
+#: navoica_enroll/templates/base.html:116
 msgid "Logo of European Social Fund"
 msgstr "Logo Unia Europejska Europejski Fundusz Społeczny"
 
@@ -402,17 +417,17 @@ msgstr ""
 #: navoica_enroll/templates/users/form_registration.html:33
 msgid ""
 "The course is funded by the European Union and the Polish state budget. The "
-"conditions of funding oblige the university, the organizer of the course, to "
-"collect data about the participants. Personal data from the registration "
+"conditions of funding oblige the university, the organizer of the course, to"
+" collect data about the participants. Personal data from the registration "
 "form, will be collected, processed and verified by the course organizer. "
 "Filling in the form is a prerequisite to join the course."
 msgstr ""
 "Kurs został sfinansowany ze środków Unii Europejskiej i środków budżetu "
 "państwa. Warunki dofinansowania obligują uczelnię - organizatora kursu do "
 "zbierania danych o uczestnikach. Dane osobowe, które zostaną przesłane za "
-"pośrednictwem formularza rejestracyjnego, będą gromadzone, przetwarzane oraz "
-"weryfikowane przez organizatora kursu. Wypełnienie formularza jest warunkiem "
-"przystąpienia do kursu."
+"pośrednictwem formularza rejestracyjnego, będą gromadzone, przetwarzane oraz"
+" weryfikowane przez organizatora kursu. Wypełnienie formularza jest "
+"warunkiem przystąpienia do kursu."
 
 #: navoica_enroll/templates/users/form_registration.html:15
 msgid "More information"
@@ -1048,8 +1063,8 @@ msgid ""
 "I agree with <a href='{url}' target='_blank'>the project participant's "
 "declaration.</a>"
 msgstr ""
-"Akceptuję <a href='{url}' target='_blank'>oświadczenie uczestnika projektu.</"
-"a>"
+"Akceptuję <a href='{url}' target='_blank'>oświadczenie uczestnika "
+"projektu.</a>"
 
 #: navoica_enroll/users/forms.py:63 navoica_enroll/users/forms.py:286
 #, python-brace-format
@@ -1275,8 +1290,8 @@ msgid ""
 "Do you belong to a national or ethnic minority, are you a migrant, a person "
 "of foreign origin?"
 msgstr ""
-"Czy należysz do mniejszości narodowej lub etnicznej, jesteś migrantem, osobą "
-"obcego pochodzenia?"
+"Czy należysz do mniejszości narodowej lub etnicznej, jesteś migrantem, osobą"
+" obcego pochodzenia?"
 
 #: navoica_enroll/users/models.py:109 navoica_enroll/users/models.py:115
 #: navoica_enroll/users/models.py:122 navoica_enroll/users/models.py:129
@@ -1373,268 +1388,3 @@ msgstr "Osoba nieuczestnicząca w kształceniu lub szkoleniu"
 #: navoica_enroll/variables.py:33
 msgid "Unknown or unspecified country"
 msgstr "Nieznany lub nieokreślony kraj"
-
-#~ msgid "Choose additional information..."
-#~ msgstr "Wybierz dodatkowe informacje..."
-
-#~ msgid "Choose county..."
-#~ msgstr "Wybierz powiat..."
-
-#~ msgid "Choose voivodeship..."
-#~ msgstr "Wybierz województwo..."
-
-#~ msgid "Choose employed status..."
-#~ msgstr "Wybierz status..."
-
-#~ msgid "Choose profession..."
-#~ msgstr "Wybierz zawód..."
-
-#~ msgid "Choose citizenship..."
-#~ msgstr "Wybierz województwo..."
-
-#~ msgid "Choose gender..."
-#~ msgstr "Wybierz płeć..."
-
-#~ msgid "Choose grade..."
-#~ msgstr "Wybierz poziom wykształcenia..."
-
-#~ msgid "Choose status..."
-#~ msgstr "Wybierz status..."
-
-#~ msgid "Choose country..."
-#~ msgstr "Wybierz kraj..."
-
-#~ msgid "Andorra"
-#~ msgstr "Andora"
-
-#~ msgid "Bangladesh"
-#~ msgstr "Bangladesz"
-
-#~ msgid "Bahrain"
-#~ msgstr "Bahrajn"
-
-#~ msgid "Bahama"
-#~ msgstr "Bahamski"
-
-#~ msgid "Bhutan"
-#~ msgstr "Bhutański"
-
-#~ msgid "Botswana"
-#~ msgstr "Motswana"
-
-#~ msgid "Belize"
-#~ msgstr "Belizean"
-
-#~ msgid "Central African Republic"
-#~ msgstr "Środkowoafrykańska"
-
-#~ msgid "Cook Iislands"
-#~ msgstr "Wysp Salomona"
-
-#~ msgid "Costa Rica"
-#~ msgstr "Kostarykańska"
-
-#~ msgid "Cape Verde"
-#~ msgstr "Republika Zielonego Przylądka"
-
-#~ msgid "Djibouti"
-#~ msgstr "Dżibuti"
-
-#~ msgid "Eritrea"
-#~ msgstr "Erytrejski"
-
-#~ msgid "Fiji"
-#~ msgstr "Fidżi"
-
-#~ msgid "Micronesia"
-#~ msgstr "Mikronezyjski"
-
-#~ msgid "Grenada"
-#~ msgstr "Grenadyjczyk"
-
-#~ msgid "Ghana"
-#~ msgstr "Ghany"
-
-#~ msgid "Guinea"
-#~ msgstr "Gwinea"
-
-#~ msgid "Equatorial Guinea"
-#~ msgstr "Gwinea Równikowa"
-
-#~ msgid "Guinea-Bissau"
-#~ msgstr "Gwinea"
-
-#~ msgid "Guyana"
-#~ msgstr "Gujański"
-
-#~ msgid "Honduras"
-#~ msgstr "Honduras"
-
-#~ msgid "Kyrgyzstan"
-#~ msgstr "Kirgiski"
-
-#~ msgid "Cayman Islands"
-#~ msgstr "Wysp Salomona"
-
-#~ msgid "Saint Lucia"
-#~ msgstr "Święty Lucjan"
-
-#~ msgid "Liechtenstein"
-#~ msgstr "Liechtensteiner"
-
-#~ msgid "Sri Lanka"
-#~ msgstr "Sri Lanki"
-
-#~ msgid "Lesotho"
-#~ msgstr "Mosotho"
-
-#~ msgid "Monaco"
-#~ msgstr "Monacan"
-
-#~ msgid "Northern Mariana Islands"
-#~ msgstr "Północnoirlandzki"
-
-#~ msgid "Maldives"
-#~ msgstr "Malediwan"
-
-#~ msgid "Malawi"
-#~ msgstr "malawijska"
-
-#~ msgid "Mozambique"
-#~ msgstr "Mozambik"
-
-#~ msgid "Namibia"
-#~ msgstr "Namibii"
-
-#~ msgid "Norfolk Island"
-#~ msgstr "Wysp Salomona"
-
-#~ msgid "Nicaragua"
-#~ msgstr "Nikaragua"
-
-#~ msgid "Norway"
-#~ msgstr "norweska"
-
-#~ msgid "Nauru"
-#~ msgstr "Nauruan"
-
-#~ msgid "Oman"
-#~ msgstr "Omanu"
-
-#~ msgid "Papua New Guinea"
-#~ msgstr "Papua Nowa Gwinea"
-
-#~ msgid "Pakistan"
-#~ msgstr "pakistańska"
-
-#~ msgid "Poland"
-#~ msgstr "Angoli"
-
-#~ msgid "Palau"
-#~ msgstr "Palauan"
-
-#~ msgid "Paraguay"
-#~ msgstr "Paragwaj"
-
-#~ msgid "Romania"
-#~ msgstr "rumuńska"
-
-#~ msgid "Solomon Islands"
-#~ msgstr "Wysp Salomona"
-
-#~ msgid "Seychelles"
-#~ msgstr "Seszele"
-
-#~ msgid "Sierra Leone"
-#~ msgstr "Sierra Leone"
-
-#~ msgid "San Marino"
-#~ msgstr "San Marinese"
-
-#~ msgid "Suriname"
-#~ msgstr "Surinamer"
-
-#~ msgid "Sao Tome & Principe"
-#~ msgstr "Wyspy Świętego Tomasza"
-
-#~ msgid "Swaziland"
-#~ msgstr "Suazi"
-
-#~ msgid "Chad"
-#~ msgstr "Czadian"
-
-#~ msgid "Turkmenistan"
-#~ msgstr "ormiańska"
-
-#~ msgid "Tonga"
-#~ msgstr "Tonga"
-
-#~ msgid "East Timor"
-#~ msgstr "Timor Wschodni"
-
-#~ msgid "Trinidad & Tobago"
-#~ msgstr "Trynidadyjski lub Tobagoński"
-
-#~ msgid "Tuvalu"
-#~ msgstr "Tuvaluan"
-
-#~ msgid "Zambia"
-#~ msgstr "Zambii"
-
-#~ msgid "Zimbabwe"
-#~ msgstr "Zimbabwe"
-
-#~ msgid "Migrant / ethnic minority"
-#~ msgstr ""
-#~ "Czy należysz do mniejszości narodowej lub etnicznej, jesteś migrantem, "
-#~ "osobą obcego pochodzenia?"
-
-#~ msgid "Homeless"
-#~ msgstr ""
-#~ "Czy jesteś osobą bezdomną lub dotkniętą wykluczeniem z dostępu do "
-#~ "mieszkań?"
-
-#~ msgid "Disabled person"
-#~ msgstr "Czy jesteś osobą z niepełnosprawnościami?"
-
-#~ msgid "St. Kitts and Nevis"
-#~ msgstr "Kittian i Nevisian"
-
-#~ msgid "Don't have a PESEL number"
-#~ msgstr "Nie posiadam nr PESEL"
-
-#~ msgid "Student"
-#~ msgstr "Student"
-
-#~ msgid "Status"
-#~ msgstr "Jaki jest obecnie Twój status na rynku pracy?"
-
-#~ msgid "Job title"
-#~ msgstr "Nazwa zakładu pracy"
-
-#~ msgid "Dutchman"
-#~ msgstr "holender"
-
-#~ msgid "Dutchwoman"
-#~ msgstr "holenderka"
-
-#~ msgid "Emirian"
-#~ msgstr "Emirian"
-
-#~ msgid "Antiguans"
-#~ msgstr "Antyguańczycy"
-
-#~ msgid "Barbudans"
-#~ msgstr "Barbudańczycy"
-
-#~ msgid "Batswana"
-#~ msgstr "Batswana"
-
-#~ msgid "Bruneian"
-#~ msgstr "Brunei"
-
-#~ msgid "Burmese"
-#~ msgstr "Birmańczyk"
-
-#~ msgid "Ivorian"
-#~ msgstr "Wybrzeża Kości Słoniowej"
